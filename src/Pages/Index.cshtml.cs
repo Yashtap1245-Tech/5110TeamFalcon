@@ -11,6 +11,10 @@ namespace ContosoCrafts.WebSite.Pages
     /// <summary>
     /// Yash     
     /// <summary>
+    ///
+    /// <summary>
+    /// Mehant
+    /// </summary>
     public class IndexModel : PageModel
     {
         //Hi Mike
