@@ -8,6 +8,13 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary>
+    /// Yash     
+    /// <summary>
+    ///
+    /// <summary>
+    /// Mehant
+    /// </summary>
     public class IndexModel : PageModel
     {
         //Hi Mike
@@ -24,7 +31,7 @@ namespace ContosoCrafts.WebSite.Pages
         public IEnumerable<ProductModel> Products { get; private set; }
 
         public void OnGet()
-        {
+        {   
             Products = ProductService.GetAllData();
         }
     }
