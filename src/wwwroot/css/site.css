@@ -116,10 +116,25 @@ body {
 p {
     font-family: 'Nunito', sans-serif;
 }
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(350%);
+    }
+}
 h1 {
     font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 48px;
+    white-space: nowrap;
+    overflow: hidden; /* Hide any overflow */
+    display: inline-block; /* Ensure the element takes only the necessary width */
+    animation: scroll 10s linear infinite; /* Scroll animation */
 }
-ul {
+ul{
     font-family: 'Nunito', sans-serif;
 }
 .footer {
