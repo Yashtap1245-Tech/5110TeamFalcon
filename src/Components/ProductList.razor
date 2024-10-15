@@ -3,7 +3,18 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
+<style>
+    body {
+        background-image: url('https://images5.alphacoders.com/133/1331568.png');
+        background-size: cover; /*keep the image fully convered in the background automatically*/
+        background-repeat: no-repeat;/*It doesnt repeat the image */
+        background-attachment: fixed; /* Keep the background fixed when scrolling */
+        background-position: center; /* Center the image */
+    }
+</style>
+
 <div class="card-columns">
+    
     @foreach (var product in ProductService.GetAllData())
     {
         <div class="card">
