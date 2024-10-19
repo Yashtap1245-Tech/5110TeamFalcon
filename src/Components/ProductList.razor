@@ -53,6 +53,23 @@
                         <div class="card-body">
                             <p class="card-text">@selectedProduct.Description</p>
                             <p class="card-text">Director: @selectedProduct.Director</p>
+                            <p class="card-text">Cast:</p>
+                            <ul class="list-inline">
+                                @foreach (var actor in selectedProduct.Cast)
+                                {
+                                    <li class="list-inline-item">@actor</li>
+                                }
+                            </ul>
+                            @if (!string.IsNullOrEmpty(selectedProduct.TrailerUrl))
+                            {
+                                <p class="card-text">
+                                    <a href="@selectedProduct.TrailerUrl" target="_blank">Watch Trailer</a>
+                                </p>
+                            }
+                            else
+                            {
+                                <p class="card-text">No trailer available</p>
+                            }
                         </div>
                     </div>
                 </div>
