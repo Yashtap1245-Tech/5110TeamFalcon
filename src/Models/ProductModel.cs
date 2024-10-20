@@ -23,7 +23,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Description { get; set; }
 
         public int[] Ratings { get; set; }
-
+        public List<string> Cast { get; set; }
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
         public string Quantity { get; set; }
