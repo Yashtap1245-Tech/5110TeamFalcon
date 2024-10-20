@@ -53,6 +53,13 @@
                         <div class="card-body">
                             <p class="card-text">@selectedProduct.Description</p>
                             <p class="card-text">Director: @selectedProduct.Director</p>
+                            <p class="card-text">Cast:</p>
+                            <ul class="list-inline">
+                                @foreach (var actor in selectedProduct.Cast)
+                                {
+                                    <li class="list-inline-item">@actor</li>
+                                }
+                            </ul>
                         </div>
                     </div>
                 </div>
