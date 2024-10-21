@@ -20,7 +20,8 @@
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Drama"
   },
   {
     "Id": "jenlooper-light",
@@ -36,7 +37,8 @@
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Crime"
   },
   {
     "Id": "jenlooper-lightshow",
@@ -52,7 +54,8 @@
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Action"
   },
   {
     "Id": "jenlooper-survival",
@@ -68,7 +71,8 @@
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Crime"
   },
   {
     "Id": "sailorhg-bubblesortpic",
@@ -84,7 +88,8 @@
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Drama"
   },
   {
     "Id": "sailorhg-corsage",
@@ -102,7 +107,8 @@
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Fantasy"
   },
   {
     "Id": "sailorhg-kit",
@@ -118,7 +124,8 @@
     "ProductType": 130,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Drama"
   },
   {
     "Id": "sailorhg-led",
@@ -134,7 +141,8 @@
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Crime"
   },
   {
     "Id": "selinazawacki-soi-shirt",
