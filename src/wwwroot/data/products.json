@@ -158,7 +158,8 @@
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Fantasy"
   },
   {
     "Id": "selinazawacki-soi-pins",
@@ -174,7 +175,8 @@
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Western"
   },
   {
     "Id": "vogueandcode-hipster-dev-bro",
@@ -190,7 +192,8 @@
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Drama"
   },
   {
     "Id": "vogueandcode-pretty-girls-code-tee",
@@ -206,7 +209,8 @@
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Fantasy"
   },
   {
     "Id": "vogueandcode-ruby-sis-2",
@@ -222,7 +226,8 @@
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Drama"
   },
   {
     "Id": "selinazawacki-moon",
@@ -238,7 +243,8 @@
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Sci-Fi"
   },
   {
     "Id": "selinazawacki-shirt",
@@ -254,6 +260,7 @@
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Sci-Fi"
   }
 ]
