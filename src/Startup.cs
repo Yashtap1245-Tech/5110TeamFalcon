@@ -53,6 +53,7 @@ namespace ContosoCrafts.WebSite
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapBlazorHub();
+                endpoints.MapFallbackToPage("/movie", "/shared/MoviePage");
 
                 // endpoints.MapGet("/products", (context) => 
                 // {
