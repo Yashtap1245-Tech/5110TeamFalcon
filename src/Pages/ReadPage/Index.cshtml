@@ -1,0 +1,29 @@
+@page "{id}"
+@using ContosoCrafts.WebSite.Pages.Shared
+@using ContosoCrafts.WebSite.Services
+@model ContosoCrafts.WebSite.Pages.ReadPage.ReadPageModel
+
+@* @model ContosoCrafts.WebSite.Pages.Product.IndexModel *@
+@inject JsonFileProductService ProductService;
+
+@{
+    ViewData["Title"] = "Movie Page";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>At <b>Falcon Movies</b>, we present to you:</p>
+
+<h2>@Model.Product.Title</h2>
+<div>
+    <img src="@Model.Product.Url" alt="@Model.Product.Title Poster" style="max-width: 300px;"/>
+</div>
+
+<h3>Description</h3>
+<p>@Model.Product.Description</p>
+
+<h3>Case Details</h3>
+<p>@Model.Product.Cast</p>
+
+<h3>Rating</h3>
+<p>@Model.Product.Ratings out of 10</p>
