@@ -4,7 +4,7 @@
 @model ContosoCrafts.WebSite.Pages.ReadPage.ReadPageModel
 
 @* @model ContosoCrafts.WebSite.Pages.Product.IndexModel *@
-@inject JsonFileReadService ProductService;
+@inject JsonFileProductService ProductService;
 
 @{
     ViewData["Title"] = "Movie Page";
@@ -16,14 +16,25 @@
 
 <h2>@Model.Product.Title</h2>
 <div>
-    <img src="@Model.Product.Url" alt="@Model.Product.Title Poster" style="max-width: 300px;"/>
+    <img src="@Model.Product.Image" alt="@Model.Product.Title Poster" style="max-width: 300px;"/>
 </div>
+<br/>
 
 <h3>Description</h3>
 <p>@Model.Product.Description</p>
 
 <h3>Case Details</h3>
-<p>@Model.Product.Cast</p>
+@foreach (var product in Model.Product.Cast)
+{
+    <li>@product</li>
+}
+<br/>
 
-<h3>Rating</h3>
-<p>@Model.Product.Ratings out of 10</p>
+<h4>Trailer</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/@Model.Product.YouTubeID" frameborder="0" allowfullscreen></iframe>
+
+@if (!string.IsNullOrEmpty(Model.Product.Genre))
+{
+    <h5>Genre:</h5>
+    <p>@Model.Product.Genre</p>
+}
