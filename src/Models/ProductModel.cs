@@ -17,7 +17,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Image { get; set; }
         //Url Field
         public string Url { get; set; }
-        
+        //Title Field
         [StringLength (maximumLength: 33, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
         public string Title { get; set; }
         // Director Field
