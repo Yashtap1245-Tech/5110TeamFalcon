@@ -50,6 +50,23 @@
                     <div class="card">
                         <div class="card-img" style="background-image: url('@selectedProduct.Image');">
                         </div>
+                        <!--
+                        This section of the modal's card body displays detailed information about the selected product, including:
+
+                        1. **Product Description**:
+                           - Shows the description of the selected product using `@selectedProduct.Description`.
+
+                        2. **Director Information**:
+                           - Displays the director's name with the label "Director".
+
+                        3. **Cast List**:
+                           - Iterates over `selectedProduct.Cast`, which is a collection of actor names, and renders each actor as an inline list item. This creates a clean, inline display of the cast members for easy readability.
+
+                        4. **Trailer Link**:
+                           - Provides a clickable link labeled "Watch Trailer" that opens the product's trailer URL (`@selectedProduct.TrailerUrl`) in a new browser tab (`target="_blank"`), allowing users to view the trailer without leaving the page.
+
+                        This structured layout provides a concise and visually organized view of the product's main details within the modal.
+                        -->
                         <div class="card-body">
                             <p class="card-text">@selectedProduct.Description</p>
                             <p class="card-text">Director: @selectedProduct.Director</p>
@@ -99,7 +116,7 @@
 {
     ProductModel selectedProduct;
     string selectedProductId;
-
+    
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
@@ -110,7 +127,7 @@
     int currentRating = 0;
     int voteCount = 0;
     string voteLabel;
-
+    
     void GetCurrentRating()
     {
         if (selectedProduct.Ratings == null)
@@ -127,7 +144,7 @@
 
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
-
+    
     void SubmitRating(int rating)
     {
         System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
