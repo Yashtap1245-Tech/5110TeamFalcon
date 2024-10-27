@@ -7,6 +7,7 @@ namespace ContosoCrafts.WebSite.Models
 {
     public class ProductModel
     {
+        //ID Field
         public string Id { get; set; }
         public string Maker { get; set; }
 
