@@ -25,6 +25,7 @@ namespace ContosoCrafts.WebSite.Models
         public int[] Ratings { get; set; }
         //Cast Field
         public List<string> Cast { get; set; }
+        //TrailerUrl Field
         public string TrailerUrl { get; set; }
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
