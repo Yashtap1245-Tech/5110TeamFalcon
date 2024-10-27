@@ -28,7 +28,7 @@ namespace ContosoCrafts.WebSite.Models
         //TrailerUrl Field
         public string TrailerUrl { get; set; }
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
-
+        //Quantity Field
         public string Quantity { get; set; }
 
         [Range (-1, 100, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
