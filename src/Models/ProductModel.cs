@@ -34,6 +34,7 @@ namespace ContosoCrafts.WebSite.Models
         [Range (-1, 100, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         //Price Field
         public int Price { get; set; }
+        //YoutubeID
         public string YouTubeID { get; set; }
         public string Genre { get; set; }
         // Store the Comments entered by the users on this product
