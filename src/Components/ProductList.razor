@@ -138,7 +138,17 @@
     int currentRating = 0;
     int voteCount = 0;
     string voteLabel;
-    
+    /// <summary>
+    /// Calculates and displays the current rating and vote count for the selected product.
+    /// </summary>
+    /// This method performs the following actions:
+    /// 1. Checks if the `Ratings` list for the `selectedProduct` is null.
+    ///    - If null, it sets `currentRating` and `voteCount` to 0, indicating no ratings are available.
+    /// 2. If `Ratings` is not null:
+    ///    - Calculates the `voteCount` as the number of ratings.
+    ///    - Sets `voteLabel` to "Vote" if there is only one rating, otherwise sets it to "Votes".
+    ///    - Computes `currentRating` as the average rating by dividing the sum of all ratings by the vote count.
+    /// 3. Logs the current rating for the selected product to the console.
     void GetCurrentRating()
     {
         if (selectedProduct.Ratings == null)
