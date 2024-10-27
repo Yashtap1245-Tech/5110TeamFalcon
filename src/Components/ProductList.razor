@@ -165,7 +165,14 @@
 
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
-    
+    /// <summary>
+    /// Submits a rating for the currently selected product.
+    /// </summary>
+    /// <param name="rating">The rating value to be added to the selected product, typically on a predefined scale (e.g., 1 to 5).</param>
+    /// This method performs the following actions:
+    /// 1. Logs the rating received for the selected product to the console.
+    /// 2. Adds the rating to the product using the `ProductService`.
+    /// 3. Refreshes the selected product data by reloading it after adding the rating.
     void SubmitRating(int rating)
     {
         System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
