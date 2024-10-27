@@ -19,7 +19,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Title { get; set; }
         // Director Field
         public string Director { get; set; }
-
+        //Description Field
         public string Description { get; set; }
 
         public int[] Ratings { get; set; }
