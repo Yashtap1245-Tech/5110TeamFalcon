@@ -35,6 +35,18 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        public ProductModel GetDataForRead(string id)
+        {
+            using (var jsonFileReader = File.OpenText(JsonFileName))
+            {
+                return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }).FirstOrDefault(m => m.Id == id);
+            }
+        }
+
         /// <summary>
         /// Add Rating
         /// 
