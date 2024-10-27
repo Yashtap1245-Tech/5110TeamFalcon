@@ -43,7 +43,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Genre { get; set; }
         // Store the Comments entered by the users on this product
         public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
-
+        //JSON Serializer
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
 
