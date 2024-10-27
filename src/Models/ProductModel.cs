@@ -21,7 +21,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Director { get; set; }
         //Description Field
         public string Description { get; set; }
-
+        //Ratings Field
         public int[] Ratings { get; set; }
         public List<string> Cast { get; set; }
         public string TrailerUrl { get; set; }
