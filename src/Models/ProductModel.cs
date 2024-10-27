@@ -12,6 +12,7 @@ namespace ContosoCrafts.WebSite.Models
         //Maker Field
         public string Maker { get; set; }
 
+        //Image Field
         [JsonPropertyName("img")]
         public string Image { get; set; }
 
