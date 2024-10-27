@@ -26,7 +26,8 @@
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [],
+    "Genre": "Drama"
   },
   {
     "Id": "jenlooper-light",
