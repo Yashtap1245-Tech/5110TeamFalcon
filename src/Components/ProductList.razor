@@ -116,7 +116,18 @@
 {
     ProductModel selectedProduct;
     string selectedProductId;
-    
+    /// <summary>
+    /// Selects a product by its unique product ID and retrieves its data, setting it as the active `selectedProduct`.
+    /// - **Parameters**:
+    ///     - `productId` (string): The unique identifier of the product to select.
+    /// - **Functionality**:
+    ///     - Assigns `productId` to `selectedProductId` to track the current product selection.
+    ///     - Searches for the product in the collection retrieved from `ProductService.GetAllData()`,
+    ///       selecting the first item that matches the given `productId` and assigns it to `selectedProduct`.
+    ///     - Calls `GetCurrentRating()` to calculate and display the current rating for the selected product.
+
+    /// </summary>
+    /// <param name="productId"></param>
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
