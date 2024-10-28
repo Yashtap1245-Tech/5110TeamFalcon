@@ -13,7 +13,15 @@ namespace ContosoCrafts.WebSite.Models
         Collectable = 130,
         Commercial = 55,
     }
-
+    /// <summary>
+    /// A static class that contains extension methods for the <see cref="ProductTypeEnum"/> enumeration.
+    /// This class provides additional functionality to the enum, allowing for more descriptive and user-friendly 
+    /// representations of the enum values, such as retrieving display names.
+    /// </summary>
+    /// <remarks>
+    /// This class is intended to be used in conjunction with the <see cref="ProductTypeEnum"/> enum, enabling
+    /// developers to easily access display names and other related features without modifying the enum itself.
+    /// </remarks>
     public static class ProductTypeEnumExtensions
     {
         public static string DisplayName(this ProductTypeEnum data)
