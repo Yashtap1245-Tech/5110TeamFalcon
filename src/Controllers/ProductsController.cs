@@ -36,7 +36,13 @@ namespace ContosoCrafts.WebSite.Controllers
         {
             return ProductService.GetAllData();
         }
-
+        /// <summary>
+        /// Submits a rating for a specific product.
+        /// This endpoint accepts a rating request containing the product ID and the rating value,
+        /// updates the product's rating in the data store, and returns a success response.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPatch]
         public ActionResult Patch([FromBody] RatingRequest request)
         {
