@@ -5,7 +5,6 @@
     ViewData["Title"] = "Read Page";
 }
 
-<h1>@ViewData["Title"]</h1>
 
 <p>At <b>Falcon Movies</b>, we present to you:</p>
 
@@ -18,7 +17,7 @@
 <h3>Description</h3>
 <p>@Model.Product.Description</p>
 
-<h3>Case Details</h3>
+<h3>Cast Details:</h3>
 @foreach (var product in Model.Product.Cast)
 {
     <li>@product</li>
