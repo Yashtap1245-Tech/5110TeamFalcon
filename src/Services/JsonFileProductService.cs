@@ -129,7 +129,8 @@ namespace ContosoCrafts.WebSite.Services
         /// Update the fields
         /// Save to the data store
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="data">The model containing the updated product data</param>
+        /// <returns>The updated model if successful otherwise null.</returns>
         public ProductModel UpdateData(ProductModel data)
         {
             var products = GetAllData();
