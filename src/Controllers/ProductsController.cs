@@ -26,6 +26,11 @@ namespace ContosoCrafts.WebSite.Controllers
 
         public JsonFileProductService ProductService { get; }
 
+        /// <summary>
+        /// Gets the product data.
+        /// This endpoint returns a collection of all products available in the system.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<ProductModel> Get()
         {
