@@ -142,14 +142,22 @@ namespace ContosoCrafts.WebSite.Services
 
             // Update the data to the new passed in values
             productData.Title = data.Title;
-            productData.Description = data.Description.Trim();
-            productData.Url = data.Url;
             productData.Image = data.Image;
+            productData.Description = data.Description.Trim();
+            productData.Genre = data.Genre;
+            productData.YouTubeID = data.YouTubeID;
+            productData.Director = data.Director;
+            // for (var i = 0; i < productData.Cast.Count; i++)
+            // {
+            //     productData.Cast[i] = data.Cast[i];
+            // }
+            // productData.Url = data.Url;
+            // productData.Image = data.Image;
 
-            productData.Quantity = data.Quantity;
-            productData.Price = data.Price;
+            // productData.Quantity = data.Quantity;
+            // productData.Price = data.Price;
 
-            productData.CommentList = data.CommentList;
+            // productData.CommentList = data.CommentList;
 
             SaveData(products);
 
