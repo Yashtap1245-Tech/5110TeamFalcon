@@ -27,7 +27,9 @@ namespace ContosoCrafts.WebSite.Services
         /// Gets the web hosting environment for accessing the web root path.
         /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
-
+        /// <summary>
+        /// Gets the path of the JSON file used to store product data.
+        /// </summary>
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
