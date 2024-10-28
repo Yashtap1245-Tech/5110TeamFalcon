@@ -15,6 +15,10 @@ namespace ContosoCrafts.WebSite.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
+        /// <summary>
+        ///Initializes a new instance of the <see cref="ProductsController"/> class.
+        /// </summary>
+        /// <param name="productService">The service used to manage product data.</param>
         public ProductsController(JsonFileProductService productService)
         {
             ProductService = productService;
