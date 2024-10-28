@@ -49,7 +49,11 @@ namespace ContosoCrafts.WebSite.Services
                     });
             }
         }
-
+        /// <summary>
+        /// Retrieves a specific product's data for reading, based on the product ID.
+        /// </summary>
+        /// <param name="id">The unique identifier of the product.</param>
+        /// <returns>The model which represents the product</returns>
         public ProductModel GetDataForRead(string id)
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
