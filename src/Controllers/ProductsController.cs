@@ -31,7 +31,11 @@ namespace ContosoCrafts.WebSite.Controllers
             
             return Ok();
         }
-
+        /// <summary>
+        /// Represents a request to submit a rating for a product. 
+        /// This class encapsulates the necessary information for a rating submission, 
+        /// including the product identifier and the rating value.
+        /// </summary>
         public class RatingRequest
         {
             //ProductID Field
