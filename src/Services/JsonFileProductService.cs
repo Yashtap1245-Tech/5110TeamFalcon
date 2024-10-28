@@ -23,7 +23,9 @@ namespace ContosoCrafts.WebSite.Services
         {
             WebHostEnvironment = webHostEnvironment;
         }
-
+        /// <summary>
+        /// Gets the web hosting environment for accessing the web root path.
+        /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
         private string JsonFileName
