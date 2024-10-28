@@ -1,0 +1,75 @@
+@page "{id}"
+@using ContosoCrafts.WebSite.Services
+@model UpdateModel;
+@inject JsonFileProductService ProductService;
+
+@{
+     ViewData["Title"] = "Read Page";
+}
+
+
+<h2><center>Falcon Movies Update Page</center></h2>
+<br/>
+<br />
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Product.Id)
+
+        <div class="form-group">
+            <label asp-for="Product.Title" class="control-label"></label>
+            <input asp-for="Product.Title" class="form-control"/>
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Product.Image" class="control-label"></label>
+            <input asp-for="Product.Image" class="form-control"/>
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Product.Director" class="control-label"></label>
+            <input asp-for="Product.Director" class="form-control"/>
+            <span asp-validation-for="Product.Director" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Description" class="control-label"></label>
+            <input asp-for="Product.Description" class="form-control"/>
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Product.Genre" class="control-label"></label>
+            <input asp-for="Product.Genre" class="form-control"/>
+            <span asp-validation-for="Product.Genre" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Product.YouTubeID" class="control-label"></label>
+            <input asp-for="Product.YouTubeID" class="form-control"/>
+            <span asp-validation-for="Product.YouTubeID" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Product.Cast" class="control-label"></label>
+            <br/>
+            @foreach (var product in Model.Product.Cast)
+            {
+                <input asp-for="@product"/>
+            }
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary"/>
+        </div>
+        
+    </form>
+    
+</div>
+
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
