@@ -34,7 +34,9 @@ namespace ContosoCrafts.WebSite.Controllers
 
         public class RatingRequest
         {
+            
             public string ProductId { get; set; }
+            //Rating Field
             public int Rating { get; set; }
         }
     }
