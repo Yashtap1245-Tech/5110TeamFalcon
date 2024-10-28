@@ -9,7 +9,11 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
-   public class JsonFileProductService
+    /// <summary>
+    /// Service for managing product data stored in a JSON file.
+    /// This class provides methods to retrieve, add, update, and delete product data.
+    /// </summary>
+    public class JsonFileProductService
     {
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
