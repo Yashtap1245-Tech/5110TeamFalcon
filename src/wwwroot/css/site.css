@@ -196,7 +196,12 @@ ul {
 }
 /*Removed old footer and header and gave colorr which matches our websiteBackgrounds */
 .bg-navbar {
-    background-color: #333333;
+    background: linear-gradient(135deg, #443939, #face7d);
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
 }
 
 .bg-footer {
@@ -206,4 +211,5 @@ ul {
 
 body {
     background-color: #f7f7f7;
+    padding-top: 70px; 
 }
