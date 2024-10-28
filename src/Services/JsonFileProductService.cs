@@ -73,8 +73,11 @@ namespace ContosoCrafts.WebSite.Services
         /// If the rating does not exist, add it
         /// Save the update
         /// </summary>
-        /// <param name="productId"></param>
-        /// <param name="rating"></param>
+        /// Adds a rating to a specific product.
+        /// If the rating does not already exist, it adds the rating and saves the updated product data.
+        /// </summary>
+        /// <param name="productId">The unique identifier of the product to rate.</param>
+        /// <param name="rating">The rating value to add (must be between 0 and 5).</param>
         public bool AddRating(string productId, int rating)
         {
             // If the ProductID is invalid, return
