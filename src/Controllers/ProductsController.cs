@@ -7,6 +7,10 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Controllers
 {
+    /// <summary>
+    /// Controller for managing products in the application. 
+    /// This class provides API endpoints for retrieving product data and submitting ratings.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class ProductsController : ControllerBase
