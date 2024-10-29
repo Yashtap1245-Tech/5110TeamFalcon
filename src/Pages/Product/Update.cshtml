@@ -55,10 +55,15 @@
         <div class="form-group">
             <label asp-for="Product.Cast" class="control-label"></label>
             <br/>
-            @foreach (var product in Model.Product.Cast)
+            @* @foreach (var product in Model.Product.Cast) *@
+            @* { *@
+            @*     <input asp-for="@product"/> *@
+            @* } *@
+            @for (var i = 0; i < Model.Product.Cast.Count; i++)
             {
-                <input asp-for="@product"/>
-            }
+                <input asp-for="@Model.Product.Cast[i]"/>
+                <span asp-validation-for="Product.Cast" class="text-danger"></span>
+            } 
         </div>
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary"/>
