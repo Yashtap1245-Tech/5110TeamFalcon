@@ -151,6 +151,7 @@ namespace ContosoCrafts.WebSite.Services
             // {
             //     productData.Cast[i] = data.Cast[i];
             // }
+            productData.Cast = data.Cast;
             // productData.Url = data.Url;
             // productData.Image = data.Image;
 
