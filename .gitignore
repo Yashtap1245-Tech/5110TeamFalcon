@@ -331,4 +331,3 @@ ASALocalRun/
 .mfractor/
 /.gitignore
 /src/wwwroot/data/Thumbs.db
-/UnitTests/TestFixture.cs
