@@ -41,6 +41,8 @@ namespace ContosoCrafts.WebSite.Models
         public string YouTubeID { get; set; }
         //Genre field
         public string Genre { get; set; }
+        //IMDbRating Field
+        public float IMDbRating { get; set; }
         // Store the Comments entered by the users on this product
         public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
         //JSON Serializer
