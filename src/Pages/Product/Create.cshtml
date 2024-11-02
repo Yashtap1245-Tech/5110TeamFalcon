@@ -1,0 +1,99 @@
+﻿@page
+@using ContosoCrafts.WebSite.Services
+@model CreateModel;
+@inject JsonFileProductService ProductService;
+
+@{
+    ViewData["Title"] = "Create Movie Page";
+}
+
+<h2><center>Falcon Movies Create Page</center></h2>
+<br />
+<br />
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="Product.Title" class="control-label"></label>
+            <input asp-for="Product.Title" class="form-control" required />
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Image" class="control-label"></label>
+            <input asp-for="Product.Image" class="form-control" required />
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Director" class="control-label"></label>
+            <input asp-for="Product.Director" class="form-control" required />
+            <span asp-validation-for="Product.Director" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Description" class="control-label"></label>
+            <textarea asp-for="Product.Description" class="form-control" required></textarea>
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Genre" class="control-label"></label>
+            <input asp-for="Product.Genre" class="form-control" required />
+            <span asp-validation-for="Product.Genre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.YouTubeID" class="control-label"></label>
+            <input asp-for="Product.YouTubeID" class="form-control" required />
+            <span asp-validation-for="Product.YouTubeID" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.TrailerUrl" class="control-label"></label>
+            <input asp-for="Product.TrailerUrl" class="form-control" required />
+            <span asp-validation-for="Product.TrailerUrl" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.ReleaseYear" class="control-label"></label>
+            <input asp-for="Product.ReleaseYear" type="number" class="form-control" required />
+            <span asp-validation-for="Product.ReleaseYear" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.IMDbRating" class="control-label"></label>
+            <input asp-for="Product.IMDbRating" type="number" step="0.1" class="form-control" required />
+            <span asp-validation-for="Product.IMDbRating" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Cast" class="control-label"></label>
+            <br />
+             
+            <button type="button" class="btn btn-secondary" onclick="addCastMember()">Add Cast Member</button>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function addCastMember() {
+            const castContainer = document.querySelector('.form-group:nth-child(10)'); // Adjust index based on form structure
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'Product.Cast'; // Ensure proper binding
+            input.className = 'form-control';
+            castContainer.appendChild(input);
+        }
+    </script>
+}
