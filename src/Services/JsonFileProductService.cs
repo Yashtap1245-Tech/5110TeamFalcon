@@ -211,6 +211,20 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
+        /// Create a new product using product passed
+        /// </summary>
+        /// <returns>The newly created model</returns>
+        public ProductModel CreateNewProduct(ProductModel product)
+        {
+            var dataSet = GetAllData();
+            dataSet = dataSet.Append(product);
+
+            SaveData(dataSet);
+
+            return product;
+        }
+
+        /// <summary>
         /// Remove the item from the system
         /// </summary>
         /// <returns>The deleted product if found otherwise null</returns>
