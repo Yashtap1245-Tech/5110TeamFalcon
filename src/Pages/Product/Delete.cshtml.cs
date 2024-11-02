@@ -29,7 +29,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             {
                 return Page();
             }
-            ProductService.UpdateData(Product);
+            ProductService.DeleteData(Product.Id);
             return RedirectToPage("./Index");
         }
     }
