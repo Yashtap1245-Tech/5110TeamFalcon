@@ -23,12 +23,12 @@ namespace ContosoCrafts.WebSite.Services
         {
             WebHostEnvironment = webHostEnvironment;
         }
-        
+
         /// <summary>
         /// Gets the web hosting environment for accessing the web root path.
         /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
-        
+
         /// <summary>
         /// Gets the path of the JSON file used to store product data.
         /// </summary>
@@ -36,7 +36,7 @@ namespace ContosoCrafts.WebSite.Services
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
-        
+
         /// <summary>
         /// Retrieves all product data from the JSON file.
         /// </summary>
@@ -52,7 +52,7 @@ namespace ContosoCrafts.WebSite.Services
                     });
             }
         }
-        
+
         /// <summary>
         /// Retrieves a specific product's data for reading, based on the product ID.
         /// </summary>
@@ -228,11 +228,29 @@ namespace ContosoCrafts.WebSite.Services
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
-            
+
             SaveData(newDataSet);
 
             return data;
         }
-        
+        public IEnumerable<string> GetUniqueGenres()
+        {
+            return GetAllData()
+                   .Select(product => product.Genre)
+                   .Distinct()
+                   .OrderBy(genre => genre);
+        }
+
+        public IEnumerable<ProductModel> GetProductsFromGenre(string genre)
+        {
+            var dataSet = GetAllData();
+            if (string.IsNullOrEmpty(genre))
+            {
+                return dataSet;
+            }
+            var data = dataSet.Where(product => product.Genre.Equals(genre));
+            return data;
+        }
+
     }
 }
