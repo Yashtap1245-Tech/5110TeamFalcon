@@ -8,18 +8,17 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    
     /// <summary>
-    /// Yash     
-    /// <summary>
-    /// Sai Sreyas
-    /// <summary>
-    /// Mehant
+    /// Index Page will return all the data to show the user
     /// </summary>
     public class IndexModel : PageModel
     {
-        //Hi Mike
         private readonly ILogger<IndexModel> _logger;
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
         {
@@ -27,9 +26,15 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        // Data Service
         public JsonFileProductService ProductService { get; }
+        // Collection of the Data
         public IEnumerable<ProductModel> Products { get; private set; }
 
+        /// <summary>
+        /// REST OnGet
+        /// Return all the data
+        /// </summary>
         public void OnGet()
         {   
             Products = ProductService.GetAllData();

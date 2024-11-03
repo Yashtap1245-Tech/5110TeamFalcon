@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoCrafts.WebSite.Pages.Product;
 
+    /// <summary>
+    /// Update Page will return all the data in an editable fields. 
+    /// </summary>
 public class UpdateModel : PageModel
 {
         // Data Service
