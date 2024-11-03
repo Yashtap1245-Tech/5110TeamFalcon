@@ -1,55 +1,27 @@
 [
   {
-    "Id": "jenlooper-cactus",
-    "Maker": "@jenlooper",
-    "img": "https://humanehollywood.org/app/uploads/2020/06/5KCVkau1HEl7ZzfPsKAPM0sMiKc-scaled.jpg",
-    "Url": "https://www.hackster.io/agent-hawking-1/the-quantified-cactus-an-easy-plant-soil-moisture-sensor-e65393",
-    "Title": "The Shawshank Redemption",
-    "Director": "Frank Darabont",
-    "Description": "The Shawshank Redemption is a 1994 American prison drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis Red Redding (Morgan Freeman), and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles.",
-    "Ratings": [
-      5,
-      5,
-      3,
-      2,
-      1,
-      5
-    ],
-    "Cast": [
-      "Tim Robbins",
-      "Morgan Freeman",
-      "Bob Gunton",
-      "William Sadler"
-    ],
-    "ReleaseYear": 1994,
-    "IMDbRating": 9.3,
-    "TrailerUrl": "https://www.youtube.com/watch?v=NmzuHjWmXOc",
-    "YouTubeID": "NmzuHjWmXOc",
-    "ProductType": 55,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": [],
-    "Genre": "Drama"
-  },
-  {
     "Id": "jenlooper-light",
     "Maker": "jenlooper",
     "img": "https://live.staticflickr.com/4848/31162695417_53fe89db83_n.jpg",
     "Url": "https://www.hackster.io/agent-hawking-1/book-light-dee7e4",
     "Title": "The Godfather",
     "Director": "Francis Ford Coppola",
-    "Description": "The Godfather is a 1972 American epic gangster film directed by Francis Ford Coppola, who co-wrote the screenplay with Mario Puzo, based on Puzo's best-selling 1969 novel. The film stars an ensemble cast including Marlon Brando, Al Pacino, James Caan, Richard Castellano, Robert Duvall, Sterling Hayden, John Marley, Richard Conte, and Diane Keaton. It is the first installment in The Godfather trilogy, chronicling the Corleone family under patriarch Vito Corleone (Brando) from 1945 to 1955. It focuses on the transformation of his youngest son, Michael Corleone (Pacino), from reluctant family outsider to ruthless mafia boss.",
+    "Description": "The Godfather is a 1972 American epic gangster film directed by Francis Ford Coppola, who co-wrote the screenplay with Mario Puzo, based on Puzo\u0027s best-selling 1969 novel. The film stars an ensemble cast including Marlon Brando, Al Pacino, James Caan, Richard Castellano, Robert Duvall, Sterling Hayden, John Marley, Richard Conte, and Diane Keaton. It is the first installment in The Godfather trilogy, chronicling the Corleone family under patriarch Vito Corleone (Brando) from 1945 to 1955. It focuses on the transformation of his youngest son, Michael Corleone (Pacino), from reluctant family outsider to ruthless mafia boss.",
     "Ratings": null,
-    "Cast": [ "Al Pacino", "Marlon Brando", "James Caan" ],
-    "ReleaseYear": 1972,
-    "IMDbRating": 9.2,
+    "Cast": [
+      "Al Pacino",
+      "Marlon Brando",
+      "James Caan"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=UaVTIH8mujA",
-    "YouTubeID": "UaVTIH8mujA",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Crime"
+    "ReleaseYear": 1972,
+    "YouTubeID": "UaVTIH8mujA",
+    "Genre": "Crime",
+    "IMDbRating": 9.2,
+    "CommentList": []
   },
   {
     "Id": "jenlooper-lightshow",
@@ -60,16 +32,20 @@
     "Director": "Christopher Nolan",
     "Description": "The Dark Knight is a 2008 superhero film directed by Christopher Nolan, from a screenplay co-written with his brother Jonathan. Based on the DC Comics superhero Batman, it is the sequel to Batman Begins (2005), and the second installment in The Dark Knight trilogy. The plot follows the vigilante Batman, police lieutenant James Gordon, and district attorney Harvey Dent, who form an alliance to dismantle organized crime in Gotham City. Their efforts are derailed by the Joker, an anarchistic mastermind who seeks to test how far Batman will go to save the city from chaos. The ensemble cast includes Christian Bale, Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman.",
     "Ratings": null,
-    "Cast": [ "Christian Bale", "Heath Ledger", "Gary Oldman" ],
-    "ReleaseYear": 2008,
-    "IMDbRating": 9.0,
+    "Cast": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Gary Oldman"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
-    "YouTubeID": "EXeTwQWrcwY",
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Action"
+    "ReleaseYear": 2008,
+    "YouTubeID": "EXeTwQWrcwY",
+    "Genre": "Action",
+    "IMDbRating": 9,
+    "CommentList": []
   },
   {
     "Id": "jenlooper-survival",
@@ -80,16 +56,20 @@
     "Director": "Francis Ford Coppola",
     "Description": "The Godfather Part II is a 1974 American epic crime film. The film is produced and directed by Francis Ford Coppola, loosely based on the 1969 novel The Godfather by Mario Puzo, who co-wrote the screenplay with Coppola. It is both a sequel and a prequel to the 1972 film The Godfather, presenting parallel dramas: one picks up the 1958 story of Michael Corleone (Al Pacino), the new Don of the Corleone family, protecting the family business in the aftermath of an attempt on his life; the prequel covers the journey of his father, Vito Corleone (Robert De Niro), from his Sicilian childhood to the founding of his family enterprise in New York City. The ensemble cast also features Robert Duvall, Diane Keaton, Talia Shire, Morgana King, John Cazale, Marianna Hill, and Lee Strasberg.",
     "Ratings": null,
-    "Cast": [ "Diane Keaton", "John Cazale", "Talia Shire" ],
-    "ReleaseYear": 1974,
-    "IMDbRating": 9.0,
+    "Cast": [
+      "Diane Keaton",
+      "John Cazale",
+      "Talia Shire"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=9O1Iy9od7-A",
-    "YouTubeID":"9O1Iy9od7-A",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Crime"
+    "ReleaseYear": 1974,
+    "YouTubeID": "9O1Iy9od7-A",
+    "Genre": "Crime",
+    "IMDbRating": 9,
+    "CommentList": []
   },
   {
     "Id": "sailorhg-bubblesortpic",
@@ -100,16 +80,20 @@
     "Director": "Sidney Lumet",
     "Description": "12 Angry Men is a 1957 American legal drama film directed by Sidney Lumet in his feature directorial debut, adapted from a 1954 teleplay of the same name by Reginald Rose. The film tells the story of a jury of twelve men as they deliberate the conviction or acquittal of a teenager charged with murder on the basis of reasonable doubt; disagreement and conflict among the jurors forces them to question their morals and values. It stars an ensemble cast, featuring Henry Fonda (who also produced the film with Rose), Lee J. Cobb, Ed Begley, E. G. Marshall, and Jack Warden.",
     "Ratings": null,
-    "Cast": [ "Henry fonda", "Joseph Sweeney", "Martin Balasam" ],
-    "ReleaseYear": 1957,
-    "IMDbRating": 8.9,
+    "Cast": [
+      "Henry fonda",
+      "Joseph Sweeney",
+      "Martin Balasam"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=TEN-2uTi2c0",
-    "YouTubeID": "TEN-2uTi2c0",
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Drama"
+    "ReleaseYear": 1957,
+    "YouTubeID": "TEN-2uTi2c0",
+    "Genre": "Drama",
+    "IMDbRating": 8.9,
+    "CommentList": []
   },
   {
     "Id": "sailorhg-corsage",
@@ -118,40 +102,48 @@
     "Url": "https://twitter.com/sailorhg/status/1090113666911891456",
     "Title": "The Lord of the Rings: The Return of the King",
     "Director": "Peter Jackson",
-    "Description": "The Lord of the Rings: The Return of the King is a 2003 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson. It is based on 1955's The Return of the King, the third volume of the novel The Lord of the Rings by J. R. R. Tolkien. The sequel to 2002's The Lord of the Rings: The Two Towers, the film is the third and final instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Bernard Hill, Billy Boyd, Dominic Monaghan, Orlando Bloom, Hugo Weaving, Miranda Otto, David Wenham, Karl Urban, John Noble, Andy Serkis, Ian Holm, and Sean Bean. Continuing the plot of the previous film, Frodo, Sam and Gollum make their final way toward Mount Doom to destroy the One Ring, unaware of Gollum's true intentions, while Merry, Pippin, Gandalf, Aragorn, Legolas, Gimli and their allies join forces against Sauron and his legions from Mordor.",
+    "Description": "The Lord of the Rings: The Return of the King is a 2003 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson. It is based on 1955\u0027s The Return of the King, the third volume of the novel The Lord of the Rings by J. R. R. Tolkien. The sequel to 2002\u0027s The Lord of the Rings: The Two Towers, the film is the third and final instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Bernard Hill, Billy Boyd, Dominic Monaghan, Orlando Bloom, Hugo Weaving, Miranda Otto, David Wenham, Karl Urban, John Noble, Andy Serkis, Ian Holm, and Sean Bean. Continuing the plot of the previous film, Frodo, Sam and Gollum make their final way toward Mount Doom to destroy the One Ring, unaware of Gollum\u0027s true intentions, while Merry, Pippin, Gandalf, Aragorn, Legolas, Gimli and their allies join forces against Sauron and his legions from Mordor.",
     "Ratings": [
       4
     ],
-    "Cast": [ "Elijah Wood", "Karl Urban", "Sean Astin" ],
-    "ReleaseYear": 2003,
-    "IMDbRating": 8.9,
+    "Cast": [
+      "Elijah Wood",
+      "Karl Urban",
+      "Sean Astin"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=y2rYRu8UW8M",
-    "YouTubeID": "y2rYRu8UW8M",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Fantasy"
+    "ReleaseYear": 2003,
+    "YouTubeID": "y2rYRu8UW8M",
+    "Genre": "Fantasy",
+    "IMDbRating": 8.9,
+    "CommentList": []
   },
   {
     "Id": "sailorhg-kit",
     "Maker": "sailorhg",
     "img": "https://i.pinimg.com/564x/e1/42/a5/e142a53687a5d1fcd838f2127d267999.jpg",
     "Url": "https://twitter.com/sailorhg/status/1090122822007963648",
-    "Title": "Schindler's List",
+    "Title": "Schindler\u0027s List",
     "Director": "Steven Spielberg",
-    "Description": "Schindler's List is a 1993 American epic historical drama film directed and produced by Steven Spielberg and written by Steven Zaillian. It is based on the 1982 novel Schindler's Ark by Thomas Keneally. The film follows Oskar Schindler, a German industrialist who saved more than a thousand mostly Polish–Jewish refugees from the Holocaust by employing them in his factories during World War II. It stars Liam Neeson as Schindler, Ralph Fiennes as SS officer Amon Göth, and Ben Kingsley as Schindler's Jewish accountant Itzhak Stern.",
+    "Description": "Schindler\u0027s List is a 1993 American epic historical drama film directed and produced by Steven Spielberg and written by Steven Zaillian. It is based on the 1982 novel Schindler\u0027s Ark by Thomas Keneally. The film follows Oskar Schindler, a German industrialist who saved more than a thousand mostly Polish\u2013Jewish refugees from the Holocaust by employing them in his factories during World War II. It stars Liam Neeson as Schindler, Ralph Fiennes as SS officer Amon G\u00F6th, and Ben Kingsley as Schindler\u0027s Jewish accountant Itzhak Stern.",
     "Ratings": null,
-    "Cast": [ "Liam Neeson", "Ralph Fiennes", "Ben Kingsley" ],
-    "ReleaseYear": 1993,
-    "IMDbRating": 8.9,
+    "Cast": [
+      "Liam Neeson",
+      "Ralph Fiennes",
+      "Ben Kingsley"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=mxphAlJID9U",
-    "YouTubeID": "mxphAlJID9U",
     "ProductType": 130,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Drama"
+    "ReleaseYear": 1993,
+    "YouTubeID": "mxphAlJID9U",
+    "Genre": "Drama",
+    "IMDbRating": 8.9,
+    "CommentList": []
   },
   {
     "Id": "sailorhg-led",
@@ -162,16 +154,20 @@
     "Director": "Quentin Tarantino",
     "Description": "Pulp Fiction is a 1994 American independent crime film written and directed by Quentin Tarantino from a story he conceived with Roger Avary. It tells four intertwining tales of crime and violence in Los Angeles, California. The film stars John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman. The title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.",
     "Ratings": null,
-    "Cast": [ "Quentin Tarantino", "John Travolta", "Samuel Jackson" ],
-    "ReleaseYear": 1994,
-    "IMDbRating": 8.9,
+    "Cast": [
+      "Quentin Tarantino",
+      "John Travolta",
+      "Samuel Jackson"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=tGpTpVyI_OQ",
-    "YouTubeID": "tGpTpVyI_OQ",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Crime"
+    "ReleaseYear": 1994,
+    "YouTubeID": "tGpTpVyI_OQ",
+    "Genre": "Crime",
+    "IMDbRating": 8.9,
+    "CommentList": []
   },
   {
     "Id": "selinazawacki-soi-shirt",
@@ -180,18 +176,22 @@
     "Url": "https://www.instagram.com/p/BNvESj-j8PI/",
     "Title": "The Lord of the Rings: The Fellowship of the Ring",
     "Director": "Peter Jackson",
-    "Description": "The Lord of the Rings: The Fellowship of the Ring is a 2001 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson, based on 1954's The Fellowship of the Ring, the first volume of the novel The Lord of the Rings by J. R. R. Tolkien. The film is the first instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Billy Boyd, Dominic Monaghan, Orlando Bloom, Christopher Lee, Hugo Weaving, Sean Bean, Ian Holm, and Andy Serkis.",
+    "Description": "The Lord of the Rings: The Fellowship of the Ring is a 2001 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson, based on 1954\u0027s The Fellowship of the Ring, the first volume of the novel The Lord of the Rings by J. R. R. Tolkien. The film is the first instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Billy Boyd, Dominic Monaghan, Orlando Bloom, Christopher Lee, Hugo Weaving, Sean Bean, Ian Holm, and Andy Serkis.",
     "Ratings": null,
-    "Cast": [ "Viggo Mortensen", "Sean Bean", "Orlando Bloom" ],
-    "ReleaseYear": 2001,
-    "IMDbRating ": 8.7,
+    "Cast": [
+      "Viggo Mortensen",
+      "Sean Bean",
+      "Orlando Bloom"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=_nZdmwHrcnw",
-    "YouTubeID": "_nZdmwHrcnw",
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Fantasy"
+    "ReleaseYear": 2001,
+    "YouTubeID": "_nZdmwHrcnw",
+    "Genre": "Fantasy",
+    "IMDbRating": 0,
+    "CommentList": []
   },
   {
     "Id": "selinazawacki-soi-pins",
@@ -200,18 +200,22 @@
     "Url": "https://www.instagram.com/p/BNm6hZzDoEF/",
     "Title": "The Good, the Bad and the Ugly",
     "Director": "Sergio Leone",
-    "Description": "The Good, the Bad and the Ugly (Italian: Il buono, il brutto, il cattivo, literally the good, the ugly, the bad) is a 1966 Italian epic spaghetti Western film directed by Sergio Leone and starring Clint Eastwood as the Good, Lee Van Cleef as the Bad, and Eli Wallach as the Ugly. Its screenplay was written by Age & Scarpelli, Luciano Vincenzoni, and Leone (with additional screenplay material and dialogue provided by an uncredited Sergio Donati),based on a story by Vincenzoni and Leone. Director of photography Tonino Delli Colli was responsible for the film's sweeping widescreen cinematography, and Ennio Morricone composed the film's score.",
+    "Description": "The Good, the Bad and the Ugly (Italian: Il buono, il brutto, il cattivo, literally the good, the ugly, the bad) is a 1966 Italian epic spaghetti Western film directed by Sergio Leone and starring Clint Eastwood as the Good, Lee Van Cleef as the Bad, and Eli Wallach as the Ugly. Its screenplay was written by Age \u0026 Scarpelli, Luciano Vincenzoni, and Leone (with additional screenplay material and dialogue provided by an uncredited Sergio Donati),based on a story by Vincenzoni and Leone. Director of photography Tonino Delli Colli was responsible for the film\u0027s sweeping widescreen cinematography, and Ennio Morricone composed the film\u0027s score.",
     "Ratings": null,
-    "Cast": [ "Clint Eastwood", "Eli Wallach", "Lee Van Cleef" ],
-    "ReleaseYear": 1966,
-    "IMDbRating": 8.8,
+    "Cast": [
+      "Clint Eastwood",
+      "Eli Wallach",
+      "Lee Van Cleef"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=IFNUGzCOQoI",
-    "YouTubeID": "IFNUGzCOQoI",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Western"
+    "ReleaseYear": 1966,
+    "YouTubeID": "IFNUGzCOQoI",
+    "Genre": "Western",
+    "IMDbRating": 8.8,
+    "CommentList": []
   },
   {
     "Id": "vogueandcode-hipster-dev-bro",
@@ -222,16 +226,20 @@
     "Director": "Robert Zemeckis",
     "Description": "Forrest Gump is a 1994 American comedy-drama film directed by Robert Zemeckis. An adaptation of the 1986 novel of the same name by Winston Groom, the screenplay of the film is written by Eric Roth. It stars Tom Hanks in the title role, alongside Robin Wright, Gary Sinise, Mykelti Williamson, and Sally Field in lead roles. The film follows the life of an Alabama man named Forrest Gump (Hanks) and his experiences in the 20th-century United States.",
     "Ratings": null,
-    "Cast": [ "Tom Hanks", "Robin Wright", "Gary Sinise" ],
-    "ReleaseYear": 1994,
-    "IMDbRating": 8.8,
+    "Cast": [
+      "Tom Hanks",
+      "Robin Wright",
+      "Gary Sinise"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=XHhAG-YLdk8",
-    "YouTubeID": "XHhAG-YLdk8",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Drama"
+    "ReleaseYear": 1994,
+    "YouTubeID": "XHhAG-YLdk8",
+    "Genre": "Drama",
+    "IMDbRating": 8.8,
+    "CommentList": []
   },
   {
     "Id": "vogueandcode-pretty-girls-code-tee",
@@ -240,18 +248,22 @@
     "Url": "https://www.vogueandcode.com/shop/pretty-girls-code-tee",
     "Title": "The Lord of the Rings: The Two Towers",
     "Director": "Peter Jackson",
-    "Description": "The Lord of the Rings: The Two Towers is a 2002 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, Stephen Sinclair, and Jackson, based on 1954's The Two Towers, the second volume of the novel The Lord of the Rings by J. R. R. Tolkien. The sequel to 2001's The Lord of the Rings: The Fellowship of the Ring, the film is the second instalment in The Lord of the Rings trilogy.",
+    "Description": "The Lord of the Rings: The Two Towers is a 2002 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, Stephen Sinclair, and Jackson, based on 1954\u0027s The Two Towers, the second volume of the novel The Lord of the Rings by J. R. R. Tolkien. The sequel to 2001\u0027s The Lord of the Rings: The Fellowship of the Ring, the film is the second instalment in The Lord of the Rings trilogy.",
     "Ratings": null,
-    "Cast": [ "Viggo Mortensen", "Sean Bean", "Orlando Bloom" ],
+    "Cast": [
+      "Viggo Mortensen",
+      "Sean Bean",
+      "Orlando Bloom"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=LbfMDwc4azU",
-    "YouTubeID": "LbfMDwc4azU",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
     "ReleaseYear": 2002,
+    "YouTubeID": "LbfMDwc4azU",
+    "Genre": "Fantasy",
     "IMDbRating": 8.7,
-    "Genre": "Fantasy"
+    "CommentList": []
   },
   {
     "Id": "vogueandcode-ruby-sis-2",
@@ -262,16 +274,20 @@
     "Director": "David Fincher",
     "Description": "Fight Club is a 1999 American film directed by David Fincher and starring Brad Pitt, Edward Norton, and Helena Bonham Carter. It is based on a 1996 novel by Chuck Palahniuk. Norton plays the unnamed narrator, who is discontented with his white-collar job. He forms a fight club with soap salesman Tyler Durden (Pitt) and becomes embroiled in a relationship with an impoverished but beguilingly attractive woman, Marla Singer (Bonham Carter)",
     "Ratings": null,
-    "Cast": [ "Edward Norton", "Brad Pitt", "Helena Bonham Carter" ],
-    "ReleaseYear": 1999,
-    "IMDbRating": 8.8,
+    "Cast": [
+      "Edward Norton",
+      "Brad Pitt",
+      "Helena Bonham Carter"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=BdJKm16Co6M",
-    "YouTubeID": "BdJKm16Co6M",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Drama"
+    "ReleaseYear": 1999,
+    "YouTubeID": "BdJKm16Co6M",
+    "Genre": "Drama",
+    "IMDbRating": 8.8,
+    "CommentList": []
   },
   {
     "Id": "selinazawacki-moon",
@@ -280,18 +296,22 @@
     "Url": "https://www.instagram.com/p/BFktVYPinKQ/",
     "Title": "Inception",
     "Director": "Christopher Nolan",
-    "Description": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan, who also produced it with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.",
+    "Description": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan, who also produced it with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person\u0027s idea into a target\u0027s subconscious.",
     "Ratings": null,
-    "Cast": [ "Leonardo Di Caprio", "Cillian Murphy", "Joseph Gordon-Levitt" ],
-    "ReleaseYear": 1999,
-    "IMDbRating": 8.8,
+    "Cast": [
+      "Leonardo Di Caprio",
+      "Cillian Murphy",
+      "Joseph Gordon-Levitt"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=YoHD9XEInc0",
-    "YouTubeID": "YoHD9XEInc0",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Sci-Fi"
+    "ReleaseYear": 1999,
+    "YouTubeID": "YoHD9XEInc0",
+    "Genre": "Sci-Fi",
+    "IMDbRating": 8.8,
+    "CommentList": []
   },
   {
     "Id": "selinazawacki-shirt",
@@ -302,15 +322,41 @@
     "Director": "Lana Wachowski",
     "Description": "The Matrix is a 1999 science fiction action film written and directed by the Wachowskis. It is the first installment in the Matrix film series, starring Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano, and depicts a dystopian future in which humanity is unknowingly trapped inside the Matrix, a simulated reality that intelligent machines have created to distract humans while using their bodies as an energy source.",
     "Ratings": null,
-    "Cast": [ "Keanu Reeves", "Carrie-Anne Moss", "Laurence Fishburne" ],
-    "ReleaseYear": 1999,
-    "IMDbRating": 8.7,
+    "Cast": [
+      "Keanu Reeves",
+      "Carrie-Anne Moss",
+      "Laurence Fishburne"
+    ],
     "TrailerUrl": "https://www.youtube.com/watch?v=vKQi3bBA1y8",
-    "YouTubeID": "vKQi3bBA1y8",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": [],
-    "Genre": "Sci-Fi"
+    "ReleaseYear": 1999,
+    "YouTubeID": "vKQi3bBA1y8",
+    "Genre": "Sci-Fi",
+    "IMDbRating": 8.7,
+    "CommentList": []
+  },
+  {
+    "Id": "98562356-da96-4eb1-9d93-7901cfbe14b5",
+    "Maker": null,
+    "img": "https://media.posterlounge.com/img/products/710000/706559/706559_poster.jpg",
+    "Url": null,
+    "Title": "The Shawshank Redemption",
+    "Director": "Frank Darabont",
+    "Description": "The Shawshank Redemption is a 1994 American prison drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis \u0022Red\u0022 Redding (Morgan Freeman), and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles.",
+    "Ratings": null,
+    "Cast": [
+      "Tim Robbins, Morgan Freeman, Bob Gunton"
+    ],
+    "TrailerUrl": "https://www.youtube.com/watch?v=NmzuHjWmXOc",
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "ReleaseYear": 1994,
+    "YouTubeID": "NmzuHjWmXOc",
+    "Genre": "Drama",
+    "IMDbRating": 9.2,
+    "CommentList": []
   }
 ]
