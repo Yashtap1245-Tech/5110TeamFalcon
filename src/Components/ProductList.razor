@@ -3,15 +3,42 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
+<div class="p-3">
+    <div class="d-flex align-items-center">
+        <div class="flex-grow-1 me-3">
+            <div class="form-group mb-0">
+                <label for="searchInput" class="sr-only">Search by Movie Title:</label>
+                <input id="searchInput" type="text" class="form-control" @bind="searchedMovie" placeholder="Search movies..." />
+            </div>
+        </div>
+
+        <div class="form-group mb-0 me-3">
+            <label for="genreDropdown" class="sr-only">Select Genre:</label>
+            <select id="genreDropdown" class="form-control" @bind="selectedGenre">
+                <option value="">All Genres</option>
+                @foreach (var genre in ProductService.GetUniqueGenres())
+                {
+                    <option value="@genre">@genre</option>
+                }
+            </select>
+        </div>
+
+        <button type="button" class="btn btn-secondary ms-2" @onclick="ResetGenre">Reset</button>
+    </div>
+</div>
+
+
+
 <div class="card-columns">
-    
-    @foreach (var product in ProductService.GetAllData())
+
+    @foreach (var product in ProductService.GetProductsFromGenre(selectedGenre).Where(movie => movie.Title.ToLower().Contains(searchedMovie.ToLower())))
     {
         <div class="card">
             <div class="card-img" style="background-image: url('@product.Image');">
             </div>
             <div class="card-body">
                 <h5 class="card-title">@product.Title</h5>
+                <h5 style="color: dimgray" class="card-genre">Genre: @product.Genre</h5>
             </div>
             <div class="card-footer">
                 <small class="text-muted">
@@ -66,9 +93,9 @@
                                 {
                                     <li class="list-inline-item">@actor</li>
                                 }
-                            <p class=" card-text">
+                                <p class=" card-text">
                                     <a href="@selectedProduct.TrailerUrl" target="_blank">Watch Trailer</a>
-                            </p>
+                                </p>
                             </ul>
                             <p class="card-text">IMDb Rating: @selectedProduct.IMDbRating</p>
                             <ul class="col align-items-center">
@@ -112,6 +139,10 @@
 {
     ProductModel selectedProduct;
     string selectedProductId;
+    string selectedGenre;
+    string searchedMovie = "";
+    public IEnumerable<ProductModel> filteredProducts;
+
     /// <summary>
     /// Selects a product by its unique product ID and retrieves its data, setting it as the active `selectedProduct`.
     /// - **Parameters**:
@@ -174,5 +205,10 @@
         System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
         ProductService.AddRating(selectedProductId, rating);
         SelectProduct(selectedProductId);
+    }
+
+    private void ResetGenre()
+    {
+        selectedGenre = "";
     }
 }
