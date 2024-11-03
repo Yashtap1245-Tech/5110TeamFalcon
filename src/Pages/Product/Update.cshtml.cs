@@ -5,16 +5,17 @@ using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ContosoCrafts.WebSite.Pages.Product;
+namespace ContosoCrafts.WebSite.Pages.Product
+{
 
     /// <summary>
     /// Update Page will return all the data in an editable fields. 
     /// </summary>
-public class UpdateModel : PageModel
-{
+    public class UpdateModel : PageModel
+    {
         // Data Service
         public JsonFileProductService ProductService { get; }
-        
+
         public UpdateModel(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -35,13 +36,23 @@ public class UpdateModel : PageModel
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
+
+        /// <summary>
+        ///     Handles POST requests for the page
+        /// </summary>
+        /// <returns>
+        ///     If validation fails, reload the current page to display validation errors
+        ///     Redirect to the Index page after a successful update
+        /// </returns>
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+
             ProductService.UpdateData(Product);
             return RedirectToPage("./Index");
         }
+    }
 }
