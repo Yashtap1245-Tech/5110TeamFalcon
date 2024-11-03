@@ -10,11 +10,14 @@ namespace ContosoCrafts.WebSite
 {
     public class Startup
     {
+        // Constructor to initialize configuration settings
         public Startup(IConfiguration configuration)
         {
+            // Inject the application's configuration settings
             Configuration = configuration;
         }
 
+        // Property to hold the configuration settings, allowing access throughout the Startup class
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -30,6 +33,7 @@ namespace ContosoCrafts.WebSite
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // Check if the application is running in the Development environment
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -40,19 +44,25 @@ namespace ContosoCrafts.WebSite
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            // Redirect HTTP requests to HTTPS
             app.UseHttpsRedirection();
+            // Enable serving of static files (like HTML, CSS, JS) from the wwwroot folder
             app.UseStaticFiles();
-
+            
+            // Set up routing
             app.UseRouting();
 
+            // Enable authorization middleware to protect endpoints
             app.UseAuthorization();
-
+            
+            // Define endpoints for the application
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapBlazorHub();
+                // Map fallback route to a specified Razor page
+                // This route handles cases where no other routes match
                 endpoints.MapFallbackToPage("/movie", "/shared/MoviePage");
 
                 // endpoints.MapGet("/products", (context) => 
