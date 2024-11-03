@@ -23,10 +23,12 @@ namespace ContosoCrafts.WebSite.Services
         {
             WebHostEnvironment = webHostEnvironment;
         }
+        
         /// <summary>
         /// Gets the web hosting environment for accessing the web root path.
         /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
+        
         /// <summary>
         /// Gets the path of the JSON file used to store product data.
         /// </summary>
@@ -34,6 +36,7 @@ namespace ContosoCrafts.WebSite.Services
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
+        
         /// <summary>
         /// Retrieves all product data from the JSON file.
         /// </summary>
@@ -49,6 +52,7 @@ namespace ContosoCrafts.WebSite.Services
                     });
             }
         }
+        
         /// <summary>
         /// Retrieves a specific product's data for reading, based on the product ID.
         /// </summary>
@@ -147,18 +151,7 @@ namespace ContosoCrafts.WebSite.Services
             productData.Genre = data.Genre;
             productData.YouTubeID = data.YouTubeID;
             productData.Director = data.Director;
-            // for (var i = 0; i < productData.Cast.Count; i++)
-            // {
-            //     productData.Cast[i] = data.Cast[i];
-            // }
             productData.Cast = data.Cast;
-            // productData.Url = data.Url;
-            // productData.Image = data.Image;
-
-            // productData.Quantity = data.Quantity;
-            // productData.Price = data.Price;
-
-            // productData.CommentList = data.CommentList;
 
             SaveData(products);
 
