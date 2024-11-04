@@ -7,11 +7,18 @@ using System;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
+    /// Create Page will return a form with fields to create new data
+    /// </summary>
     public class CreateModel : PageModel
     {
         // Data Service
         public JsonFileProductService ProductService { get; }
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        /// <param name="productService"></param>
         public CreateModel(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -24,6 +31,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
             Cast = new List<string>()
         };
 
+        /// <summary>
+        ///     Handles POST requests for the page
+        /// </summary>
+        /// <returns>
+        ///     If validation fails, reload the current page to display validation errors
+        ///     Redirect to the Index page after a successful create
+        /// </returns>
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
