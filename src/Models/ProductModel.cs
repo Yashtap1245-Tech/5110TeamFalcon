@@ -46,7 +46,7 @@ namespace ContosoCrafts.WebSite.Models
         //IMDbRating Field
         public float IMDbRating { get; set; }
         // Store the Comments entered by the users on this product
-        public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
+        public List<string> CommentList { get; set; } = new List<string>();
         //JSON Serializer
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
