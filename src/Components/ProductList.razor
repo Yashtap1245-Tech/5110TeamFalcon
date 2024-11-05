@@ -100,8 +100,12 @@
                             <p class="card-text">IMDb Rating: @selectedProduct.IMDbRating</p>
                             <ul class="col align-items-center">
                                 <p>Leave a comment</p>
-                                <textarea></textarea>
-                                <button class="btn btn-success">Comment</button>
+                                @foreach (var comment in selectedProduct.CommentList)
+                                {
+                                    <p>@comment</p>
+                                }
+                                <input @bind="newComment" class="form-control" />
+                                <button class="btn btn-success" @onclick="e=> SubmitComments()">Comment</button>
                             </ul>
                         </div>
                     </div>
@@ -141,6 +145,7 @@
     string selectedProductId;
     string selectedGenre;
     string searchedMovie = "";
+    string newComment = ""; // Property to hold the new comment
     public IEnumerable<ProductModel> filteredProducts;
 
     /// <summary>
@@ -207,8 +212,22 @@
         SelectProduct(selectedProductId);
     }
 
+
+    /// <summary>
+    /// Execute when the Add comments button is clicked
+    /// </summary>
+    void SubmitComments()
+    {
+        System.Console.WriteLine($"Comments received for {selectedProduct.Id}: {newComment}");
+        ProductService.AddComment(selectedProductId, newComment);
+        SelectProduct(selectedProductId);
+    }
+    
+    
     private void ResetGenre()
     {
         selectedGenre = "";
     }
+
+
 }
