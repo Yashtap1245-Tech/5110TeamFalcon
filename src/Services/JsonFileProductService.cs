@@ -251,6 +251,23 @@ namespace ContosoCrafts.WebSite.Services
             var data = dataSet.Where(product => product.Genre.Equals(genre));
             return data;
         }
+        
+       ///<summary>
+       /// Save the comments to the database
+       /// </summary> 
+        public bool AddComment(string productId, string comment)
+        {
+            var products = GetAllData().ToList();
+            var data = products.FirstOrDefault(p => p.Id == productId);
+            var comments = data.CommentList.ToList();
+            comments.Add(comment);
+            data.CommentList = comments.ToList();
+
+            // Save the data back to the data store
+            SaveData(products);
+
+            return true;
+        }
 
     }
 }
