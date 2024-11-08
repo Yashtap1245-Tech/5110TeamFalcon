@@ -27,7 +27,7 @@ namespace UnitTests.Services
         #region GetDataForRead
 
         [Test]
-        public void GetDataForRead_ExistingProduct_ReturnsProduct()
+        public void GetDataForRead_Existing_Product_Should_Return_Product()
         {
             // Arrange
             var productId = "1";
@@ -43,7 +43,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void GetDataForRead_NonExistingProduct_ReturnsNull()
+        public void GetDataForRead_Non_Existing_Product_Should_Return_Null()
         {
             // Arrange
             CreateTestFile(new List<ProductModel>());
@@ -60,7 +60,7 @@ namespace UnitTests.Services
         #region AddRating
 
         [Test]
-        public void AddRating_InValid_Product_Null_Should_Return_False()
+        public void AddRating_Invalid_Product_Null_Should_Return_False()
         {
             // Arrange
 
@@ -72,7 +72,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void AddRating_InValid_Product_Empty_Should_Return_False()
+        public void AddRating_Invalid_Product_Empty_Should_Return_False()
         {
             // Assert
 
@@ -97,7 +97,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void AddRating_Invalid_Rating_Below_0_Should_Return_False()
+        public void AddRating_Invalid_Rating_Below_Zero_Should_Return_False()
         {
             // Arrange
             var productId = "1";
@@ -112,7 +112,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void AddRating_Invalid_Rating_Above_5_Should_Return_False()
+        public void AddRating_Invalid_Rating_Above_Five_Should_Return_False()
         {
             // Arrange
             var productId = "1";
@@ -127,7 +127,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void AddRating_Valid_Product_Rating_Should_Return_True()
+        public void AddRating_Valid_Product_Should_Return_True()
         {
             // Arrange
             var productId = "1";
@@ -149,7 +149,7 @@ namespace UnitTests.Services
         #region UpdateData
 
         [Test]
-        public void UpdateData_ValidProduct_Should_ReturnUpdatedProduct()
+        public void UpdateData_Valid_Product_Should_Return_Updated_Product()
         {
             // Arrange
             var productId = "1";
@@ -195,7 +195,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void UpdateData_NonExistingProduct_Should_ReturnNull()
+        public void UpdateData_Non_Existing_Product_Should_Return_Null()
         {
             // Arrange
             var nonExistingProduct = new ProductModel
@@ -216,7 +216,7 @@ namespace UnitTests.Services
         #region CreateData
 
         [Test]
-        public void CreateData_CreatesNewProduct()
+        public void CreateData_Should_Create_New_Product()
         {
             // Arrange
 
@@ -233,7 +233,7 @@ namespace UnitTests.Services
         #region DeleteData
 
         [Test]
-        public void DeleteData_ExistingProduct_DeletesProduct()
+        public void DeleteData_Existing_Product_Should_Delete_Product()
         {
             // Arrange
             var productId = "1";
@@ -250,7 +250,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void DeleteData_NonExistingProduct_ReturnsNull()
+        public void DeleteData_Non_Existing_Product_Should_Return_Null()
         {
             // Arrange
             CreateTestFile(new List<ProductModel>());
@@ -263,7 +263,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void DeleteData_DeletesCorrectProduct_WhenMultipleProductsExist()
+        public void DeleteData_Existing_Product_Multiple_Products_Should_Delete_Correct_Product()
         {
             // Arrange
             var product1 = new ProductModel { Id = "1", Title = "Product 1" };
@@ -285,7 +285,7 @@ namespace UnitTests.Services
         #region GetProductsFromGenre
 
         [Test]
-        public void GetProductsFromGenre_NonExistentGenre_ReturnsEmptyList()
+        public void GetProductsFromGenre_Non_Existing_Genre_Should_Return_Empty_List()
         {
             // Arrange
             var product1 = new ProductModel { Id = "1", Title = "Action Movie 1", Genre = "Action" };
@@ -304,7 +304,7 @@ namespace UnitTests.Services
         #region AddComment
 
         [Test]
-        public void AddComment_ValidProduct_AddsComment()
+        public void AddComment_Valid_Product_Should_Add_Comment()
         {
             // Arrange
             var productId = "1";
@@ -322,7 +322,7 @@ namespace UnitTests.Services
         }
 
         [Test]
-        public void AddComment_DuplicateComment_ReturnsTrue_AndAddsComment()
+        public void AddComment_Duplicate_Comment_Should_Return_True_And_Add_Comment()
         {
             // Arrange
             var productId = "1";
