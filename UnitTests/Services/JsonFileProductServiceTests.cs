@@ -227,6 +227,59 @@ namespace UnitTests.Services
 
         #endregion DeleteData
 
+        #region GetProductsFromGenre
+
+        [Test]
+        public void GetProductsFromGenre_NonExistentGenre_ReturnsEmptyList()
+        {
+            var product1 = new ProductModel { Id = "1", Title = "Action Movie 1", Genre = "Action" };
+            var product2 = new ProductModel { Id = "2", Title = "Comedy Movie", Genre = "Comedy" };
+
+            CreateTestFile(new List<ProductModel> { product1, product2 });
+
+            var result = _service.GetProductsFromGenre("Drama");
+
+            Assert.That(result, Is.Empty);
+        }
+
+        #endregion GetProductsFromGenre
+
+        #region AddComment
+
+        [Test]
+        public void AddComment_ValidProduct_AddsComment()
+        {
+            var productId = "1";
+            var product = new ProductModel { Id = productId, Title = "Test Product", CommentList = new List<string>() };
+            CreateTestFile(new List<ProductModel> { product });
+
+            var comment = "This is a great product!";
+            var result = _service.AddComment(productId, comment);
+
+            var updatedProduct = _service.GetDataForRead(productId);
+
+            Assert.That(result, Is.True);
+            Assert.That(updatedProduct.CommentList, Contains.Item(comment));
+        }
+
+        [Test]
+        public void AddComment_DuplicateComment_ReturnsTrue_AndAddsComment()
+        {
+            var productId = "1";
+            var comment = "This is a great product!";
+            var product = new ProductModel { Id = productId, Title = "Test Product", CommentList = new List<string> { comment } };
+            CreateTestFile(new List<ProductModel> { product });
+
+            var result = _service.AddComment(productId, comment); // Adding a duplicate comment
+
+            var updatedProduct = _service.GetDataForRead(productId);
+
+            Assert.That(result, Is.True); // Method still returns true
+            Assert.That(updatedProduct.CommentList.Count, Is.EqualTo(2)); // The comment list should now have 2 of the same comment
+        }
+
+        #endregion AddComment
+
         private void CreateTestFile(IEnumerable<ProductModel> products)
         {
             var json = JsonSerializer.Serialize(products);
