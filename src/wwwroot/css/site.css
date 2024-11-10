@@ -154,6 +154,10 @@ html {
 .back-to-index {
     margin-top: 20px;
 }
+
+.movie-poster {
+    max-width: 300px;
+}
 button.accept-policy {
     font-size: 1rem;
     line-height: inherit;
