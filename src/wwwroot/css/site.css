@@ -151,6 +151,9 @@ html {
     margin-bottom: 10px;
 }
 
+.back-to-index {
+    margin-top: 20px;
+}
 button.accept-policy {
     font-size: 1rem;
     line-height: inherit;
