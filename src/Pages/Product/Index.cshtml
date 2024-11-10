@@ -5,26 +5,27 @@
 }
 
 <div class="container">
+    <a asp-page="/Index" class="btn btn-primary margin-bottom-10">Back</a>
     <a asp-page="/Product/Create" class="btn btn-primary margin-bottom-10">Create</a>
     <table class="table table-bordered table-striped">
         <thead>
-            <tr>
-                <th>Title</th>
-                <th>Action</th>
-            </tr>
+        <tr>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var product in Model.Products)
-            {
-                <tr>
-                    <td>@product.Title</td>
-                    <td>
-                        <a asp-page="/Product/Read" asp-route-id="@product.Id">Read</a> &nbsp;
-                        <a asp-page="/Product/Update" asp-route-id="@product.Id">Update</a> &nbsp;
-                        <a asp-page="/Product/Delete" asp-route-id="@product.Id">Delete</a>
-                    </td>
-                </tr>
-            }
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Title</td>
+                <td>
+                    <a asp-page="/Product/Read" asp-route-id="@product.Id">Read</a> &nbsp;
+                    <a asp-page="/Product/Update" asp-route-id="@product.Id">Update</a> &nbsp;
+                    <a asp-page="/Product/Delete" asp-route-id="@product.Id">Delete</a>
+                </td>
+            </tr>
+        }
         </tbody>
     </table>
 </div>
