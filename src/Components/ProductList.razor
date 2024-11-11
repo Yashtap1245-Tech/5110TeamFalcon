@@ -8,7 +8,11 @@
         <div class="flex-grow-1 me-3">
             <div class="form-group mb-0">
                 <label for="searchInput" class="sr-only">Search by Movie Title:</label>
-                <input id="searchInput" type="text" class="form-control" @bind="searchedMovie" placeholder="Search movies..." />
+                <input id="searchInput" type="text" class="form-control"
+                       @bind="searchedMovie" placeholder=""
+                       style="padding-left: 30px; background-image: url('data/search.png');
+                       background-repeat: no-repeat; background-position: 10px center;
+                       background-size: 20px; border-radius: 5px; border: 1px solid #ccc;" />
             </div>
         </div>
 
