@@ -228,3 +228,7 @@ body {
 .logo-navbar {
     height: 40px;
 }
+
+.card-genre {
+    color: dimgray;
+}
