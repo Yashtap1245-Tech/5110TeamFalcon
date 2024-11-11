@@ -232,3 +232,16 @@ body {
 .card-genre {
     color: dimgray;
 }
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: row; /* Keep the links in a row, even on mobile */
+        justify-content: space-between; /* Make sure there is space between the links */
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
