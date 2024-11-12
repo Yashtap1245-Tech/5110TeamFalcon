@@ -21,7 +21,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-
         // Collection of the Data
         [BindProperty]
         public ProductModel Product { get; set; }
@@ -35,7 +34,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
             // Product = ProductService.GetDataForRead(id);
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
-
 
         /// <summary>
         ///     Handles POST requests for the page
