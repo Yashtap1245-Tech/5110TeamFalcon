@@ -225,6 +225,7 @@
         System.Console.WriteLine($"Comments received for {selectedProduct.Id}: {newComment}");
         ProductService.AddComment(selectedProductId, newComment);
         SelectProduct(selectedProductId);
+        newComment = "";
     }
     
     
