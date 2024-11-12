@@ -31,8 +31,6 @@
     </div>
 </div>
 
-
-
 <div class="card-columns">
 
     @foreach (var product in ProductService.GetProductsFromGenre(selectedGenre).Where(movie => movie.Title.ToLower().Contains(searchedMovie.ToLower())))
@@ -40,10 +38,12 @@
         <div class="card">
             <div class="card-img" style="background-image: url('@product.Image');">
             </div>
+
             <div class="card-body">
                 <h5 class="card-title">@product.Title</h5>
                 <h5 class="card-genre">Genre: @product.Genre</h5>
             </div>
+
             <div class="card-footer">
                 <small class="text-muted">
                     <button @onclick="(e => SelectProduct(product.Id))"
@@ -67,6 +67,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-img" style="background-image: url('@selectedProduct.Image');">
@@ -114,6 +115,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="modal-footer">
                     @if (voteCount == 0)
                     {
@@ -201,6 +203,7 @@
 
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
+
     /// <summary>
     /// Submits a rating for the currently selected product.
     /// </summary>
@@ -216,7 +219,6 @@
         SelectProduct(selectedProductId);
     }
 
-
     /// <summary>
     /// Execute when the Add comments button is clicked
     /// </summary>
@@ -228,11 +230,8 @@
         newComment = "";
     }
     
-    
     private void ResetGenre()
     {
         selectedGenre = "";
     }
-
-
 }
