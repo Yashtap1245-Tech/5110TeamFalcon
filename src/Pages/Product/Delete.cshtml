@@ -3,14 +3,16 @@
 @{
     ViewData["Title"] = "Delete Product";
 }
-
+<!--Page Heading-->
 <h1>Delete Product</h1>
-
+<!--Delete Confirmation Message-->
 <h3>Are you sure you want to delete this product?</h3>
+<!--Display Product Details-->
 <p><strong>Title:</strong> @Model.Product.Title</p>
 <p><strong>Description:</strong> @Model.Product.Description</p>
-
+<!--Form for deleting the product-->
 <form method="post">
     <button type="submit" class="btn btn-primary">Delete</button>
+    <!--Cancel Button-->
     <a asp-page="./Index" class="btn btn-danger">Cancel</a>
 </form>
