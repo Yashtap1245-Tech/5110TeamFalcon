@@ -61,12 +61,11 @@
                 <span asp-validation-for="Product.Cast" class="text-danger"></span>
             } 
         </div>
+
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary"/>
         </div>
-        
     </form>
-    
 </div>
 
 <div class="form-group">
@@ -76,4 +75,3 @@
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-
