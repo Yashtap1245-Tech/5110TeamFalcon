@@ -7,71 +7,76 @@
      ViewData["Title"] = "Read Page";
 }
 
-
+<!--Page Heading-->
 <h2><center>Falcon Movies Update Page</center></h2>
 <br/>
 <br />
+<!--Form Container-->
 <div class="container">
+    <!--Form for updating the product-->
     <form method="post">
+        <!--Validation Summary-->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <!--Hidden field for ProductId-->
         @Html.HiddenFor(x => x.Product.Id)
-
+        <!--Input field for Product Title-->
         <div class="form-group">
             <label asp-for="Product.Title" class="control-label"></label>
             <input asp-for="Product.Title" class="form-control"/>
             <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
-        
+        <!--Input field for Image-->
         <div class="form-group">
             <label asp-for="Product.Image" class="control-label"></label>
             <input asp-for="Product.Image" class="form-control"/>
             <span asp-validation-for="Product.Image" class="text-danger"></span>
         </div>
-        
+        <!--Input field for director-->
         <div class="form-group">
             <label asp-for="Product.Director" class="control-label"></label>
             <input asp-for="Product.Director" class="form-control"/>
             <span asp-validation-for="Product.Director" class="text-danger"></span>
         </div>
-
+        <!--Input field for Product Description-->
         <div class="form-group">
             <label asp-for="Product.Description" class="control-label"></label>
             <input asp-for="Product.Description" class="form-control"/>
             <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
-        
+        <!--Input field for Product Genre-->
         <div class="form-group">
             <label asp-for="Product.Genre" class="control-label"></label>
             <input asp-for="Product.Genre" class="form-control"/>
             <span asp-validation-for="Product.Genre" class="text-danger"></span>
         </div>
-        
+        <!--Input field for YouTubeId-->
         <div class="form-group">
             <label asp-for="Product.YouTubeID" class="control-label"></label>
             <input asp-for="Product.YouTubeID" class="form-control"/>
             <span asp-validation-for="Product.YouTubeID" class="text-danger"></span>
         </div>
-        
+        <!--Input field for Product Cast-->
         <div class="form-group">
             <label asp-for="Product.Cast" class="control-label"></label>
             <br/>
+            <!--Loop through the Cast List and Create Input Fields for Each Item-->
             @for (var i = 0; i < Model.Product.Cast.Count; i++)
             {
                 <input asp-for="@Model.Product.Cast[i]"/>
                 <span asp-validation-for="Product.Cast" class="text-danger"></span>
             } 
         </div>
-
+        <!--Submit Button-->
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary"/>
         </div>
     </form>
 </div>
-
+<!--Back To Index-->
 <div class="form-group">
     <a asp-page="/Product/Index" class="btn btn-secondary ml-2">Back to Index</a>
 </div>
-
+<!--Validation Scripts Selection-->
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
