@@ -246,3 +246,20 @@ body {
         justify-content: space-between;
     }
 }
+
+/*** Progress Bar Styling begin ****/
+.header {
+  position: fixed;
+  top: 6.5%;
+  z-index: 1;
+  width: 98%;
+  background-color: #f1f1f1;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 2px;
+  background: #000000;
+  width: 0%;
+}
+/*** Progress Bar Styling End  ***/
