@@ -50,6 +50,5 @@ namespace ContosoCrafts.WebSite.Models
         //JSON Serializer
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
-
     }
 }
