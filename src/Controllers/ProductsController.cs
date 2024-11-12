@@ -36,6 +36,7 @@ namespace ContosoCrafts.WebSite.Controllers
         {
             return ProductService.GetAllData();
         }
+
         /// <summary>
         /// Submits a rating for a specific product.
         /// This endpoint accepts a rating request containing the product ID and the rating value,
@@ -50,6 +51,7 @@ namespace ContosoCrafts.WebSite.Controllers
             
             return Ok();
         }
+
         /// <summary>
         /// Represents a request to submit a rating for a product. 
         /// This class encapsulates the necessary information for a rating submission, 
