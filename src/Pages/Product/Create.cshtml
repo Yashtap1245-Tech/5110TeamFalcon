@@ -4,77 +4,85 @@
 @inject JsonFileProductService ProductService;
 
 @{
+    // Set the title of the page
     ViewData["Title"] = "Create Movie Page";
 }
 
+<!-- Navigation Button to Go Back to the Movies List -->
 <a asp-page="/Product/Index" class="btn btn-primary margin-bottom-10">Back</a>
-<h2><center>Falcon Movies Create Page</center></h2>
-<br/>
-<br/>
-<div class="container">
-    <form method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+<h2><center>Falcon Movies Create Page</center></h2>
+
+<br/>
+<br/>
+
+<div class="container">
+    <!-- Form to Add a New Movie -->
+    <form method="post">
+        <!-- Display Validation Summary if ModelState is invalid -->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <!-- Movie Title Input Field -->
         <div class="form-group">
             <label asp-for="Product.Title" class="control-label"></label>
             <input asp-for="Product.Title" class="form-control" required />
             <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
-
+        <!-- Movie Image Input Field -->
         <div class="form-group">
             <label asp-for="Product.Image" class="control-label"></label>
             <input asp-for="Product.Image" class="form-control" required />
             <span asp-validation-for="Product.Image" class="text-danger"></span>
         </div>
-
+        <!-- Movie Director Input Field -->
         <div class="form-group">
             <label asp-for="Product.Director" class="control-label"></label>
             <input asp-for="Product.Director" class="form-control" required />
             <span asp-validation-for="Product.Director" class="text-danger"></span>
         </div>
-
+        <!-- Movie Description Input Field -->
         <div class="form-group">
             <label asp-for="Product.Description" class="control-label"></label>
             <textarea asp-for="Product.Description" class="form-control" required></textarea>
             <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
-
+        <!-- Movie Genre Input Field -->
         <div class="form-group">
             <label asp-for="Product.Genre" class="control-label"></label>
             <input asp-for="Product.Genre" class="form-control" required />
             <span asp-validation-for="Product.Genre" class="text-danger"></span>
         </div>
-
+        <!-- YouTube ID Input Field -->
         <div class="form-group">
             <label asp-for="Product.YouTubeID" class="control-label"></label>
             <input asp-for="Product.YouTubeID" class="form-control" required />
             <span asp-validation-for="Product.YouTubeID" class="text-danger"></span>
         </div>
-
+        <!-- Movie Trailer URL Input Field -->
         <div class="form-group">
             <label asp-for="Product.TrailerUrl" class="control-label"></label>
             <input asp-for="Product.TrailerUrl" class="form-control" required />
             <span asp-validation-for="Product.TrailerUrl" class="text-danger"></span>
         </div>
-
+        <!-- Movie Release Year Input Field -->
         <div class="form-group">
             <label asp-for="Product.ReleaseYear" class="control-label"></label>
             <input asp-for="Product.ReleaseYear" type="number" class="form-control" required />
             <span asp-validation-for="Product.ReleaseYear" class="text-danger"></span>
         </div>
-
+        <!-- IMDb Rating Input Field -->
         <div class="form-group">
             <label asp-for="Product.IMDbRating" class="control-label"></label>
             <input asp-for="Product.IMDbRating" type="number" step="0.1" class="form-control" required />
             <span asp-validation-for="Product.IMDbRating" class="text-danger"></span>
         </div>
-
+        <!-- Cast Members: Button to Add More Cast Members -->
         <div class="form-group">
             <label asp-for="Product.Cast" class="control-label"></label>
             <br />
             <button type="button" class="btn btn-secondary" onclick="addCastMember()">Add Cast Member</button>
         </div>
 
+        <!-- Submit Button to Save the Movie -->
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary" />
         </div>
@@ -83,6 +91,7 @@
 
 @section Scripts {
     @{
+        // Render client-side validation scripts
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
