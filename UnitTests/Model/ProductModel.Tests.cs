@@ -1,11 +1,8 @@
 using ContosoCrafts.WebSite.Models;
-using NUnit.Framework.Legacy;
-
 namespace UnitTests.Model;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json;
 
 [TestFixture]
 public class ProductModelTests
