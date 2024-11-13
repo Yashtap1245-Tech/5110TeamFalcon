@@ -1,20 +1,29 @@
 ﻿@page
 @model ContosoCrafts.WebSite.Pages.Product.IndexModel
 @{
+    // Set the title of the page in the browser tab
     ViewData["Title"] = "Movies";
 }
-
+<!-- Main Container -->
 <div class="container">
+    <!-- Navigation Buttons -->
+    <!-- Back Button-->
     <a asp-page="/Index" class="btn btn-primary margin-bottom-10">Back</a>
+    <!-- Create Button-->
     <a asp-page="/Product/Create" class="btn btn-primary margin-bottom-10">Create</a>
+    <!-- Products Table -->
     <table class="table table-bordered table-striped">
         <thead>
         <tr>
+                <!-- Table Header for Product Title -->
             <th>Title</th>
+                <!-- Table Header for Actions (Read, Update, Delete) -->
             <th>Action</th>
         </tr>
         </thead>
+        <!-- Table Body -->
         <tbody>
+            <!-- Loop through each product in the Products list -->
         @foreach (var product in Model.Products)
         {
             <tr>
