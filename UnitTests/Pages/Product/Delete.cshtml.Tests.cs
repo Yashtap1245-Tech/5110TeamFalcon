@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using ContosoCrafts.WebSite.Models;
+﻿using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using ContosoCrafts.WebSite.Pages.Product;
 using Microsoft.AspNetCore.Http;
@@ -13,8 +12,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
-using System.Collections.Generic;
-using System;
 
 namespace UnitTests.Pages.Product.Delete
 {
