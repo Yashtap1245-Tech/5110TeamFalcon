@@ -2,48 +2,49 @@
 @model ReadModel;
 
 @{
+    // Set the title of the page in the browser tab
     ViewData["Title"] = "Read Page";
 }
-
-
+<!-- Introduction Section -->
 <p>At <b>Falcon Movies</b>, we present to you:</p>
-
+<!-- Display the Product Title -->
 <h2>@Model.Product.Title</h2>
-
+<!-- Display the Product Image -->
 <div>
     <img src="@Model.Product.Image" alt="@Model.Product.Title Poster" class="movie-poster"   />
 </div>
 
 <br />
-
+<!-- Display the Product Description -->
 <h3>Description</h3>
 <p>@Model.Product.Description</p>
-
+<!-- Display the IMDb Rating -->
 <h3>IMDbRating</h3>
 <p>@Model.Product.IMDbRating</p>
-
+<!-- Display the Cast Details as a List -->
 <h3>Cast Details:</h3>
 @foreach (var product in Model.Product.Cast)
 {
     <li>@product</li>
 }
 <br />
-
+<!-- Display the Product Trailer-->
 <h4>Trailer</h4>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/@Model.Product.YouTubeID" frameborder="0" allowfullscreen></iframe>
-
+<!-- Display the Genre if it is not empty -->
 @if (!string.IsNullOrEmpty(Model.Product.Genre))
 {
     <h5>Genre:</h5>
     <p>@Model.Product.Genre</p>
 }
-
+<!-- Action Buttons Row -->
 <div class="row">
-<div class="back-to-index">
-    <a asp-page="./Index" class="btn btn-secondary">Back to Index</a>
-</div>
-
-<div class="back-to-index">
-    <a asp-page="/Product/Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger ml-2">Delete</a>
+    <!-- Back to Index Button -->
+    <div class="back-to-index">
+        <a asp-page="./Index" class="btn btn-secondary">Back to Index</a>
+    </div>
+    <!-- Delete Button-->
+    <div class="back-to-index">
+        <a asp-page="/Product/Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger ml-2">Delete</a>
     </div>
 </div>
