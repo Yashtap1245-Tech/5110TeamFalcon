@@ -49,8 +49,6 @@ public class ProductModelTests
         // Assert
         Assert.That(validationResults, Has.Count.EqualTo(1));
         Assert.That(validationResults[0].ErrorMessage, Is.EqualTo("The Title should have a length of more than 1 and less than 33"));
-        // Assert.AreEqual(1, validationResults.Count);
-        // Assert.AreEqual("The Title should have a length of more than 1 and less than 33", validationResults[0].ErrorMessage);
     }
 
     [Test]
