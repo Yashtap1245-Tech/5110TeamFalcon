@@ -79,11 +79,6 @@ namespace UnitTests.Pages.Product.Update
             // Act
             PageModel.OnGet("jenlooper-cactus");
             
-            // Assert.AreEqual(true, PageModel.ModelState.IsValid);
-            // Assert.AreEqual("The Shawshank Redemption", PageModel.Product.Title);
-            // Assert.AreEqual("", PageModel.Product.Description);
-            // Assert.AreEqual("Frank Darabont", PageModel.Product.Director);
-            // Assert.AreEqual("Drama", PageModel.Product.Genre);
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(PageModel.Product.Title, Is.EqualTo("The Shawshank Redemption"));
             Assert.That(PageModel.Product.Director, Is.EqualTo("Frank Darabont"));
@@ -94,6 +89,7 @@ namespace UnitTests.Pages.Product.Update
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
+            // Arrange
             // Force an invalid error state
             PageModel.ModelState.AddModelError("bogus", "Bogus Error");
             
@@ -101,7 +97,6 @@ namespace UnitTests.Pages.Product.Update
             var result = PageModel.OnPost() as ActionResult;
             
             // Assert
-            // Assert.AreEqual(false, PageModel.ModelState.IsValid);
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(false));
         }
 
@@ -125,8 +120,6 @@ namespace UnitTests.Pages.Product.Update
             var result = PageModel.OnPost() as RedirectToPageResult;
             
             // Assert
-            // Assert.AreEqual(true, PageModel.ModelState.IsValid);
-            // Assert.AreEqual(true, result.PageName.Contains("Index"));
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));            
             Assert.That(result.PageName.Contains("Index"), Is.EqualTo(true));            
 
