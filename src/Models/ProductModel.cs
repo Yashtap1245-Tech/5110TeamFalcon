@@ -28,8 +28,6 @@ namespace ContosoCrafts.WebSite.Models
         public int[] Ratings { get; set; }
         //Cast Field
         public List<string> Cast { get; set; }
-        //TrailerUrl Field
-        public string TrailerUrl { get; set; }
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
         //Quantity Field
         public string Quantity { get; set; }
@@ -39,7 +37,7 @@ namespace ContosoCrafts.WebSite.Models
         public int Price { get; set; }
         //Release Year Field
         public int ReleaseYear { get; set; }
-        //YoutubeID
+        //YoutubeID for movie trailer
         public string YouTubeID { get; set; }
         //Genre field
         public string Genre { get; set; }
