@@ -11,7 +11,6 @@
     "Cast": [
       "Tim Robbins, Morgan Freeman, Bob Gunton"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=NmzuHjWmXOc",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
@@ -27,7 +26,7 @@
     "img": "https://live.staticflickr.com/4848/31162695417_53fe89db83_n.jpg",
     "Url": "https://www.hackster.io/agent-hawking-1/book-light-dee7e4",
     "Title": "The Godfather",
-    "Director": "Francis Ford Coppola",
+    "Director": "Francis Ford Coppola - modified",
     "Description": "The Godfather is a 1972 American epic gangster film directed by Francis Ford Coppola, who co-wrote the screenplay with Mario Puzo, based on Puzo\u0027s best-selling 1969 novel. The film stars an ensemble cast including Marlon Brando, Al Pacino, James Caan, Richard Castellano, Robert Duvall, Sterling Hayden, John Marley, Richard Conte, and Diane Keaton. It is the first installment in The Godfather trilogy, chronicling the Corleone family under patriarch Vito Corleone (Brando) from 1945 to 1955. It focuses on the transformation of his youngest son, Michael Corleone (Pacino), from reluctant family outsider to ruthless mafia boss.",
     "Ratings": null,
     "Cast": [
@@ -35,12 +34,11 @@
       "Marlon Brando",
       "James Caan"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=UaVTIH8mujA",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
     "ReleaseYear": 1972,
-    "YouTubeID": "UaVTIH8mujA",
+    "YouTubeID": "G0eKzU_fV00",
     "Genre": "Crime",
     "IMDbRating": 9.2,
     "CommentList": [
@@ -61,7 +59,6 @@
       "Heath Ledger",
       "Gary Oldman"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
@@ -85,7 +82,6 @@
       "John Cazale",
       "Talia Shire"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=9O1Iy9od7-A",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
@@ -109,7 +105,6 @@
       "Joseph Sweeney",
       "Martin Balasam"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=TEN-2uTi2c0",
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
@@ -135,7 +130,6 @@
       "Karl Urban",
       "Sean Astin"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=y2rYRu8UW8M",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
@@ -159,7 +153,6 @@
       "Ralph Fiennes",
       "Ben Kingsley"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=mxphAlJID9U",
     "ProductType": 130,
     "Quantity": null,
     "Price": 0,
@@ -183,7 +176,6 @@
       "John Travolta",
       "Samuel Jackson"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=tGpTpVyI_OQ",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
@@ -207,7 +199,6 @@
       "Sean Bean",
       "Orlando Bloom"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=_nZdmwHrcnw",
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
@@ -231,7 +222,6 @@
       "Eli Wallach",
       "Lee Van Cleef"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=IFNUGzCOQoI",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
@@ -255,7 +245,6 @@
       "Robin Wright",
       "Gary Sinise"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=XHhAG-YLdk8",
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
@@ -279,7 +268,6 @@
       "Sean Bean",
       "Orlando Bloom"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=LbfMDwc4azU",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
@@ -303,7 +291,6 @@
       "Brad Pitt",
       "Helena Bonham Carter"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=BdJKm16Co6M",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
@@ -327,7 +314,6 @@
       "Cillian Murphy",
       "Joseph Gordon-Levitt"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=YoHD9XEInc0",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
@@ -351,7 +337,6 @@
       "Carrie-Anne Moss",
       "Laurence Fishburne"
     ],
-    "TrailerUrl": "https://www.youtube.com/watch?v=vKQi3bBA1y8",
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
