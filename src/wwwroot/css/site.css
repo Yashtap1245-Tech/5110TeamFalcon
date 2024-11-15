@@ -265,3 +265,39 @@ body {
   width: 0%;
 }
 /*** Progress Bar Styling End  ***/
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+    body.dark-theme .bg-navbar {
+        background: linear-gradient(135deg, #1a1a1a, #333333);
+    }
+
+    body.dark-theme .bg-footer {
+        background-color: #1a1a1a;
+    }
+
+    body.dark-theme .btn-primary {
+        background-color: #444444;
+        color: #ffffff;
+    }
+
+        body.dark-theme .btn-primary:hover {
+            background-color: #666666;
+        }
+    /* Dark Theme Styles for Product Items */
+    body.dark-theme .product-item {
+        color: #ffffff;
+    }
+
+    body.dark-theme .product-title {
+        color: #ffffff;
+    }
+
+    body.dark-theme .product-description {
+        color: #cccccc;
+    }
+    
