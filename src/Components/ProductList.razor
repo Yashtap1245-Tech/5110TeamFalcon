@@ -32,7 +32,6 @@
 </div>
 
 <div class="card-columns">
-
     @foreach (var product in ProductService.GetProductsFromGenre(selectedGenre).Where(movie => movie.Title.ToLower().Contains(searchedMovie.ToLower())))
     {
         <div class="card">
@@ -47,7 +46,7 @@
             <div class="card-footer">
                 <small class="text-muted">
                     <button @onclick="(e => SelectProduct(product.Id))"
-                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            data-toggle="modal" data-target="#productModal" class="btn btn-primary">
                         More Info
                     </button>
                 </small>
@@ -121,7 +120,11 @@
                     {
                         <span>Be the first to vote!</span>
                     }
-                    else
+                    @if (votedProductIds.Contains(selectedProductId))
+                    {
+                        <span>You have already voted</span>
+                    }
+                    @if (voteCount > 0)
                     {
                         <span>@voteCount @voteLabel</span>
                     }
@@ -154,16 +157,11 @@
     string newComment = ""; // Property to hold the new comment
     public IEnumerable<ProductModel> filteredProducts;
 
+    // Dictionary to track which products the user has voted on
+    private HashSet<string> votedProductIds = new HashSet<string>();
+
     /// <summary>
     /// Selects a product by its unique product ID and retrieves its data, setting it as the active `selectedProduct`.
-    /// - **Parameters**:
-    ///     - `productId` (string): The unique identifier of the product to select.
-    /// - **Functionality**:
-    ///     - Assigns `productId` to `selectedProductId` to track the current product selection.
-    ///     - Searches for the product in the collection retrieved from `ProductService.GetAllData()`,
-    ///       selecting the first item that matches the given `productId` and assigns it to `selectedProduct`.
-    ///     - Calls `GetCurrentRating()` to calculate and display the current rating for the selected product.
-
     /// </summary>
     /// <param name="productId"></param>
     void SelectProduct(string productId)
@@ -214,9 +212,13 @@
     /// 3. Refreshes the selected product data by reloading it after adding the rating.
     void SubmitRating(int rating)
     {
-        System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
-        ProductService.AddRating(selectedProductId, rating);
-        SelectProduct(selectedProductId);
+        if (!votedProductIds.Contains(selectedProductId))
+        {
+            System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
+            ProductService.AddRating(selectedProductId, rating);
+            votedProductIds.Add(selectedProductId); // Mark as voted
+            SelectProduct(selectedProductId); // Refresh the product data
+        }
     }
 
     /// <summary>
@@ -224,12 +226,12 @@
     /// </summary>
     void SubmitComments()
     {
-        System.Console.WriteLine($"Comments received for {selectedProduct.Id}: {newComment}");
+        Console.WriteLine($"Comments received for {selectedProduct.Id}: {newComment}");
         ProductService.AddComment(selectedProductId, newComment);
         SelectProduct(selectedProductId);
         newComment = "";
     }
-    
+
     private void ResetGenre()
     {
         selectedGenre = "";
