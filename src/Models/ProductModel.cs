@@ -34,7 +34,6 @@ namespace ContosoCrafts.WebSite.Models
         public string Description { get; set; }
         
         //Ratings Field
-        [Required(ErrorMessage = "Ratings are required")]
         public int[] Ratings { get; set; }
         
         //Cast Field
