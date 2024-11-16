@@ -23,7 +23,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <button id="theme-toggle" class="btn btn-primary">Switch to Dark Theme</button>
+                
 
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1 d-flex justify-content-between w-100">
@@ -41,6 +41,15 @@
                     <a class="navbar-brand" asp-area="" asp-page="/Index">
                         <img src="/data/FalconLogo.png" alt="Logo" class="logo-navbar">
                     </a>
+                </div>
+
+                <div class="theme-toggle-container">
+                    <span class="theme-icon">☀️</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle-checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="theme-icon">🌙</span>
                 </div>
             </div>
 
@@ -69,34 +78,26 @@
     <script type="text/javascript">
         console.log("JavaScript for dark theme toggle is loaded");
 
-        // Check if the dark theme is already applied
+        // Get the checkbox and current theme from localStorage
+        const themeToggleCheckbox = document.getElementById("theme-toggle-checkbox");
         const currentTheme = localStorage.getItem("theme") || "light";
+
+        // Apply the saved theme on load
         if (currentTheme === "dark") {
             document.body.classList.add("dark-theme");
-            document.getElementById("theme-toggle").textContent = "Switch to Light Theme";
+            themeToggleCheckbox.checked = true;
         }
 
-        // Toggle theme and update localStorage
-        const themeToggleButton = document.getElementById("theme-toggle");
-        if (themeToggleButton) {
-            console.log("Theme toggle button found");
-            themeToggleButton.addEventListener("click", () => {
-                const isDarkTheme = document.body.classList.toggle("dark-theme");
-
-                // Update button text and localStorage
-                if (isDarkTheme) {
-                    console.log("Dark theme enabled");
-                    document.getElementById("theme-toggle").textContent = "Switch to Light Theme";
-                    localStorage.setItem("theme", "dark");
-                } else {
-                    console.log("Light theme enabled");
-                    document.getElementById("theme-toggle").textContent = "Switch to Dark Theme";
-                    localStorage.setItem("theme", "light");
-                }
-            });
-        } else {
-            console.error("Theme toggle button not found");
-        }
+        // Toggle theme and update localStorage when checkbox is clicked
+        themeToggleCheckbox.addEventListener("change", () => {
+            if (themeToggleCheckbox.checked) {
+                document.body.classList.add("dark-theme");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.body.classList.remove("dark-theme");
+                localStorage.setItem("theme", "light");
+            }
+        });
     </script>
 
     @* Progress Bar (Scroll Indicator Implementated) *@
