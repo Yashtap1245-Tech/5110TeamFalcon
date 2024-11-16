@@ -135,7 +135,7 @@
                         {
                             <span class="fa fa-star checked" @onclick="(e => SubmitRating(currentStar))"></span>
                         }
-                        else
+                        if (i > currentRating)
                         {
                             <span class="fa fa-star" @onclick="(e => SubmitRating(currentStar))"></span>
                         }
@@ -192,7 +192,7 @@
             currentRating = 0;
             voteCount = 0;
         }
-        else
+        if (selectedProduct.Ratings != null)
         {
             voteCount = selectedProduct.Ratings.Count();
             voteLabel = voteCount > 1 ? "Votes" : "Vote";
