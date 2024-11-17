@@ -150,12 +150,23 @@
 
 @code
 {
-    ProductModel selectedProduct;
     string selectedProductId;
+    ProductModel selectedProduct;
     string selectedGenre;
     string searchedMovie = "";
     string newComment = ""; // Property to hold the new comment
     public IEnumerable<ProductModel> filteredProducts;
+
+    /// <summary>
+    /// Initializes the component by setting the default selected product and product ID.
+    /// Retrieves the first product from the product service and assigns it as the selected product.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        // Initialize Product Selection
+        selectedProduct = ProductService.GetAllData().FirstOrDefault();
+        selectedProductId = selectedProduct?.Id;
+    }
 
     // Dictionary to track which products the user has voted on
     private HashSet<string> votedProductIds = new HashSet<string>();
