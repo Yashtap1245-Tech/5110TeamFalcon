@@ -46,7 +46,7 @@
         <!--Input field for Product Genre-->
         <div class="form-group">
             <label asp-for="Product.Genre" class="control-label"></label>
-            <input asp-for="Product.Genre" class="form-control"/>
+            <input asp-for="Product.Genre" class="form-control" id="genreInput" />
             <span asp-validation-for="Product.Genre" class="text-danger"></span>
         </div>
         <!--Input field for YouTubeId-->
@@ -79,4 +79,10 @@
 <!--Validation Scripts Selection-->
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        document.getElementById("genreInput").addEventListener("input", function () {
+            let value = this.value.toLowerCase();
+            this.value = value.charAt(0).toUpperCase() + value.slice(1);
+        })
+    </script>
 }
