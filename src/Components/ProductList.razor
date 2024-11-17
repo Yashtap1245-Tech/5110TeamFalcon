@@ -102,15 +102,24 @@
                                 </p>
                             </ul>
                             <p class="card-text">IMDb Rating: @selectedProduct.IMDbRating</p>
-                            <ul class="col align-items-center">
-                                <p>Leave a comment</p>
-                                @foreach (var comment in selectedProduct.CommentList)
-                                {
-                                    <p>@comment</p>
-                                }
-                                <input @bind="newComment" class="form-control" />
-                                <button class="btn btn-success" @onclick="e=> SubmitComments()">Comment</button>
-                            </ul>
+
+                            <div class="form-group">
+    <label for="commentInput">Leave a Comment:</label>
+    <input id="commentInput" type="text" class="form-control"
+           @bind="newComment"
+           maxlength="30"
+           placeholder="Enter your comment (max 30 characters)" />
+    <button class="btn btn-success" @onclick="SubmitComments">Add Comment</button>
+    <ValidationMessage For="@(() => newComment)" />
+</div>
+
+<ul class="list-group">
+    @foreach (var comment in selectedProduct.CommentList)
+    {
+        <li class="list-group-item">@comment</li>
+    }
+</ul>
+
                         </div>
                     </div>
                 </div>
@@ -237,11 +246,31 @@
     /// </summary>
     void SubmitComments()
     {
+        // Check if the comment is empty or whitespace
+        if (string.IsNullOrWhiteSpace(newComment))
+        {
+            Console.WriteLine("Comment cannot be empty.");
+            return;
+        }
+
+        // Enforce a maximum length of 30 characters for the comment
+        if (newComment.Length > 30)
+        {
+            Console.WriteLine("Comment exceeds the maximum length of 30 characters.");
+            return;
+        }
+
+        // Add the comment to the product's comment list
         Console.WriteLine($"Comments received for {selectedProduct.Id}: {newComment}");
         ProductService.AddComment(selectedProductId, newComment);
+
+        // Refresh the selected product to display the updated comment list
         SelectProduct(selectedProductId);
+
+        // Clear the input field after successfully adding the comment
         newComment = "";
     }
+
     /// <summary>
     /// Search box and genres will be empty as soon as the user clicks on the reset button
     /// </summary>
