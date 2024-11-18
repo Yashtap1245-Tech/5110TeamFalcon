@@ -93,9 +93,12 @@
                             <p class="card-text">Director: @selectedProduct.Director</p>
                             <p class="card-text">Cast:</p>
                             <ul class="list-inline">
-                                @foreach (var actor in selectedProduct.Cast)
+                                @if (selectedProduct.Cast != null && selectedProduct.Cast.Any())
                                 {
-                                    <li class="list-inline-item">@actor</li>
+                                    @foreach (var actor in selectedProduct.Cast)
+                                    {
+                                        <li class="list-inline-item">@actor</li>
+                                    }
                                 }
                                 <p class=" card-text">
                                     <a href="https://www.youtube.com/watch?v=@selectedProduct.YouTubeID" target="_blank">Watch Trailer</a>
@@ -160,7 +163,7 @@
 @code
 {
     string selectedProductId;
-    ProductModel selectedProduct;
+    ProductModel selectedProduct = new ProductModel();
     string selectedGenre;
     string searchedMovie = "";
     string newComment = ""; // Property to hold the new comment
