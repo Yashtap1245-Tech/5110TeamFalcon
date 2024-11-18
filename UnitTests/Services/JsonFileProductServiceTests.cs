@@ -14,14 +14,10 @@ namespace UnitTests.Services
     [TestFixture]
     public class JsonFileProductServiceTests
     {
-        private JsonFileProductService _service;
-        private TestWebHostEnvironment _webHostEnvironment;
 
         [SetUp]
         public void Setup()
         {
-            _webHostEnvironment = new TestWebHostEnvironment();
-            _service = new JsonFileProductService(_webHostEnvironment);
         }
 
         #region GetDataForRead
@@ -30,12 +26,10 @@ namespace UnitTests.Services
         public void GetDataForRead_Existing_Product_Should_Return_Product()
         {
             // Arrange
-            var productId = "1";
-            var product = new ProductModel { Id = productId, Title = "Test Product" };
-            CreateTestFile(new List<ProductModel> { product });
+            var productId = "jenlooper-cactus";
 
             // Act
-            var result = _service.GetDataForRead(productId);
+            var result = TestHelper.ProductService.GetDataForRead(productId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
@@ -46,10 +40,9 @@ namespace UnitTests.Services
         public void GetDataForRead_Non_Existing_Product_Should_Return_Null()
         {
             // Arrange
-            CreateTestFile(new List<ProductModel>());
 
             // Act
-            var result = _service.GetDataForRead("invalid-id");
+            var result = TestHelper.ProductService.GetDataForRead("invalid-id");
 
             // Assert
             Assert.That(result, Is.Null);
@@ -65,7 +58,7 @@ namespace UnitTests.Services
             // Arrange
 
             // Act
-            var result = _service.AddRating(null, 1);
+            var result = TestHelper.ProductService.AddRating(null, 1);
 
             // Assert
             Assert.That(result, Is.EqualTo(false));
@@ -77,7 +70,7 @@ namespace UnitTests.Services
             // Assert
 
             // Act
-            var result = _service.AddRating("", 1);
+            var result = TestHelper.ProductService.AddRating("", 1);
 
             // Assert
             Assert.That(result, Is.EqualTo(false));
@@ -87,10 +80,9 @@ namespace UnitTests.Services
         public void AddRating_Invalid_Product_Should_Return_False()
         {
             // Arrange
-            CreateTestFile(new List<ProductModel>()); // No products exist
 
             // Act
-            var result = _service.AddRating("invalid-id", 3);
+            var result = TestHelper.ProductService.AddRating("invalid-id", 3);
 
             // Assert
             Assert.That(result, Is.EqualTo(false));
@@ -102,10 +94,9 @@ namespace UnitTests.Services
             // Arrange
             var productId = "1";
             var product = new ProductModel { Id = productId, Ratings = null }; // Set Ratings to null
-            CreateTestFile(new List<ProductModel> { product });
 
             // Act
-            var result = _service.AddRating(productId, -1);
+            var result = TestHelper.ProductService.AddRating(productId, -1);
 
             // Assert
             Assert.That(result, Is.EqualTo(false));
@@ -117,10 +108,9 @@ namespace UnitTests.Services
             // Arrange
             var productId = "1";
             var product = new ProductModel { Id = productId, Ratings = null }; // Set Ratings to null
-            CreateTestFile(new List<ProductModel> { product });
 
             // Act
-            var result = _service.AddRating(productId, 6);
+            var result = TestHelper.ProductService.AddRating(productId, 6);
 
             // Assert
             Assert.That(result, Is.EqualTo(false));
@@ -130,13 +120,12 @@ namespace UnitTests.Services
         public void AddRating_Valid_Product_Should_Return_True()
         {
             // Arrange
-            var productId = "1";
+            var productId = "jenlooper-cactus";
             var product = new ProductModel { Id = productId, Ratings = null }; // Set Ratings to null
-            CreateTestFile(new List<ProductModel> { product });
 
             // Act
-            var result = _service.AddRating(productId, 5);
-            var updatedProduct = _service.GetDataForRead(productId);
+            var result = TestHelper.ProductService.AddRating(productId, 5);
+            var updatedProduct = TestHelper.ProductService.GetDataForRead(productId);
 
             // Assert
             Assert.That(result, Is.EqualTo(true));
@@ -152,20 +141,7 @@ namespace UnitTests.Services
         public void UpdateData_Valid_Product_Should_Return_Updated_Product()
         {
             // Arrange
-            var productId = "1";
-            var originalProduct = new ProductModel
-            {
-                Id = productId,
-                Title = "Original Title",
-                Image = "original.png",
-                Description = "Original Description",
-                Genre = "Original Genre",
-                YouTubeID = "OriginalYouTubeID",
-                Director = "Original Director",
-                Cast = new List<string> { "Original Cast" }
-            };
-
-            CreateTestFile(new List<ProductModel> { originalProduct });
+            var productId = "jenlooper-cactus";
 
             var updatedProduct = new ProductModel
             {
@@ -180,8 +156,8 @@ namespace UnitTests.Services
             };
 
             // Act
-            var result = _service.UpdateData(updatedProduct);
-            var retrievedProduct = _service.GetDataForRead(productId);
+            var result = TestHelper.ProductService.UpdateData(updatedProduct);
+            var retrievedProduct = TestHelper.ProductService.GetDataForRead(productId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
@@ -205,7 +181,7 @@ namespace UnitTests.Services
             };
 
             // Act
-            var result = _service.UpdateData(nonExistingProduct);
+            var result = TestHelper.ProductService.UpdateData(nonExistingProduct);
 
             // Assert
             Assert.That(result, Is.Null);
@@ -221,7 +197,7 @@ namespace UnitTests.Services
             // Arrange
 
             // Act
-            var newProduct = _service.CreateData();
+            var newProduct = TestHelper.ProductService.CreateData();
             
             // Assert
             Assert.That(newProduct, Is.Not.Null);
@@ -236,27 +212,24 @@ namespace UnitTests.Services
         public void DeleteData_Existing_Product_Should_Delete_Product()
         {
             // Arrange
-            var productId = "1";
-            var product = new ProductModel { Id = productId, Title = "Test Product" };
-            CreateTestFile(new List<ProductModel> { product });
+            var productId = "jenlooper-lightshow";
 
             // Act
-            var result = _service.DeleteData(productId);
+            var result = TestHelper.ProductService.DeleteData(productId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
             Assert.That(result.Id, Is.EqualTo(productId));
-            Assert.That(_service.GetDataForRead(productId), Is.Null); // Verify the product is deleted
+            Assert.That(TestHelper.ProductService.GetDataForRead(productId), Is.Null); // Verify the product is deleted
         }
 
         [Test]
         public void DeleteData_Non_Existing_Product_Should_Return_Null()
         {
             // Arrange
-            CreateTestFile(new List<ProductModel>());
 
             // Act
-            var result = _service.DeleteData("invalid-id");
+            var result = TestHelper.ProductService.DeleteData("invalid-id");
 
             // Assert
             Assert.That(result, Is.Null); // Ensure that trying to delete a non-existing product returns null
@@ -266,18 +239,15 @@ namespace UnitTests.Services
         public void DeleteData_Existing_Product_Multiple_Products_Should_Delete_Correct_Product()
         {
             // Arrange
-            var product1 = new ProductModel { Id = "1", Title = "Product 1" };
-            var product2 = new ProductModel { Id = "2", Title = "Product 2" };
-            CreateTestFile(new List<ProductModel> { product1, product2 });
 
             // Act
-            var result = _service.DeleteData("1");
+            var result = TestHelper.ProductService.DeleteData("sailorhg-bubblesortpic");
 
             // Assert
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.Id, Is.EqualTo("1"));
-            Assert.That(_service.GetDataForRead("1"), Is.Null); // Verify product 1 is deleted
-            Assert.That(_service.GetDataForRead("2"), Is.Not.Null); // Ensure product 2 still exists
+            Assert.That(result.Id, Is.EqualTo("sailorhg-bubblesortpic"));
+            Assert.That(TestHelper.ProductService.GetDataForRead("sailorhg-bubblesortpic"), Is.Null); // Verify product 1 is deleted
+            Assert.That(TestHelper.ProductService.GetDataForRead("sailorhg-corsage"), Is.Not.Null); // Ensure product 2 still exists
         }
 
         #endregion DeleteData
@@ -290,10 +260,9 @@ namespace UnitTests.Services
             // Arrange
             var product1 = new ProductModel { Id = "1", Title = "Action Movie 1", Genre = "Action" };
             var product2 = new ProductModel { Id = "2", Title = "Comedy Movie", Genre = "Comedy" };
-            CreateTestFile(new List<ProductModel> { product1, product2 });
 
             // Act
-            var result = _service.GetProductsFromGenre("Drama");
+            var result = TestHelper.ProductService.GetProductsFromGenre("Drama");
 
             // Assert
             Assert.That(result, Is.Empty);
@@ -307,14 +276,12 @@ namespace UnitTests.Services
         public void AddComment_Valid_Product_Should_Add_Comment()
         {
             // Arrange
-            var productId = "1";
-            var product = new ProductModel { Id = productId, Title = "Test Product", CommentList = new List<string>() };
-            CreateTestFile(new List<ProductModel> { product });
+            var productId = "sailorhg-corsage";
             var comment = "This is a great Movie!";
-            var result = _service.AddComment(productId, comment);
+            var result = TestHelper.ProductService.AddComment(productId, comment);
 
             // Act
-            var updatedProduct = _service.GetDataForRead(productId);
+            var updatedProduct = TestHelper.ProductService.GetDataForRead(productId);
 
             // Assert
             Assert.That(result, Is.True);
@@ -325,14 +292,14 @@ namespace UnitTests.Services
         public void AddComment_Duplicate_Comment_Should_Return_True_And_Add_Comment()
         {
             // Arrange
-            var productId = "1";
+            var productId = "sailorhg-bubblesortpic";
             var comment = "This is a great product!";
             var product = new ProductModel { Id = productId, Title = "Test Product", CommentList = new List<string> { comment } };
-            CreateTestFile(new List<ProductModel> { product });
 
             // Act
-            var result = _service.AddComment(productId, comment); // Adding a duplicate comment
-            var updatedProduct = _service.GetDataForRead(productId);
+            var initialresult = TestHelper.ProductService.AddComment(productId, comment); // Adding a Initial comment
+            var result = TestHelper.ProductService.AddComment(productId, comment); // Adding a duplicate comment
+            var updatedProduct = TestHelper.ProductService.GetDataForRead(productId);
 
             // Assert
             Assert.That(result, Is.True); // Method still returns true
@@ -340,45 +307,5 @@ namespace UnitTests.Services
         }
 
         #endregion AddComment
-
-        private void CreateTestFile(IEnumerable<ProductModel> products)
-        {
-            var json = JsonSerializer.Serialize(products);
-            var filePath = Path.Combine(_webHostEnvironment.WebRootPath, "data", "products.json");
-            File.WriteAllText(filePath, json);
-        }
-
-        private class TestWebHostEnvironment : IWebHostEnvironment
-        {
-            public string ApplicationName { get; set; } = "TestApplication";
-            public string EnvironmentName { get; set; } = "Development";
-            public string ContentRootPath { get; set; } = Path.GetTempPath();
-            public string WebRootPath => Path.Combine(Path.GetTempPath(), "wwwroot");
-
-            public TestWebHostEnvironment()
-            {
-                Directory.CreateDirectory(WebRootPath + "/data");
-            }
-
-            public IFileProvider FileProvider => null;
-
-            string IWebHostEnvironment.WebRootPath
-            {
-                get => WebRootPath;
-                set => throw new System.NotImplementedException();
-            }
-
-            IFileProvider IWebHostEnvironment.WebRootFileProvider
-            {
-                get => null;
-                set => throw new System.NotImplementedException();
-            }
-
-            IFileProvider IHostEnvironment.ContentRootFileProvider
-            {
-                get => null;
-                set => throw new System.NotImplementedException();
-            }
-        }
     }
 }
