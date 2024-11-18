@@ -291,11 +291,13 @@ body.dark-theme {
         }
     /* Dark Theme Styles for Product Items */
     body.dark-theme .product-item {
-        color: #ffffff;
+        color: orange;
     }
 
     body.dark-theme .product-title {
-        color: #ffffff;
+        color: orange;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add subtle shadow for better contrast */
+        font-weight: bold;
     }
 
     body.dark-theme .product-description {
@@ -404,7 +406,7 @@ input:checked + .slider {
     bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.85); /* Dark background for title overlay */
-    color: #ffffff; /* White text color for contrast */
+    color: #f0e68c; /* White text color for contrast */
     padding: 5px;
     text-align: center;
     border-radius: 0 0 10px 10px;
@@ -412,6 +414,34 @@ input:checked + .slider {
     font-size: 0.9em;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better separation */
 }
+
+body.dark-theme .movie-title-overlay {
+    background: rgba(30, 30, 30, 0.9); /* Slightly lighter black background */
+    color: #ffdd57; /* Soft yellow color for better visibility */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+}
+
+body.dark-theme .card-title {
+    color: #ffdd57 !important; /* Bright yellow for better visibility in dark theme */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Subtle shadow for contrast */
+    font-weight: bold;
+}
+
+body.dark-theme .card-genre {
+    color: #ffdd57 !important; /* Light gray for better readability */
+}
+
+body.dark-theme .card-text {
+    color: #ffdd57 !important; /* Light gray color for better readability */
+}
+
+body.dark-theme .list-inline-item {
+    color: #ffdd57 !important; /* Bright yellow color for the cast names */
+    font-weight: bold; /* Make the text bold for better visibility */
+}
+
+
+
 /* Back Face */
 .card-back {
     background-color: #333333;
