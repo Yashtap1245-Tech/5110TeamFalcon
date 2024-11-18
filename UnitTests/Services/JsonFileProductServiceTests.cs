@@ -119,8 +119,7 @@ namespace UnitTests.Services
         public void AddRating_Valid_Product_Should_Return_True()
         {
             // Arrange
-            var productId = "jenlooper-cactus";
-            var product = new ProductModel { Id = productId, Ratings = null }; // Set Ratings to null
+            var productId = "jenlooper-lightshow";
 
             // Act
             var result = TestHelper.ProductService.AddRating(productId, 5);
@@ -128,7 +127,7 @@ namespace UnitTests.Services
 
             // Assert
             Assert.That(result, Is.EqualTo(true));
-            Assert.That(updatedProduct.Ratings.Length, Is.EqualTo(1));
+            Assert.That(updatedProduct.Ratings.Length, Is.EqualTo(2));
             Assert.That(updatedProduct.Ratings.Last(), Is.EqualTo(5));
         }
 
