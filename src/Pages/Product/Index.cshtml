@@ -29,10 +29,11 @@
             <tr>
                 <td>@product.Title</td>
                 <td>
-                    <a asp-page="/Product/Read" asp-route-id="@product.Id">Read</a> &nbsp;
-                    <a asp-page="/Product/Update" asp-route-id="@product.Id">Update</a> &nbsp;
-                    <a asp-page="/Product/Delete" asp-route-id="@product.Id">Delete</a>
+                    <button class="btn btn-info btn-sm" asp-page="/Product/Read" asp-route-id="@product.Id">Read</button>
+                    <button class="btn btn-warning btn-sm" asp-page="/Product/Update" asp-route-id="@product.Id">Update</button>
+                    <button class="btn btn-danger btn-sm" asp-page="/Product/Delete" asp-route-id="@product.Id">Delete</button>
                 </td>
+
             </tr>
         }
         </tbody>
