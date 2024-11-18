@@ -10,32 +10,61 @@
 <!--Delete Confirmation Message-->
 <h3>Are you sure you want to delete this product?</h3>
 
-    <!-- Display Validation Summary if ModelState is invalid -->
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    
-    <!-- Movie Title Input Field -->
-    <br/>
-    <h3>Title:<strong> @Model.Product.Title</strong></h3>
-    <span asp-validation-for="Product.Title" class="text-danger"></span>
-    <span asp-validation-for="Product.Image" class="text-danger"></span>
-    <span asp-validation-for="Product.Director" class="text-danger"></span>
-    
-    <!-- Movie Description Input Field -->
-    <h3>Description:</h3>
-    <p>@Model.Product.Description</p>
-    
-    <!-- Validation for other Attributes -->
-    <span asp-validation-for="Product.Description" class="text-danger"></span>
-    <span asp-validation-for="Product.Genre" class="text-danger"></span>
-    <span asp-validation-for="Product.YouTubeID" class="text-danger"></span>
-    <span asp-validation-for="Product.YouTubeID" class="text-danger"></span>
-    <span asp-validation-for="Product.ReleaseYear" class="text-danger"></span>
-    <span asp-validation-for="Product.IMDbRating" class="text-danger"></span>
-
-<!--Form for deleting the product-->
 <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <!--Hidden field for ProductId-->
+    @Html.HiddenFor(x => x.Product.Id)
+    <!--Input field for Product Title-->
+    <div class="form-group">
+        <label asp-for="Product.Title" class="control-label"></label>
+        <input asp-for="Product.Title" class="form-control" readonly/>
+        <span asp-validation-for="Product.Title" class="text-danger"></span>
+    </div>
+    <!--Input field for Image-->
+    <div class="form-group">
+        <label asp-for="Product.Image" class="control-label"></label>
+        <input asp-for="Product.Image" class="form-control" readonly/>
+        <span asp-validation-for="Product.Image" class="text-danger"></span>
+    </div>
+    <!--Input field for director-->
+    <div class="form-group">
+        <label asp-for="Product.Director" class="control-label"></label>
+        <input asp-for="Product.Director" class="form-control" readonly/>
+        <span asp-validation-for="Product.Director" class="text-danger"></span>
+    </div>
+    <!--Input field for Product Description-->
+    <div class="form-group">
+        <label asp-for="Product.Description" class="control-label"></label>
+        <input asp-for="Product.Description" class="form-control" readonly/>
+        <span asp-validation-for="Product.Description" class="text-danger"></span>
+    </div>
+    <!--Input field for Product Genre-->
+    <div class="form-group">
+        <label asp-for="Product.Genre" class="control-label"></label>
+        <input asp-for="Product.Genre" class="form-control" id="genreInput"  readonly/>
+        <span asp-validation-for="Product.Genre" class="text-danger"></span>
+    </div>
+    <!--Input field for YouTubeId-->
+    <div class="form-group">
+        <label asp-for="Product.YouTubeID" class="control-label"></label>
+        <input asp-for="Product.YouTubeID" class="form-control" readonly/>
+        <span asp-validation-for="Product.YouTubeID" class="text-danger"></span>
+    </div>
+    <!--Input field for Product Cast-->
+    <div class="form-group">
+        <label asp-for="Product.Cast" class="control-label"></label>
+        <br/>
+        <!--Loop through the Cast List and Create Input Fields for Each Item-->
+        @for (var i = 0; i < Model.Product.Cast.Count; i++)
+        {
+            <input asp-for="@Model.Product.Cast[i]" readonly/>
+            <span asp-validation-for="Product.Cast" class="text-danger"></span>
+        }
+    </div>
+    <!--Submit Button-->
+    <!--Form for deleting the product-->
     <button type="submit" class="btn btn-primary">Delete</button>
-    
+
     <!--Cancel Button-->
     <a asp-page="./Index" class="btn btn-danger">Cancel</a>
 </form>
