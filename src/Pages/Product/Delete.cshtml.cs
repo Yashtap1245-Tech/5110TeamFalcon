@@ -19,10 +19,16 @@ namespace ContosoCrafts.WebSite.Pages.Product
         // Collection of the Data
         [BindProperty]
         public ProductModel Product { get; set; }
-        public void OnGet(string id)
+        
+        public IActionResult OnGet(string id)
         {
             // Product = ProductService.GetDataForRead(id);
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            if (Product == null)
+            {
+                return RedirectToPage("./IdNotFound");
+            }
+            return Page();
         }
 
         public IActionResult OnPost()
