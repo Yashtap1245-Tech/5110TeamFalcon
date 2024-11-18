@@ -28,10 +28,16 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// REST OnGet
         /// Return all the data
         /// </summary>
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
+        // public void OnGet(string id)
         {
             // Product = ProductService.GetDataForRead(id);
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            if (Product == null)
+            {
+                return RedirectToPage("./IdNotFound");
+            }
+            return Page();
         }
 
         /// <summary>
