@@ -2,6 +2,8 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
+using Bunit;
+using System.Linq;
 
 namespace UnitTests.Components
 {
@@ -29,7 +31,31 @@ namespace UnitTests.Components
             var result = page.Markup;
 
             // Assert
-            Assert.That(result.Contains("The Quantified Cactus: An Easy Plant Soil Moisture Sensor"), Is.EqualTo(false));
+            Assert.That(result.Contains("The Shawshank Redemption"), Is.EqualTo(true));
+        }
+
+        [Test]
+        public void SelectedProduct_Valid_ID_jenlooper_Should_Return_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_jenlooper-cactus";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it 
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert 
+            Assert.That(pageMarkup.Contains("The Shawshank Redemption is a 1994 American prison drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis Red Redding (Morgan Freeman), and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles."), Is.EqualTo(true));
         }
     }
 }
