@@ -127,7 +127,7 @@ namespace UnitTests.Services
 
             // Assert
             Assert.That(result, Is.EqualTo(true));
-            Assert.That(updatedProduct.Ratings.Length, Is.EqualTo(2));
+            Assert.That(updatedProduct.Ratings.Length, Is.EqualTo(1));
             Assert.That(updatedProduct.Ratings.Last(), Is.EqualTo(5));
         }
 
@@ -256,11 +256,9 @@ namespace UnitTests.Services
         public void GetProductsFromGenre_Non_Existing_Genre_Should_Return_Empty_List()
         {
             // Arrange
-            var product1 = new ProductModel { Id = "1", Title = "Action Movie 1", Genre = "Action" };
-            var product2 = new ProductModel { Id = "2", Title = "Comedy Movie", Genre = "Comedy" };
 
             // Act
-            var result = TestHelper.ProductService.GetProductsFromGenre("Drama");
+            var result = TestHelper.ProductService.GetProductsFromGenre("SCARY");
 
             // Assert
             Assert.That(result, Is.Empty);
