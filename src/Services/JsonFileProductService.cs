@@ -248,7 +248,7 @@ namespace ContosoCrafts.WebSite.Services
             {
                 return dataSet;
             }
-            var data = dataSet.Where(product => product.Genre.Equals(genre));
+            var data = dataSet.Where(product => product.Genre != null && product.Genre.Equals(genre));
             return data;
         }
         
