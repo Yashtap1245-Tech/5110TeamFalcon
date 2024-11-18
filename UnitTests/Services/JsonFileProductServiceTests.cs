@@ -92,8 +92,7 @@ namespace UnitTests.Services
         public void AddRating_Invalid_Rating_Below_Zero_Should_Return_False()
         {
             // Arrange
-            var productId = "1";
-            var product = new ProductModel { Id = productId, Ratings = null }; // Set Ratings to null
+            var productId = "jenlooper-cactus";
 
             // Act
             var result = TestHelper.ProductService.AddRating(productId, -1);
@@ -106,7 +105,7 @@ namespace UnitTests.Services
         public void AddRating_Invalid_Rating_Above_Five_Should_Return_False()
         {
             // Arrange
-            var productId = "1";
+            var productId = "jenlooper-cactus";
             var product = new ProductModel { Id = productId, Ratings = null }; // Set Ratings to null
 
             // Act
