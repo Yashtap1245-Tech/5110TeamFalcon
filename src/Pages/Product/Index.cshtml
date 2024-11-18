@@ -29,9 +29,17 @@
             <tr>
                 <td>@product.Title</td>
                 <td>
-                    <button class="btn btn-info btn-sm" asp-page="/Product/Read" asp-route-id="@product.Id">Read</button>
-                    <button class="btn btn-warning btn-sm" asp-page="/Product/Update" asp-route-id="@product.Id">Update</button>
-                    <button class="btn btn-danger btn-sm" asp-page="/Product/Delete" asp-route-id="@product.Id">Delete</button>
+                        <form asp-page="/Product/Read" asp-route-id="@product.Id" method="get" style="display:inline;">
+                            <button type="submit" class="btn btn-info btn-sm">Read</button>
+                        </form>
+
+                        <form asp-page="/Product/Update" asp-route-id="@product.Id" method="get" style="display:inline;">
+                            <button type="submit" class="btn btn-warning btn-sm">Update</button>
+                        </form>
+
+                        <form asp-page="/Product/Delete" asp-route-id="@product.Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
                 </td>
 
             </tr>
