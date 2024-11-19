@@ -7,11 +7,13 @@ using System;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+
     /// <summary>
     /// Create Page will return a form with fields to create new data
     /// </summary>
     public class CreateModel : PageModel
     {
+
         // Data Service
         public JsonFileProductService ProductService { get; }
 
@@ -54,5 +56,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
             return RedirectToPage("./Index");
         }
+
     }
+
 }
