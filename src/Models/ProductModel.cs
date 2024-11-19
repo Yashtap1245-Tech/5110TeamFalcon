@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Attributes of the Product
+    /// </summary>
     public class ProductModel
     {
         //ID Field
