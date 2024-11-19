@@ -5,11 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+
     /// <summary>
     /// Index Page will return all the data to show the user
     /// </summary>
     public class ReadModel : PageModel
     {
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -39,5 +41,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
             return Page();
         }
+
     }
+
 }
