@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
@@ -28,9 +29,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// REST OnGet
         /// Return all the data
         /// </summary>
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
         {
             Product = ProductService.GetDataForRead(id);
-        } 
+            if (Product == null)
+            {
+                return RedirectToPage("./IdNotFound");
+            }
+
+            return Page();
+        }
     }
 }
