@@ -62,9 +62,6 @@ namespace ContosoCrafts.WebSite.Models
         [MaxLength(30, ErrorMessage = "Comment must be 30 characters or less.")]
         public List<string> CommentList { get; set; } = new List<string>();
 
-        //JSON Serializer
-        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
-
     }
 
 }
