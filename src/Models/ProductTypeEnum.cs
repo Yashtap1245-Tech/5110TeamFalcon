@@ -8,6 +8,7 @@
         Collectable = 130,
         Commercial = 55,
     }
+
     /// <summary>
     /// A static class that contains extension methods for the <see cref="ProductTypeEnum"/> enumeration.
     /// This class provides additional functionality to the enum, allowing for more descriptive and user-friendly 
@@ -41,6 +42,9 @@
                 // Default, Unknown
                 _ => "",
             };
+
         }
+
     }
+
 }
