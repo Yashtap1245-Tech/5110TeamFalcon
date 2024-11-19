@@ -8,7 +8,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 {
 
     /// <summary>
-    /// Class DeleteModel inherits the PageModel class
+    /// Class DeleteModel inherits the class PageModel
     /// </summary>
     public class DeleteModel : PageModel
     {
@@ -27,7 +27,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public ProductModel Product { get; set; }
         
         /// <summary>
-        /// OnGet Method with id as parameter
+        /// OnGet Method with id as parameters
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -44,6 +44,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
             return Page();
         }
 
+        /// <summary>
+        /// OnPost method after deleting the item
+        /// </summary>
+        /// <returns></returns>
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
