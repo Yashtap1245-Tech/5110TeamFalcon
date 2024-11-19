@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace UnitTests.Pages.Product.Update
 {
@@ -82,6 +83,18 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(PageModel.Product.Director, Is.EqualTo("Frank Darabont"));
             Assert.That(PageModel.Product.Description, Is.EqualTo("The Shawshank Redemption is a 1994 American prison drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis Red Redding (Morgan Freeman), and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles."));
             Assert.That(PageModel.Product.Genre, Is.EqualTo("Drama"));
+        }
+
+        [Test]
+        public void OnGet_Invalid_Id_Should_Redirect_Page()
+        {
+            // Arrange
+            var invalid_Id = "jenlooper-cactusasdasd";
+            // Act
+            var result = PageModel.OnGet(invalid_Id);
+
+            //Assert
+            Assert.That(result, Is.TypeOf<RedirectToPageResult>());
         }
 
         [Test]
