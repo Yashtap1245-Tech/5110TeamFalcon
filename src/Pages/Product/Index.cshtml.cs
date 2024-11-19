@@ -5,11 +5,13 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+
     /// <summary>
     /// Index Page will return all the data to show the user
     /// </summary>
     public class IndexModel : PageModel
     {
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -33,5 +35,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             Products = ProductService.GetAllData();
         }
+
     }
+
 }
