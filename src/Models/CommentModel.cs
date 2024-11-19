@@ -11,4 +11,5 @@ namespace ContosoCrafts.WebSite.Models
         // The Comment
         public string Comment { get; set; }
     }
+
 }
