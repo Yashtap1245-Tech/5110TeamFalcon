@@ -27,7 +27,7 @@
             </select>
         </div>
 
-        <button type="button" class="btn btn-secondary ms-2" @onclick="ResetGenre">Reset</button>
+        <button type="button" class="btn btn-secondary ms-2" id="Reset_button" @onclick="ResetGenre">Reset</button>
     </div>
 </div>
 
@@ -112,8 +112,7 @@
            @bind="newComment"
            maxlength="30"
            placeholder="Enter your comment (max 30 characters)" />
-    <button class="btn btn-success" @onclick="SubmitComments">Add Comment</button>
-    <ValidationMessage For="@(() => newComment)" />
+    <button class="btn btn-success" @onclick="SubmitComments" id="Add_comment">Add Comment</button>
 </div>
 
 <ul class="list-group">
@@ -177,7 +176,6 @@
     {
         // Initialize Product Selection
         selectedProduct = ProductService.GetAllData().FirstOrDefault();
-        selectedProductId = selectedProduct?.Id;
     }
 
     // Dictionary to track which products the user has voted on
