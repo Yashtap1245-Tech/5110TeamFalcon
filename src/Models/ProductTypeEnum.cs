@@ -1,5 +1,6 @@
 ﻿namespace ContosoCrafts.WebSite.Models
 {
+
     /// <summary>
     /// Product Enum class
     /// </summary>
@@ -23,6 +24,7 @@
     /// </remarks>
     public static class ProductTypeEnumExtensions
     {
+
         /// <summary>
         /// Retrieves the display name associated with a specific <see cref="ProductTypeEnum"/> value.
         /// This method converts the enum value into a human-readable string, which can be useful for 
