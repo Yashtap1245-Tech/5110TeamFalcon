@@ -1,5 +1,8 @@
 ﻿namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Product Enum class
+    /// </summary>
     public enum ProductTypeEnum
     {
         Undefined = 0,
