@@ -85,5 +85,108 @@ namespace UnitTests.Components
             starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
             var postStarChange = starButton.OuterHtml;
         }
+
+        [Test]
+        public void SubmitRating_On_existing_previous_rating()
+        {
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_sailorhg-corsage";
+            var page = RenderComponent<ProductList>();
+            var buttonList = page.FindAll("Button");
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            button.Click();
+            var buttonMarkup = page.Markup;
+            var starButtonList = page.FindAll("span");
+            var preVoteCountSpan = starButtonList[4];
+
+            var preVoteCoutString = preVoteCountSpan.OuterHtml;
+
+            var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star"));
+            var preStarChange = starButton.OuterHtml;
+            starButton.Click();
+
+            buttonMarkup = page.Markup;
+            starButtonList = page.FindAll("span");
+            var postVoteCountSpan = starButtonList[4];
+
+            var postVoteCoutString = postVoteCountSpan.OuterHtml;
+            starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
+            var postStarChange = starButton.OuterHtml;
+        }
+
+        [Test]
+        public void Check_reset_genre()
+        {
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Reset_button";
+            var page = RenderComponent<ProductList>();
+            var buttonList = page.FindAll("Button");
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            button.Click();
+
+            var pageMarkup = page.Markup;
+
+            Assert.That(pageMarkup.Contains("The Shawshank Redemption"), Is.EqualTo(true));
+        }
+
+        [Test]
+        public void Submit_Comment()
+        {
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_jenlooper-cactus";
+            var page = RenderComponent<ProductList>();
+            var buttonList = page.FindAll("Button");
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            button.Click();
+            var commentInput = page.Find("input#commentInput");
+            commentInput.Change("New comment from test");
+            var addCommentButtonList = page.FindAll("Button");
+            var addCommentButton = addCommentButtonList.First(m => m.OuterHtml.Contains("Add_comment"));
+            addCommentButton.Click();
+            var pageMarkup = page.Markup;
+
+            Assert.That(pageMarkup.Contains("New comment from test"), Is.EqualTo(true));
+        }
+
+        [Test]
+        public void Submit_White_Blank_Comment()
+        {
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_sailorhg-kit";
+            var page = RenderComponent<ProductList>();
+            var buttonList = page.FindAll("Button");
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            button.Click();
+            var commentInput = page.Find("input#commentInput");
+            commentInput.Change("");
+            var addCommentButtonList = page.FindAll("Button");
+            var addCommentButton = addCommentButtonList.First(m => m.OuterHtml.Contains("Add_comment"));
+            addCommentButton.Click();
+            var pageMarkup = page.Markup;
+
+            Assert.That(pageMarkup.Contains("New comment from test"), Is.EqualTo(false));
+
+        }
+
+        [Test]
+        public void Submit_Max_Length_Comment()
+        {
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_sailorhg-kit";
+            var page = RenderComponent<ProductList>();
+            var buttonList = page.FindAll("Button");
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            button.Click();
+            var commentInput = page.Find("input#commentInput");
+            commentInput.Change("ascas kl klasckmck aksmck masklmmklasmc  jkasnc janscmasm jsnc kasnc asjkcnas cs ckas c");
+            var addCommentButtonList = page.FindAll("Button");
+            var addCommentButton = addCommentButtonList.First(m => m.OuterHtml.Contains("Add_comment"));
+            addCommentButton.Click();
+
+            JsonFileProductService productService = Services.GetService<JsonFileProductService>();
+            var comments = productService.GetAllData().First(x => x.Id == "sailorhg-kit").CommentList;
+            Assert.That(comments.Contains("ascas kl klasckmck aksmck masklmmklasmc  jkasnc janscmasm jsnc kasnc asjkcnas cs ckas c"), Is.EqualTo(false));
+
+        }
     }
 }
