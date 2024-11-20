@@ -6,6 +6,8 @@ namespace UnitTests.Model
     [TestFixture]
     public class ProductTypeEnumTests
     {
+        #region DisplayName_Should_Return_Correct_Name_For_Collectable
+
         [Test]
         public void DisplayName_Should_Return_Correct_Name_For_Collectable()
         {
@@ -18,6 +20,10 @@ namespace UnitTests.Model
             // Assert
             Assert.That(displayName, Is.EqualTo("Collectables"));
         }
+
+        #endregion DisplayName_Should_Return_Correct_Name_For_Collectable
+
+        #region DisplayName_Should_Return_Correct_Name_For_Commercial
 
         [Test]
         public void DisplayName_Should_Return_Correct_Name_For_Commercial()
@@ -32,6 +38,10 @@ namespace UnitTests.Model
             Assert.That(displayName, Is.EqualTo("Commercial goods"));
         }
 
+        #endregion DisplayName_Should_Return_Correct_Name_For_Commercial
+
+        #region DisplayName_Should_Return_Correct_Name_For_Amature
+
         [Test]
         public void DisplayName_Should_Return_Correct_Name_For_Amature()
         {
@@ -44,6 +54,10 @@ namespace UnitTests.Model
             // Assert
             Assert.That(displayName, Is.EqualTo("Hand Made Items"));
         }
+
+        #endregion DisplayName_Should_Return_Correct_Name_For_Amature
+
+        #region DisplayName_Should_Return_Correct_Name_For_Antique
 
         [Test]
         public void DisplayName_Should_Return_Correct_Name_For_Antique()
@@ -58,6 +72,10 @@ namespace UnitTests.Model
             Assert.That(displayName, Is.EqualTo("Antiques"));
         }
 
+        #endregion DisplayName_Should_Return_Correct_Name_For_Antique
+
+        #region DisplayName_Should_Return_Empty_String_For_Undefined
+
         [Test]
         public void DisplayName_Should_Return_Empty_String_For_Undefined()
         {
@@ -68,20 +86,26 @@ namespace UnitTests.Model
             var displayName = productType.DisplayName();
 
             // Assert
-            Assert.That(displayName, Is.EqualTo(""));
+            Assert.That(displayName, Is.EqualTo(""));  // Undefined should return empty string
         }
+
+        #endregion DisplayName_Should_Return_Empty_String_For_Undefined
+
+        #region DisplayName_Should_Return_Empty_String_For_Unknown_Value
 
         [Test]
         public void DisplayName_Should_Return_Empty_String_For_Unknown_Value()
         {
             // Arrange
-            var productType = (ProductTypeEnum)999; // Invalid value outside defined enum values.
+            var productType = (ProductTypeEnum)999;  // Invalid value outside defined enum values
 
             // Act
             var displayName = productType.DisplayName();
 
             // Assert
-            Assert.That(displayName, Is.EqualTo(""));
+            Assert.That(displayName, Is.EqualTo(""));  // Invalid enum values should return empty string
         }
+
+        #endregion DisplayName_Should_Return_Empty_String_For_Unknown_Value
     }
 }
