@@ -8,17 +8,20 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite
 {
+
     /// <summary>
     /// Startup class main body
     /// </summary>
     public class Startup
     {
+
         /// <summary>
         /// Constructor to initialize configuration settings
         /// </summary>
         /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
+
             // Inject the application's configuration settings
             Configuration = configuration;
         }
@@ -51,14 +54,17 @@ namespace ContosoCrafts.WebSite
             {
                 app.UseDeveloperExceptionPage();
             }
+
             else
             {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             // Redirect HTTP requests to HTTPS
             app.UseHttpsRedirection();
+
             // Enable serving of static files (like HTML, CSS, JS) from the wwwroot folder
             app.UseStaticFiles();
             
@@ -85,6 +91,9 @@ namespace ContosoCrafts.WebSite
                 //     return context.Response.WriteAsync(json);
                 // });
             });
+
         }
+
     }
+
 }
