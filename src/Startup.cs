@@ -8,9 +8,15 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite
 {
+    /// <summary>
+    /// Startup class main body
+    /// </summary>
     public class Startup
     {
-        // Constructor to initialize configuration settings
+        /// <summary>
+        /// Constructor to initialize configuration settings
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             // Inject the application's configuration settings
@@ -20,7 +26,10 @@ namespace ContosoCrafts.WebSite
         // Property to hold the configuration settings, allowing access throughout the Startup class
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container.
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages().AddRazorRuntimeCompilation();
@@ -30,7 +39,11 @@ namespace ContosoCrafts.WebSite
             services.AddTransient<JsonFileProductService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // Check if the application is running in the Development environment
