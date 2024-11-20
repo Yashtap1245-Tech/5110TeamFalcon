@@ -6,17 +6,24 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Error
 {
-    public class ErrorTests
+    /// <summary>
+    /// Unit tests for the ErrorModel class.
+    /// </summary>
+    public class ErrorModelTests
     {
         #region TestSetup
+
         public static ErrorModel pageModel;
 
+        /// <summary>
+        /// Initializes the test setup before each test is executed.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
-            var MockLoggerDirect = Mock.Of<ILogger<ErrorModel>>();
+            var mockLogger = Mock.Of<ILogger<ErrorModel>>();
 
-            pageModel = new ErrorModel(MockLoggerDirect)
+            pageModel = new ErrorModel(mockLogger)
             {
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
@@ -26,11 +33,15 @@ namespace UnitTests.Pages.Error
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// Test to verify OnGet method behavior when the activity is valid.
+        /// Expected result: RequestId should be the activity ID.
+        /// </summary>
         [Test]
-        public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
+        public void OnGet_Valid_ActivitySet_RequestIdIsActivityId()
         {
             // Arrange
-
             Activity activity = new Activity("activity");
             activity.Start();
 
@@ -41,12 +52,16 @@ namespace UnitTests.Pages.Error
             activity.Stop();
 
             // Assert
-            Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
-            Assert.That(pageModel.RequestId, Is.EqualTo(activity.Id));
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(activity.Id, pageModel.RequestId);
         }
 
+        /// <summary>
+        /// Test to verify OnGet method behavior when the activity is null.
+        /// Expected result: RequestId should be the default value "trace".
+        /// </summary>
         [Test]
-        public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
+        public void OnGet_Invalid_ActivityNull_RequestIdIsTraceIdentifier()
         {
             // Arrange
 
@@ -56,10 +71,11 @@ namespace UnitTests.Pages.Error
             // Reset
 
             // Assert
-            Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
-            Assert.That(pageModel.RequestId, Is.EqualTo("trace"));
-            Assert.That(pageModel.ShowRequestId, Is.EqualTo(true));
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual("trace", pageModel.RequestId);
+            Assert.AreEqual(true, pageModel.ShowRequestId);
         }
+
         #endregion OnGet
     }
 }
