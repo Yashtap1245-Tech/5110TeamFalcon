@@ -1,12 +1,16 @@
 ﻿@page
 @model ErrorModel
+
+// Setting the title of the page
 @{
     ViewData["Title"] = "Error";
 }
 
+// Error header message
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
+// Check if the RequestId should be shown
 @if (Model.ShowRequestId)
 {
     <p>
