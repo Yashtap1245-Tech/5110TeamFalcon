@@ -71,12 +71,26 @@ namespace UnitTests.Pages.Product.Read
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
+            // Arrange
+
             //Act
             PageModel.OnGet("jenlooper-cactus");
 
             //Assert
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(PageModel.Product.Title, Is.EqualTo("The Shawshank Redemption"));
+        }
+
+        [Test]
+        public void OnGet_Invalid_Id_Should_Redirect_The_Page()
+        {
+            // Arrange
+            var invalid_Id = "jenlooper-cactusasdasd";
+            // Act
+            var result = PageModel.OnGet(invalid_Id);
+
+            //Assert
+            Assert.That(result, Is.TypeOf<RedirectToPageResult>());
         }
     }
 }
