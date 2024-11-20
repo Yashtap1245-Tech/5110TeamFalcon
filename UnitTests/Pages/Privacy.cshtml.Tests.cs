@@ -5,17 +5,24 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Privacy
 {
-    public class PrivacyTests
+    /// <summary>
+    /// Unit tests for the PrivacyModel class.
+    /// </summary>
+    public class PrivacyModelTests
     {
         #region TestSetup
+
         public static PrivacyModel pageModel;
 
+        /// <summary>
+        /// Initializes the test setup before each test is executed.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
-            var MockLoggerDirect = Mock.Of<ILogger<PrivacyModel>>();
+            var mockLogger = Mock.Of<ILogger<PrivacyModel>>();
 
-            pageModel = new PrivacyModel(MockLoggerDirect)
+            pageModel = new PrivacyModel(mockLogger)
             {
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
@@ -25,8 +32,13 @@ namespace UnitTests.Pages.Privacy
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// Test to verify the OnGet method behavior when the activity is set to valid conditions.
+        /// Expected result: Model state should be valid.
+        /// </summary>
         [Test]
-        public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
+        public void OnGet_Valid_ActivitySet_ModelStateIsValid()
         {
             // Arrange
 
@@ -36,7 +48,7 @@ namespace UnitTests.Pages.Privacy
             // Reset
 
             // Assert
-            Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
         }
 
         #endregion OnGet
