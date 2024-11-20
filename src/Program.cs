@@ -3,10 +3,14 @@ using Microsoft.Extensions.Hosting;
 
 namespace ContosoCrafts.WebSite
 {
+    /// <summary>
+    /// Main Program body
+    /// </summary>
     public class Program
     {   // Entry point of the application
         public static void Main(string[] args)
         {
+
             // Builds and runs the host (server) for the web application
             CreateHostBuilder(args).Build().Run();
         }
@@ -18,5 +22,7 @@ namespace ContosoCrafts.WebSite
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
+
 }
