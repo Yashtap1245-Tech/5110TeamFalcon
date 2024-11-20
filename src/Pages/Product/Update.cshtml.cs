@@ -12,9 +12,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class UpdateModel : PageModel
     {
+
         // Data Service
         public JsonFileProductService ProductService { get; }
 
+        /// <summary>
+        /// UpdateModel constructor
+        /// </summary>
+        /// <param name="productService"></param>
         public UpdateModel(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -37,6 +42,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             {
                 return RedirectToPage("./IdNotFound");
             }
+
             return Page();
         }
 
@@ -57,5 +63,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService.UpdateData(Product);
             return RedirectToPage("./Index");
         }
+
     }
+
 }
