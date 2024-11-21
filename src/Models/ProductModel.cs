@@ -24,15 +24,17 @@ namespace ContosoCrafts.WebSite.Models
         public string Url { get; set; }
         
         //Title Field
-        [StringLength (maximumLength: 50, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
+        [StringLength (maximumLength: 50, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}.")]
         [Required(ErrorMessage = "Title is required")]
         public string Title { get; set; }
-        
+
         // Director Field
+        [StringLength(maximumLength: 80, MinimumLength = 1, ErrorMessage = "The Movie should have a director.")]
         [Required(ErrorMessage = "Director is required")]
         public string Director { get; set; }
-        
+
         //Description Field
+        [StringLength(maximumLength: 500, MinimumLength = 1, ErrorMessage = "The description should not been more than 300 words.")]
         [Required(ErrorMessage = "Description is required")]
         public string Description { get; set; }
         
@@ -45,13 +47,15 @@ namespace ContosoCrafts.WebSite.Models
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
         //Release Year Field
+        [Range(1000, 9999, ErrorMessage = "The year must be a four-digit number.")]
         public int ReleaseYear { get; set; }
         
         //YoutubeID for movie trailer
         [Required(ErrorMessage = "YouTubeID is required")]
         public string YouTubeID { get; set; }
-        
+
         //Genre field
+        [StringLength(maximumLength: 30, MinimumLength = 1, ErrorMessage = "The description should not been more than 300 words.")]
         [Required(ErrorMessage = "Genre is required")]
         public string Genre { get; set; }
         
