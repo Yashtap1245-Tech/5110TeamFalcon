@@ -12,16 +12,10 @@ namespace ContosoCrafts.WebSite.Models
     {
         //ID Field
         public string Id { get; set; }
-        
-        //Maker Field
-        public string Maker { get; set; }
 
         //Image Field
         [JsonPropertyName("img")]
         public string Image { get; set; }
-        
-        //Url Field
-        public string Url { get; set; }
         
         //Title Field
         [StringLength (maximumLength: 50, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}.")]
