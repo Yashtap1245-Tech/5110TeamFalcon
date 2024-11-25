@@ -422,3 +422,26 @@ input:checked + .slider {
     input:checked + .slider:before {
         transform: translate(24px, -50%);
     }
+
+.btn-info {
+    background-color: #28a745; /* Green for visibility */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove border for a clean look */
+    padding: 5px 10px; /* Adjust padding for a smaller size */
+    font-size: 14px; /* Slightly larger font size for readability */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+    /* Hover Effect for Read Button */
+    .btn-info:hover {
+        background-color: #218838; /* Slightly darker green on hover */
+        color: #ffffff; /* Ensure text remains white */
+    }
+
+    /* Optional: Focus State for Accessibility */
+    .btn-info:focus {
+        outline: 2px solid #218838; /* Green outline for focus */
+        outline-offset: 2px;
+    }
