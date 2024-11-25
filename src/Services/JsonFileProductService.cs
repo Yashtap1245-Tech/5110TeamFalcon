@@ -190,7 +190,6 @@ namespace ContosoCrafts.WebSite.Services
                 Id = System.Guid.NewGuid().ToString(),
                 Title = "Enter Title",
                 Description = "Enter Description",
-                Url = "Enter URL",
                 Image = "",
             };
 
