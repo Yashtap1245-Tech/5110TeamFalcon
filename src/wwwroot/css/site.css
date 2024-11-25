@@ -457,3 +457,53 @@ input:checked + .slider {
         outline: 2px solid #218838; /* Green outline for focus */
         outline-offset: 2px;
     }
+
+/* General Button Styling */
+.btn {
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    font-size: 12px;
+    padding: 6px 10px;
+}
+
+/* Read Button (Blue) */
+.btn-read {
+    background-color: #17a2b8; /* Info Blue */
+    border: 1px solid #17a2b8;
+}
+
+    .btn-read:hover {
+        background-color: #138496; /* Darker Blue */
+        border-color: #138496;
+        text-decoration: none;
+    }
+
+/* Edit Button (Yellow) */
+.btn-edit {
+    background-color: #ffc107; /* Warning Yellow */
+    border: 1px solid #ffc107;
+}
+
+    .btn-edit:hover {
+        background-color: #e0a800; /* Darker Yellow */
+        border-color: #e0a800;
+        text-decoration: none;
+    }
+
+/* Delete Button (Red) */
+.btn-delete {
+    background-color: #dc3545; /* Danger Red */
+    border: 1px solid #dc3545;
+}
+
+    .btn-delete:hover {
+        background-color: #c82333; /* Darker Red */
+        border-color: #c82333;
+        text-decoration: none;
+    }
