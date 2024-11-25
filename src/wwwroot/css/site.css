@@ -28,6 +28,18 @@ for details on configuring this project to bundle and minify static web assets. 
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
 }
 
+body.dark-theme .card-columns .card {
+    align-items: center; /* Center vertically */
+    display: flex;
+    flex-direction: column; /* Ensure the card content stacks vertically */
+    background-color: #4b3b78; /* Deep purple background */
+    color: #ffffff; /* Light text for readability */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures child elements respect the border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
     .card-columns .card:hover .card-img {
         opacity: 1;
         -webkit-transform-style: preserve-3d;
