@@ -28,12 +28,11 @@
         {
             <tr>
                 <td>@product.Title</td>
-                <td>
-                    <a class="btn btn-info btn-sm"  asp-page="/Product/Read" asp-route-id="@product.Id">Read</a> &nbsp;
-                    <a class="btn btn-warning btn-sm" asp-page="/Product/Update" asp-route-id="@product.Id">Update</a> &nbsp;
-                    <a class="btn btn-danger btn-sm" asp-page="/Product/Delete" asp-route-id="@product.Id">Delete</a>
-                </td>
-
+                    <td>
+                        <a class="btn btn-read btn-sm" asp-page="/Product/Read" asp-route-id="@product.Id">Read</a> &nbsp;
+                        <a class="btn btn-edit btn-sm" asp-page="/Product/Update" asp-route-id="@product.Id">Update</a> &nbsp;
+                        <a class="btn btn-delete btn-sm" asp-page="/Product/Delete" asp-route-id="@product.Id">Delete</a>
+                    </td>
             </tr>
         }
         </tbody>
