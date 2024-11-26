@@ -379,6 +379,14 @@ body.dark-theme {
         color: #ffdd57 !important; /* Bright yellow color for the cast names */
         font-weight: bold; /* Make the text bold for better visibility */
     }
+
+    /* Dark Theme Card Body */
+    body.dark-theme .card-body {
+        background-color: #2c2c4e; /* Deep purple-blue background */
+        color: #ffffff; /* White text for readability */
+        border-radius: 10px; /* Smooth corners for the card body */
+        padding: 20px; /* Spacing for content inside the card */
+    }
 .theme-toggle-container {
     display: flex;
     align-items: center;
