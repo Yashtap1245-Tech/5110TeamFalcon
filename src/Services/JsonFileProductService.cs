@@ -254,12 +254,14 @@ namespace ContosoCrafts.WebSite.Services
         ///<summary>
         /// Save the comments to the database
         /// </summary> 
-        public bool AddComment(string productId, string comment)
+        public bool AddComment(string productId, string comment, string sentimentType, double sentimentScore)
         {
             var products = GetAllData().ToList();
             var data = products.FirstOrDefault(p => p.Id == productId);
             var comments = data.CommentList.ToList();
-            comments.Add(comment);
+            // comments.Add(comment);
+            // comments.Add(new List<string, string, double> { { comment, sentimentType, sentimentScore } });
+            comments.Add(new Comment { Text = comment, SentimentType = sentimentType, SentimentPositive = sentimentScore });
             data.CommentList = comments.ToList();
 
             // Save the data back to the data store
