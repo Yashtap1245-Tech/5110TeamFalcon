@@ -1,7 +1,10 @@
+@using Azure
+@using Azure.AI.TextAnalytics
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
-@using Microsoft.AspNetCore.Components.Web
+@using System.Linq
 @inject JsonFileProductService ProductService
+@inject SentimentAnalysisService SentimentAnalysisService
 
 <div class="p-3">
     <div class="d-flex align-items-center">
@@ -107,20 +110,24 @@
                             <p class="card-text">IMDb Rating: @selectedProduct.IMDbRating</p>
 
                             <div class="form-group">
-    <label for="commentInput">Leave a Comment:</label>
-    <input id="commentInput" type="text" class="form-control"
-           @bind="newComment"
-           maxlength="30"
-           placeholder="Enter your comment (max 30 characters)" />
-    <button class="btn btn-success" @onclick="SubmitComments" id="Add_comment">Add Comment</button>
-</div>
+                                <label for="commentInput">Leave a Comment:</label>
+                                <input id="commentInput" type="text" class="form-control"
+                                       @bind="newComment"
+                                       maxlength="30"
+                                       placeholder="Enter your comment (max 30 characters)" />
+                                <button class="btn btn-success" @onclick="SubmitComments" id="Add_comment">Add Comment</button>
+                            </div>
 
-<ul class="list-group">
-    @foreach (var comment in selectedProduct.CommentList)
-    {
-        <li class="list-group-item">@comment</li>
-    }
-</ul>
+                            <ul class="list-group">
+                                @foreach (var commentDict in selectedProduct.CommentList)
+                                {
+                                    @* @foreach (var comment in commentDict) *@
+                                    @* { *@
+                                    @*     <li class="list-group-item">@comment.Key: @comment.Value</li> *@
+                                    @* } *@
+                                <li class="list-group-item">@commentDict.Text: @commentDict.SentimentType: @commentDict.SentimentPositive</li>
+                                }
+                            </ul>
 
                         </div>
                     </div>
@@ -166,6 +173,11 @@
     string selectedGenre;
     string searchedMovie = "";
     string newComment = ""; // Property to hold the new comment
+
+    string sentimentType;
+    double positive;
+    double negative;
+    double neutral;
     public IEnumerable<ProductModel> filteredProducts;
 
     /// <summary>
@@ -217,7 +229,10 @@
         {
             voteCount = selectedProduct.Ratings.Count();
             voteLabel = voteCount > 1 ? "Votes" : "Vote";
-            currentRating = selectedProduct.Ratings.Sum() / voteCount;
+            if (voteCount > 0)
+            {
+                currentRating = selectedProduct.Ratings.Sum() / voteCount;
+            }
         }
 
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
@@ -261,15 +276,31 @@
             return;
         }
 
+
+        
+        string languageKey = "C1ZJKTGttyHCfv0P1XVIvk2NIX1J0N489hYghZfq0EleEsJRteINJQQJ99AKACYeBjFXJ3w3AAAaACOGm1I4";
+        string languageEndpoint = "https://sentimentanalysisforfalcon.cognitiveservices.azure.com/";
+
+        AzureKeyCredential credentials = new AzureKeyCredential(languageKey);
+        Uri endpoint = new Uri(languageEndpoint);
+
+        var client = new TextAnalyticsClient(endpoint, credentials);
+        SentimentAnalysisService saService = new SentimentAnalysisService();
+        (sentimentType, positive, negative, neutral) = saService.SentimentAnalysis(client, newComment);
+        
         // Add the comment to the product's comment list
         Console.WriteLine($"Comments received for {selectedProduct.Id}: {newComment}");
-        ProductService.AddComment(selectedProductId, newComment);
+        ProductService.AddComment(selectedProductId, newComment, sentimentType, positive);
+        
+        
+        // Implementing Sentiment analysis
 
         // Refresh the selected product to display the updated comment list
         SelectProduct(selectedProductId);
 
         // Clear the input field after successfully adding the comment
         newComment = "";
+
     }
 
     /// <summary>
