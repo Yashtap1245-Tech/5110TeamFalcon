@@ -515,3 +515,20 @@ input:checked + .slider {
         border-color: #c82333;
         text-decoration: none;
     }
+    
+/* Styling for the sentiment bar */
+#sentimentBarContainer {
+    opacity: 0.4;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border: 0px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+#sentimentBar {
+    height: 100%;
+    background-color: green;
+}
