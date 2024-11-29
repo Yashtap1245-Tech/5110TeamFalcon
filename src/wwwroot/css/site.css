@@ -532,3 +532,48 @@ input:checked + .slider {
     height: 100%;
     background-color: green;
 }
+
+svg {
+    width: 42px;
+    height: 42px;
+    transform: rotate(-90deg);
+    overflow: visible;
+}
+
+circle {
+    stroke-width: 4px;
+    fill: none;
+}
+
+circle:nth-child(1) {
+    stroke: #e3d3d3;
+}
+
+circle:nth-child(2) {
+    stroke: green;
+    stroke-dasharray: calc(2 * 3.1416 * 20);
+    stroke-dashoffset: calc((2 * 3.1416 * 20) - (var(--percentage) * (2 * 3.1416 * 20) / 100));
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle_box {
+    font-size: 16px;
+    text-align: left;
+    padding: 5px;
+}
+
+.voting {
+    padding: 10px;
+}
+
+.custom-footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.background-circle {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 4px;
+}
