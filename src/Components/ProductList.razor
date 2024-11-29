@@ -114,19 +114,20 @@
                                 <label for="commentInput">Leave a Comment:</label>
                                 <input id="commentInput" type="text" class="form-control"
                                        @bind="newComment"
-                                       maxlength="30"
-                                       placeholder="Enter your comment (max 30 characters)" />
+                                       placeholder="Enter your comment (max 200 characters)" />
+                                <br/>
                                 <button class="btn btn-success" @onclick="SubmitComments" id="Add_comment">Add Comment</button>
                             </div>
 
                             <ul class="list-group">
                                 @foreach (var commentDict in selectedProduct.CommentList)
                                 {
-                                    @* @foreach (var comment in commentDict) *@
-                                    @* { *@
-                                    @*     <li class="list-group-item">@comment.Key: @comment.Value</li> *@
-                                    @* } *@
-                                <li class="list-group-item">@commentDict.Text: @commentDict.SentimentType: @commentDict.SentimentPositive</li>
+                                    <li class="list-group-item">
+                                        @commentDict.Text
+                                        <div id="sentimentBarContainer">
+                                            <div id="sentimentBar" style="width:@commentDict.SentimentPositive%;"></div>
+                                        </div>
+                                    </li>
                                 }
                             </ul>
 
@@ -176,9 +177,7 @@
     string newComment = ""; // Property to hold the new comment
 
     string sentimentType;
-    double positive;
-    double negative;
-    double neutral;
+    int positive;
     public IEnumerable<ProductModel> filteredProducts;
 
     /// <summary>
@@ -261,7 +260,7 @@
     /// <summary>
     /// Execute when the Add comments button is clicked
     /// </summary>
-    void SubmitComments()
+    public void SubmitComments()
     {
         // Check if the comment is empty or whitespace
         if (string.IsNullOrWhiteSpace(newComment))
@@ -271,9 +270,9 @@
         }
 
         // Enforce a maximum length of 30 characters for the comment
-        if (newComment.Length > 30)
+        if (newComment.Length > 200)
         {
-            Console.WriteLine("Comment exceeds the maximum length of 30 characters.");
+            Console.WriteLine("Comment exceeds the maximum length of 200 characters.");
             return;
         }
 
@@ -287,7 +286,7 @@
 
         var client = new TextAnalyticsClient(endpoint, credentials);
         SentimentAnalysisService saService = new SentimentAnalysisService();
-        (sentimentType, positive, negative, neutral) = saService.SentimentAnalysis(client, newComment);
+        (sentimentType, positive) = saService.SentimentAnalysis(client, newComment);
         
         // Add the comment to the product's comment list
         Console.WriteLine($"Comments received for {selectedProduct.Id}: {newComment}");
@@ -312,4 +311,6 @@
         selectedGenre = "";
         searchedMovie = "";
     }
+    
+    
 }
