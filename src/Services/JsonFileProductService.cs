@@ -254,7 +254,7 @@ namespace ContosoCrafts.WebSite.Services
         ///<summary>
         /// Save the comments to the database
         /// </summary> 
-        public bool AddComment(string productId, string comment, string sentimentType, double sentimentScore)
+        public bool AddComment(string productId, string comment, string sentimentType, int sentimentScore)
         {
             var products = GetAllData().ToList();
             var data = products.FirstOrDefault(p => p.Id == productId);
