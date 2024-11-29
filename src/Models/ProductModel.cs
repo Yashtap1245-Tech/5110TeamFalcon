@@ -60,15 +60,14 @@ namespace ContosoCrafts.WebSite.Models
         public float IMDbRating { get; set; }
 
         // Store the Comments entered by the users on this product
-        // [MaxLength(30, ErrorMessage = "Comment must be 30 characters or less.")]
-        // public List<Dictionary<string, string, double>> CommentList { get; set; } = new List<Dictionary<string, string, double>>();
         public List<Comment> CommentList { get; set; } = new List<Comment>();
     }
 
     public class Comment
     {
+        [StringLength(maximumLength: 200, MinimumLength = 3, ErrorMessage = "Should have a length between 3 and 200 characters.")]
         public string Text { get; set; }
         public string SentimentType { get; set; }
-        public double SentimentPositive { get; set; }
+        public int SentimentPositive { get; set; }
     }
 }
