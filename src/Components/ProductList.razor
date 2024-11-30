@@ -318,10 +318,28 @@
         double averageSentimentPositive = 0.0;
         if (commentCount > 0)
         {
-             averageSentimentPositive = selectedProduct.CommentList.Sum(c => c.SentimentPositive) / commentCount;
+            averageSentimentPositive = selectedProduct.CommentList.Sum(c => c.SentimentPositive) / commentCount;
+            Console.WriteLine($"Sentiment sum  received for {averageSentimentPositive}");
+            if (currentRating > 0)
+            {
+                percentageLiked = (averageSentimentPositive + (currentRating / 5.0) * 100) / 2;
+            }
+            if (currentRating == 0)
+            {
+                percentageLiked = averageSentimentPositive;
+            }
         }
-
-        percentageLiked = (averageSentimentPositive + (currentRating / 5.0 ) * 100 ) / 2;
+        if(commentCount == 0){
+            if (currentRating > 0)
+            {
+                percentageLiked = (currentRating / 5.0) * 100;
+            }
+            if (currentRating == 0)
+            {
+                percentageLiked = 0.0;
+            }
+        }
+        Console.WriteLine($"Sentiment sum  received for {averageSentimentPositive}");
     }
 
     /// <summary>
