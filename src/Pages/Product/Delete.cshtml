@@ -44,6 +44,12 @@
         <input asp-for="Product.Genre" class="form-control" id="genreInput"  readonly/>
         <span asp-validation-for="Product.Genre" class="text-danger"></span>
     </div>
+    <!--Input field for ReleaseYear-->
+    <div class="form-group">
+        <label asp-for="Product.ReleaseYear" class="control-label"></label>
+        <input asp-for="Product.ReleaseYear" class="form-control" readonly/>
+        <span asp-validation-for="Product.ReleaseYear" class="text-danger"></span>
+    </div>
     <!--Input field for YouTubeId-->
     <div class="form-group">
         <label asp-for="Product.YouTubeID" class="control-label"></label>
