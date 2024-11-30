@@ -97,7 +97,7 @@
                             <p class="card-text">Director: @selectedProduct.Director</p>
                             <p class="card-text">Cast:</p>
                             <ul class="list-inline">
-                                @if (selectedProduct.Cast != null && selectedProduct.Cast.Any())
+                                @if (selectedProduct.Cast != null)
                                 {
                                     @foreach (var actor in selectedProduct.Cast)
                                     {
