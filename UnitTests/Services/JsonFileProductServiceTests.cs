@@ -274,14 +274,14 @@ namespace UnitTests.Services
             // Arrange
             var productId = "sailorhg-corsage";
             var comment = "This is a great Movie!";
-            var result = TestHelper.ProductService.AddComment(productId, comment);
+            var result = TestHelper.ProductService.AddComment(productId, comment , "Positive", 74);
 
             // Act
             var updatedProduct = TestHelper.ProductService.GetDataForRead(productId);
 
             // Assert
             Assert.That(result, Is.True);
-            Assert.That(updatedProduct.CommentList, Contains.Item(comment));
+            Assert.That(updatedProduct.CommentList[0].Text, Is.EqualTo(comment));
         }
 
         [Test]
@@ -290,11 +290,11 @@ namespace UnitTests.Services
             // Arrange
             var productId = "sailorhg-bubblesortpic";
             var comment = "This is a great product!";
-            var product = new ProductModel { Id = productId, Title = "Test Product", CommentList = new List<string> { comment } };
+            var product = new ProductModel { Id = productId, Title = "Test Product", CommentList = new List < Comment> { } };
 
             // Act
-            var initialresult = TestHelper.ProductService.AddComment(productId, comment); // Adding a Initial comment
-            var result = TestHelper.ProductService.AddComment(productId, comment); // Adding a duplicate comment
+            var initialresult = TestHelper.ProductService.AddComment(productId, comment, "Positive", 74); // Adding a Initial comment
+            var result = TestHelper.ProductService.AddComment(productId, comment, "Positive", 74); // Adding a duplicate comment
             var updatedProduct = TestHelper.ProductService.GetDataForRead(productId);
 
             // Assert
