@@ -28,7 +28,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Director { get; set; }
 
         // Description Field
-        [StringLength(maximumLength: 500, MinimumLength = 1, ErrorMessage = "The description should not been more than 500 characters.")]
+        [StringLength(maximumLength: 800, MinimumLength = 1, ErrorMessage = "The description should not been more than 800 characters.")]
         [Required(ErrorMessage = "Description is required")]
         public string Description { get; set; }
 
