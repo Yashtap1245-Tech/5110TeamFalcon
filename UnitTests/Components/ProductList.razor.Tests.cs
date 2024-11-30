@@ -90,6 +90,42 @@ namespace UnitTests.Components
         }
 
         [Test]
+        public void SubmitRating_Valid_ID_Click_Higher_Rating_Should_Increment_Count_And_Check_Star()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_jenlooper-cactus";
+            var page = RenderComponent<ProductList>();
+            var buttonList = page.FindAll("Button");
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+            var buttonMarkup = page.Markup;
+            var starButtonList = page.FindAll("span");
+            var preVoteCountSpan = starButtonList[2];
+
+            var preVoteCoutString = preVoteCountSpan.OuterHtml;
+
+            var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star"));
+            var preStarChange = starButton.OuterHtml;
+            starButton.Click();
+
+            buttonMarkup = page.Markup;
+            starButtonList = page.FindAll("span");
+            var postVoteCountSpan = starButtonList[4];
+
+            var postVoteCoutString = postVoteCountSpan.OuterHtml;
+            starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
+            var postStarChange = starButton.OuterHtml;
+
+            // Assert 
+            JsonFileProductService productService = Services.GetService<JsonFileProductService>();
+            var ratings = productService.GetAllData().First(x => x.Id == "jenlooper-cactus").Ratings.Last();
+            Assert.That(ratings.Equals(1), Is.EqualTo(true));
+        }
+
+        [Test]
         public void SubmitRating_On_Existing_Previous_Rating_Should_Increment_Rating_To_1()
         {
             // Arrange
