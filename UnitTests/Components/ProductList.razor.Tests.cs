@@ -15,6 +15,8 @@ namespace UnitTests.Components
         public void TestInitialize()
         {
             // Initial setup if needed (currently empty, but could be expanded)
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            Services.AddSingleton<SentimentAnalysisService>(TestHelper.SentimentService);
         }
 
         #endregion TestSetup
@@ -198,7 +200,7 @@ namespace UnitTests.Components
             // Act
             button.Click();
             var commentInput = page.Find("input#commentInput");
-            commentInput.Change("ascas kl klasckmck aksmck masklmmklasmc  jkasnc janscmasm jsnc kasnc asjkcnas cs ckas c");
+            commentInput.Change("ascas kl klasckmck aksmck masklmmklasmc  jkasnc janscmasm jsnc kasnc asjkcnas cs ckas c dsvasdvsdvs sdvc sdvc svscx adcscx adcasdc sx asdvvfscx sfvdsc ssdvszxc sdzv sfdvds csdv sczcadvwevad czavdv sfd");
             var addCommentButtonList = page.FindAll("Button");
             var addCommentButton = addCommentButtonList.First(m => m.OuterHtml.Contains("Add_comment"));
             addCommentButton.Click();
@@ -206,8 +208,7 @@ namespace UnitTests.Components
             // Assert
             JsonFileProductService productService = Services.GetService<JsonFileProductService>();
             var comments = productService.GetAllData().First(x => x.Id == "sailorhg-kit").CommentList;
-            Assert.That(comments.Contains("ascas kl klasckmck aksmck masklmmklasmc  jkasnc janscmasm jsnc kasnc asjkcnas cs ckas c"), Is.EqualTo(false));
-
+            Assert.That(comments[0].Text.Contains("ascas kl klasckmck aksmck masklmmklasmc  jkasnc janscmasm jsnc kasnc asjkcnas cs ckas c dsvasdvsdvs sdvc sdvc svscx adcscx adcasdc sx asdvvfscx sfvdsc ssdvszxc sdzv sfdvds csdv sczcadvwevad czavdv sfda"), Is.EqualTo(false));
         }
     }
 }
