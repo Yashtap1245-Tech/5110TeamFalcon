@@ -602,3 +602,20 @@ body.dark-theme .btn-primary.back-button {
         background-color: #007bff !important; /* Blue for hover effect */
         transform: scale(1.05) !important; /* Slight zoom on hover */
     }
+
+/* Create Button Style in Dark Theme */
+body.dark-theme .btn-primary.create-button {
+    background-color: #ff4c4c; /* Bright red for the create button */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+    body.dark-theme .btn-primary.create-button:hover {
+        background-color: #d93636; /* Darker red on hover */
+        transform: scale(1.05); /* Slight zoom on hover */
+    }
