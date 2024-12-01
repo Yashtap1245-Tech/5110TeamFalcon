@@ -355,7 +355,7 @@ body.dark-theme {
 
         /* Link Styles within the Table */
         body.dark-theme .table a {
-            color: #333333; /* Light Black for action links */
+            color: #1e1e1e; /* Black for action links */
             text-decoration: none; /* Remove underline for cleaner look */
         }
 
