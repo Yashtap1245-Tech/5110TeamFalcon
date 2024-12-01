@@ -616,6 +616,6 @@ body.dark-theme .btn-primary.create-button {
 }
 
     body.dark-theme .btn-primary.create-button:hover {
-        background-color: #d93636; /* Darker red on hover */
+        background-color: #007bff; /* Blue on hover */
         transform: scale(1.05); /* Slight zoom on hover */
     }
