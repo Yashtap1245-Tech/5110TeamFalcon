@@ -605,7 +605,7 @@ body.dark-theme .btn-primary.back-button {
 
 /* Create Button Style in Dark Theme */
 body.dark-theme .btn-primary.create-button {
-    background-color: #ff4c4c; /* Bright red for the create button */
+    background-color: #20c997; /* Teal for the create button */
     color: #ffffff; /* White text for contrast */
     border: none;
     padding: 10px 20px;
