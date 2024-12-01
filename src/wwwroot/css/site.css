@@ -329,13 +329,13 @@ body.dark-theme {
         /* Table Header Styles */
         body.dark-theme .table th {
             background-color: #2b2b2b; /* Slightly lighter background for headers */
-            color: #ffdd57; /* Bright yellow text for headers */
+            color: #ffffff; /* Bright yellow text for headers */
             border-color: #444444; /* Dark border for header cells */
         }
 
         /* Table Row Styles */
         body.dark-theme .table td {
-            color: #f0e68c; /* Light yellow for table data */
+            color: #ffffff; /* Light yellow for table data */
             border-color: #444444; /* Dark border for data cells */
         }
 
@@ -362,21 +362,21 @@ body.dark-theme {
     }
 
     body.dark-theme .card-title {
-        color: #ffdd57 !important; /* Bright yellow for better visibility in dark theme */
+        color: #ffffff !important; /* Bright yellow for better visibility in dark theme */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Subtle shadow for contrast */
         font-weight: bold;
     }
 
     body.dark-theme .card-genre {
-        color: #ffdd57 !important; /* Light gray for better readability */
+        color: #ffffff !important; /* Light gray for better readability */
     }
 
     body.dark-theme .card-text {
-        color: #ffdd57 !important; /* Light gray color for better readability */
+        color: #ffffff !important; /* Light gray color for better readability */
     }
 
     body.dark-theme .list-inline-item {
-        color: #ffdd57 !important; /* Bright yellow color for the cast names */
+        color: #ffffff !important; /* Bright yellow color for the cast names */
         font-weight: bold; /* Make the text bold for better visibility */
     }
 
