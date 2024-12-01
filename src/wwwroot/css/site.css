@@ -443,6 +443,14 @@ input:checked + .slider {
         transform: translate(24px, -50%);
     }
 
+body.dark-theme .switch .slider {
+    background-color: #e6e6e6; /* White background for the toggle switch in dark theme */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional: Add a subtle glow effect */
+}
+
+    body.dark-theme .switch .slider:before {
+        background-color: #ffcc00; /* Gold color for the toggle knob */
+    }
 .btn-info {
     background-color: #28a745; /* Green for visibility */
     color: #ffffff; /* White text for contrast */
