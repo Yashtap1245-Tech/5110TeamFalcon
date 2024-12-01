@@ -298,7 +298,7 @@ body.dark-theme {
 }
 
     body.dark-theme .bg-navbar {
-        background: linear-gradient(135deg, #1a1a1a, #333333);
+        background: linear-gradient(135deg, #2c2c4e, #3a2b63);
     }
 
     body.dark-theme .bg-footer {
