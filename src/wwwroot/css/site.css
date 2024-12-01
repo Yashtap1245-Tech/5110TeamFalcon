@@ -585,3 +585,20 @@ circle:nth-child(2) {
     stroke: #ccc;
     stroke-width: 4px;
 }
+
+/* Back Button Style in Dark Theme */
+body.dark-theme .btn-primary.back-button {
+    background-color: #20c997 !important; /* Teal for visibility */
+    color: #ffffff !important; /* White text for contrast */
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important; /* Smooth hover effect */
+}
+
+    body.dark-theme .btn-primary.back-button:hover {
+        background-color: #007bff !important; /* Blue for hover effect */
+        transform: scale(1.05) !important; /* Slight zoom on hover */
+    }
