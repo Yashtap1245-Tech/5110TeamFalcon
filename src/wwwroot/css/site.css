@@ -32,7 +32,7 @@ body.dark-theme .card-columns .card {
     align-items: center; /* Center vertically */
     display: flex;
     flex-direction: column; /* Ensure the card content stacks vertically */
-    background-color: #333333; /* Deep purple background */
+    background-color: #1e1e1e; /* Deep purple background */
     color: #ffffff; /* Light text for readability */
     border-radius: 10px;
     overflow: hidden; /* Ensures child elements respect the border radius */
