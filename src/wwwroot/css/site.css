@@ -588,7 +588,7 @@ circle:nth-child(2) {
 
 /* Back Button Style in Dark Theme */
 body.dark-theme .btn-primary.back-button {
-    background-color: #20c997 !important; /* Teal for visibility */
+    background-color: #FF0000 !important; /* Red for visibility */
     color: #ffffff !important; /* White text for contrast */
     border: none !important;
     padding: 10px 20px !important;
