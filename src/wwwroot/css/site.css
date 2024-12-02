@@ -648,3 +648,9 @@ body.dark-theme .list-group {
     cursor: pointer; /* Pointer cursor for interactivity */
     transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Smooth hover and text color effects */
 }
+
+.btn-yellow {
+    color: yellow;
+    border-color: yellow;
+    background-color: yellow
+}
