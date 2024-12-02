@@ -37,6 +37,7 @@ namespace UnitTests.Components
             Assert.That(result.Contains("The Shawshank Redemption"), Is.EqualTo(true));
         }
 
+        #region SelectProduct
         [Test]
         public void SelectedProduct_Valid_ID_jenlooper_Should_Return_Content()
         {
@@ -54,7 +55,9 @@ namespace UnitTests.Components
             // Assert 
             Assert.That(pageMarkup.Contains("The Shawshank Redemption is a 1994 American prison drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis Red Redding (Morgan Freeman), and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles."), Is.EqualTo(true));
         }
+        #endregion
 
+        #region SubmitRatting
         [Test]
         public void SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
@@ -156,7 +159,9 @@ namespace UnitTests.Components
             var ratings = productService.GetAllData().First(x => x.Id == "sailorhg-corsage").Ratings.Last();
             Assert.That(ratings.Equals(1), Is.EqualTo(true));
         }
+        #endregion
 
+        #region CheckGenre
         [Test]
         public void Check_Reset_Genre_Should_Return_To_Default_Products()
         {
@@ -175,7 +180,9 @@ namespace UnitTests.Components
             // Assert
             Assert.That(pageMarkup.Contains("The Shawshank Redemption"), Is.EqualTo(true));
         }
+        #endregion
 
+        #region SubmitComment
         [Test]
         public void Submit_Comment_Should_Add_New_Comment_To_Product()
         {
@@ -246,5 +253,6 @@ namespace UnitTests.Components
             var comments = productService.GetAllData().First(x => x.Id == "sailorhg-kit").CommentList;
             Assert.That(comments[0].Text.Contains("ascas kl klasckmck aksmck masklmmklasmc  jkasnc janscmasm jsnc kasnc asjkcnas cs ckas c dsvasdvsdvs sdvc sdvc svscx adcscx adcasdc sx asdvvfscx sfvdsc ssdvszxc sdzv sfdvds csdv sczcadvwevad czavdv sfda"), Is.EqualTo(false));
         }
+        #endregion
     }
 }
