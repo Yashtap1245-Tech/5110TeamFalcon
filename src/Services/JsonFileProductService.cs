@@ -232,6 +232,11 @@ namespace ContosoCrafts.WebSite.Services
 
             return data;
         }
+
+        /// <summary>
+        /// To get the genre of the movies
+        /// </summary>
+        /// <returns>The deleted product if found otherwise null</returns>
         public IEnumerable<string> GetUniqueGenres()
         {
             return GetAllData()
@@ -240,6 +245,10 @@ namespace ContosoCrafts.WebSite.Services
                    .OrderBy(genre => genre);
         }
 
+        /// <summary>
+        /// to get the product of the genre
+        /// </summary>
+        /// <returns>The deleted product if found otherwise null</returns>
         public IEnumerable<ProductModel> GetProductsFromGenre(string genre)
         {
             var dataSet = GetAllData();
