@@ -635,3 +635,16 @@ body.dark-theme .btn-primary.create-button {
         background-color: #007bff; /* Blue on hover */
         transform: scale(1.05); /* Slight zoom on hover */
     }
+
+/* Success Button Styling for Dark Theme */
+body.dark-theme .list-group {
+    background-color: #28a745; /* Green background for the button */
+    color: #1e1e1e; /* White text for readability */
+    border: 2px solid #1c7c31; /* Darker green border */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    padding: 10px 20px; /* Padding for spacing */
+    font-size: 14px; /* Readable font size */
+    font-weight: bold; /* Bold text for emphasis */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Smooth hover and text color effects */
+}
