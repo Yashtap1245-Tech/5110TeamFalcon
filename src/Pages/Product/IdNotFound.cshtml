@@ -4,5 +4,22 @@
     ViewData["Title"] = "Error";
 }
 
-<h1 class="text-danger">ID Not Found.</h1>
-<h2 class="text-danger">An error occurred while processing your requested Id.</h2>
+<div class="error-page-container">
+    <h1 class="error-title">Oops! Something Went Wrong</h1>
+    <p class="error-description">
+        The product you're looking for doesn't exist or the URL might be invalid.
+    </p>
+
+    <!-- Clickable Image -->
+    <a href="/" class="error-image-link" title="Back to Homepage">
+        <img src="https://clipart-library.com/images_k/movie-reel-transparent-background/movie-reel-transparent-background-4.png" alt="Error Image" class="error-image" />
+    </a>
+
+    <p class="error-instruction">
+        Please check the URL and try again, or click the image above to return to the homepage.
+    </p>
+
+    <div class="error-actions">
+        <a href="/" class="error-button error-button-primary">Back to Homepage</a>
+    </div>
+</div>
