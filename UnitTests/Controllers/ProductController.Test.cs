@@ -82,17 +82,20 @@ namespace UnitTests.Controllers
         /// Tests the constructor of the ProductsController to ensure that the ProductService
         /// is properly initialized with the provided service instance.
         /// </summary>
+        #region ConsturctorInitialze
         [Test]
         public void Constructor_Should_Initialize_ProductService()
         {
             // Assert that the ProductService was correctly injected into the controller
             Assert.That(_controller.ProductService, Is.EqualTo(_productService), "Expected ProductService to be initialized with the provided service.");
         }
+        #endregion
 
         /// <summary>
         /// Tests the Get method of the ProductsController to ensure that it returns all products.
         /// This test verifies that the Get method retrieves the correct number of products from the data store.
         /// </summary>
+        #region ReturnProducts
         [Test]
         public void Get_Should_Return_All_Products()
         {
@@ -102,11 +105,14 @@ namespace UnitTests.Controllers
             // Assert - Verify the result is the expected number of products (2 in this case)
             Assert.That(result.Count(), Is.EqualTo(2), "Expected Get() to return two products.");
         }
+        #endregion
 
         /// <summary>
         /// Tests the Patch method of the ProductsController to ensure that it adds a rating to the specified product
         /// and returns an Ok result. This test verifies that the rating is correctly added to the product's Ratings array.
         /// </summary>
+
+        #region PatchRating
         [Test]
         public void Patch_Should_Add_Rating_To_Product_And_Return_Ok()
         {
@@ -136,5 +142,6 @@ namespace UnitTests.Controllers
             // Check if the Ratings array contains the new rating (5)
             Assert.That(product.Ratings, Contains.Item(5), "Product Ratings should contain the new rating.");
         }
+        #endregion
     }
 }
