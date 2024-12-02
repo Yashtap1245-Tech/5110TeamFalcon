@@ -59,6 +59,13 @@ body.dark-theme .card-columns .card {
     text-align: center;
 }
 
+body.dark-theme .card-footer {
+    background-color: #1e1e1e; /* Dark background */
+    padding: 10px; /* Consistent spacing */
+    text-align: center; /* Center-align the footer content */
+    color: #d3d3d3; /* Light gray text for readability */
+}
+
 .card-columns .card-img {
     height: 330px;
     width: 200px;
