@@ -147,7 +147,8 @@ namespace UnitTests.Services
                 Title = "Updated Title",
                 Image = "updated.png",
                 Description = "Updated Description",
-                Genre = "Updated Genre",
+                // Genre = "Updated Genre",
+                Genre = GenreEnum.Action,
                 YouTubeID = "UpdatedYouTubeID",
                 Director = "Updated Director",
                 Cast = new List<string> { "Updated Cast" }
@@ -162,7 +163,7 @@ namespace UnitTests.Services
             Assert.That(retrievedProduct.Title, Is.EqualTo("Updated Title"));
             Assert.That(retrievedProduct.Image, Is.EqualTo("updated.png"));
             Assert.That(retrievedProduct.Description, Is.EqualTo("Updated Description"));
-            Assert.That(retrievedProduct.Genre, Is.EqualTo("Updated Genre"));
+            Assert.That(retrievedProduct.Genre, Is.EqualTo(GenreEnum.Action));
             Assert.That(retrievedProduct.YouTubeID, Is.EqualTo("UpdatedYouTubeID"));
             Assert.That(retrievedProduct.Director, Is.EqualTo("Updated Director"));
             Assert.That(retrievedProduct.Cast, Is.EqualTo(new List<string> { "Updated Cast" }));
