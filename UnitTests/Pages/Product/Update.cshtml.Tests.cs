@@ -92,6 +92,10 @@ namespace UnitTests.Pages.Product.Update
         }
 
         [Test]
+        /// <summary>
+        /// Tests the OnGet method with an invalid product ID.
+        /// Ensures that the method redirects the user to a different page when the specified product ID does not exist.
+        /// </summary>
         public void OnGet_Invalid_Id_Should_Redirect_Page()
         {
             // Arrange
