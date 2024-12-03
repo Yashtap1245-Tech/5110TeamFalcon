@@ -19,7 +19,7 @@ namespace UnitTests.Model
                 Description = "A mind-bending thriller directed by Christopher Nolan.",
                 Director = "Christopher Nolan",
                 Cast = new List<string>(),  // Empty Cast list (this should trigger the validation error)
-                Genre = "Sci-Fi",
+                Genre = GenreEnum.SciFi,
                 YouTubeID = "YoHD9XEInc0",
                 ReleaseYear = 2010
             };
