@@ -5,9 +5,17 @@ using NUnit.Framework;
 
 namespace UnitTests.Pages.Startup
 {
+    /// <summary>
+    /// Unit tests for the Startup class of the application.
+    /// Verifies the configuration and initialization of the application during startup.
+    /// </summary>
     public class StartupTests
     {
         #region TestSetup
+        /// <summary>
+        /// Setup method for initializing test dependencies.
+        /// Runs before each test in this class.
+        /// </summary>
 
         [SetUp]
         public void TestInitialize()
