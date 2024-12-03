@@ -71,6 +71,12 @@ namespace UnitTests.Pages.Product.Update
         #endregion TestSetup
         
         [Test]
+        /// <summary>
+        /// Tests the OnGet method with a valid product ID.
+        /// Ensures that:
+        /// 1. The ModelState is valid after invoking the method.
+        /// 2. The returned Product object contains the correct details for the specified product ID, including title, director, description, and genre.
+        /// </summary>
         public void OnGet_Valid_Should_Return_Product()
         {
             // Arrange
