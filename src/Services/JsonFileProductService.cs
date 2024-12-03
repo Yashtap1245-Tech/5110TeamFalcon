@@ -238,7 +238,7 @@ namespace ContosoCrafts.WebSite.Services
         public IEnumerable<string> GetUniqueGenres()
         {
             return GetAllData()
-                   .Select(product => product.Genre)
+                   .Select(product => product.Genre.DisplayName())
                    .Distinct()
                    .OrderBy(genre => genre);
         }
@@ -254,7 +254,7 @@ namespace ContosoCrafts.WebSite.Services
             {
                 return dataSet;
             }
-            var data = dataSet.Where(product => product.Genre != null && product.Genre.Equals(genre));
+            var data = dataSet.Where(product => product.Genre != 0 && product.Genre.DisplayName().Equals(genre));
             return data;
         }
 
