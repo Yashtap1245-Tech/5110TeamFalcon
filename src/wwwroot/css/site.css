@@ -731,3 +731,8 @@ body.dark-theme .btn-primary {
     background-color: #dc3545; /* Red background for delete */
     color: #ffffff; /* White text for contrast */
 }
+/* Cancel Button (Green) */
+body.dark-theme .btn-danger {
+    background-color: #28a745; /* Green background for cancel */
+    color: #ffffff; /* White text for contrast */
+}
