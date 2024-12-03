@@ -108,6 +108,10 @@ namespace UnitTests.Pages.Product.Create
         }
 
         [Test]
+        /// <summary>
+        /// Tests the OnPost method for a product with an empty ID.
+        /// Ensures that a new ID is generated for the product.
+        /// </summary>
         public void OnPost_Empty_Product_Id_Should_Generate_New_Id()
         {
             // Arrange
@@ -121,6 +125,10 @@ namespace UnitTests.Pages.Product.Create
         }
 
         [Test]
+        /// <summary>
+        /// Tests the OnPost method for a product with an existing ID.
+        /// Ensures that the existing ID remains unchanged.
+        /// </summary>
         public void OnPost_Existing_Product_Id_Should_Not_Change_Id()
         {
             // Arrange
