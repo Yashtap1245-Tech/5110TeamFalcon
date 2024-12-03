@@ -11,7 +11,7 @@
     ],
     "ReleaseYear": 1994,
     "YouTubeID": "NmzuHjWmXOc",
-    "Genre": "Drama",
+    "Genre": 3,
     "IMDbRating": 9.2,
     "CommentList": []
   },
@@ -30,7 +30,7 @@
     ],
     "ReleaseYear": 1972,
     "YouTubeID": "G0eKzU_fV00",
-    "Genre": "Crime",
+    "Genre": 2,
     "IMDbRating": 9.2,
     "CommentList": [
     ]
@@ -50,7 +50,7 @@
     ],
     "ReleaseYear": 2008,
     "YouTubeID": "EXeTwQWrcwY",
-    "Genre": "Action",
+    "Genre": 1,
     "IMDbRating": 9,
     "CommentList": []
   },
@@ -69,7 +69,7 @@
     ],
     "ReleaseYear": 1974,
     "YouTubeID": "9O1Iy9od7-A",
-    "Genre": "Crime",
+    "Genre": 2,
     "IMDbRating": 9,
     "CommentList": []
   },
@@ -88,7 +88,7 @@
     ],
     "ReleaseYear": 1957,
     "YouTubeID": "TEN-2uTi2c0",
-    "Genre": "Drama",
+    "Genre": 3,
     "IMDbRating": 8.9,
     "CommentList": []
   },
@@ -108,7 +108,7 @@
     ],
     "ReleaseYear": 2003,
     "YouTubeID": "y2rYRu8UW8M",
-    "Genre": "Fantasy",
+    "Genre": 4,
     "IMDbRating": 8.9,
     "CommentList": []
   },
@@ -127,7 +127,7 @@
     ],
     "ReleaseYear": 1993,
     "YouTubeID": "mxphAlJID9U",
-    "Genre": "Drama",
+    "Genre": 3,
     "IMDbRating": 8.9,
     "CommentList": []
   },
@@ -146,7 +146,7 @@
     ],
     "ReleaseYear": 1994,
     "YouTubeID": "tGpTpVyI_OQ",
-    "Genre": "Crime",
+    "Genre": 2,
     "IMDbRating": 8.9,
     "CommentList": []
   },
@@ -167,7 +167,7 @@
     ],
     "ReleaseYear": 2001,
     "YouTubeID": "_nZdmwHrcnw",
-    "Genre": "Fantasy",
+    "Genre": 4,
     "IMDbRating": 0,
     "CommentList": []
   },
@@ -186,7 +186,7 @@
     ],
     "ReleaseYear": 1966,
     "YouTubeID": "IFNUGzCOQoI",
-    "Genre": "Western",
+    "Genre": 6,
     "IMDbRating": 8.8,
     "CommentList": []
   },
@@ -205,7 +205,7 @@
     ],
     "ReleaseYear": 1994,
     "YouTubeID": "XHhAG-YLdk8",
-    "Genre": "Drama",
+    "Genre": 3,
     "IMDbRating": 8.8,
     "CommentList": []
   },
@@ -224,7 +224,7 @@
     ],
     "ReleaseYear": 2002,
     "YouTubeID": "LbfMDwc4azU",
-    "Genre": "Fantasy",
+    "Genre": 4,
     "IMDbRating": 8.7,
     "CommentList": []
   },
@@ -243,7 +243,7 @@
     ],
    "ReleaseYear": 1999,
     "YouTubeID": "BdJKm16Co6M",
-    "Genre": "Drama",
+    "Genre": 3,
     "IMDbRating": 8.8,
     "CommentList": []
   },
@@ -262,7 +262,7 @@
     ],
     "ReleaseYear": 1999,
     "YouTubeID": "YoHD9XEInc0",
-    "Genre": "Sci-Fi",
+    "Genre": 5,
     "IMDbRating": 8.8,
     "CommentList": []
   },
@@ -281,7 +281,7 @@
     ],
     "ReleaseYear": 1999,
     "YouTubeID": "vKQi3bBA1y8",
-    "Genre": "Sci-Fi",
+    "Genre": 5,
     "IMDbRating": 8.7,
     "CommentList": []
   }
