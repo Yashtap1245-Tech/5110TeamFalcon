@@ -721,3 +721,8 @@ body.dark-theme .form-group .btn-primary {
     background-color: #28a745; /* Green background */
     color: #ffffff; /* White text for contrast */
 }
+/* Back to Index Button (Red) */
+body.dark-theme .form-group .btn-secondary {
+    background-color: #dc3545; /* Red background */
+    color: #ffffff; /* White text for contrast */
+}
