@@ -1,4 +1,5 @@
 @page "{id}"
+@using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
 @model UpdateModel;
 @inject JsonFileProductService ProductService;
@@ -85,10 +86,4 @@
 <!--Validation Scripts Selection-->
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script type="text/javascript">
-        document.getElementById("genreInput").addEventListener("input", function () {
-            let value = this.value.toLowerCase();
-            this.value = value.charAt(0).toUpperCase() + value.slice(1);
-        })
-    </script>
 }
