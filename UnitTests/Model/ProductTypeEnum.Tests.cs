@@ -4,7 +4,7 @@ namespace UnitTests.Model
     using ContosoCrafts.WebSite.Models;
 
     [TestFixture]
-    public class ProductTypeEnumTests
+    public class GenreEnumTests
     {
         #region DisplayName_Should_Return_Correct_Name_For_Collectable
 
@@ -12,13 +12,13 @@ namespace UnitTests.Model
         public void DisplayName_Should_Return_Correct_Name_For_Collectable()
         {
             // Arrange
-            var productType = ProductTypeEnum.Collectable;
+            var productType = GenreEnum.Action;
 
             // Act
             var displayName = productType.DisplayName();
 
             // Assert
-            Assert.That(displayName, Is.EqualTo("Collectables"));
+            Assert.That(displayName, Is.EqualTo("Action"));
         }
 
         #endregion DisplayName_Should_Return_Correct_Name_For_Collectable
@@ -29,13 +29,13 @@ namespace UnitTests.Model
         public void DisplayName_Should_Return_Correct_Name_For_Commercial()
         {
             // Arrange
-            var productType = ProductTypeEnum.Commercial;
+            var productType = GenreEnum.Action;
 
             // Act
             var displayName = productType.DisplayName();
 
             // Assert
-            Assert.That(displayName, Is.EqualTo("Commercial goods"));
+            Assert.That(displayName, Is.EqualTo("Action"));
         }
 
         #endregion DisplayName_Should_Return_Correct_Name_For_Commercial
@@ -46,13 +46,13 @@ namespace UnitTests.Model
         public void DisplayName_Should_Return_Correct_Name_For_Amature()
         {
             // Arrange
-            var productType = ProductTypeEnum.Amature;
+            var productType = GenreEnum.Crime;
 
             // Act
             var displayName = productType.DisplayName();
 
             // Assert
-            Assert.That(displayName, Is.EqualTo("Hand Made Items"));
+            Assert.That(displayName, Is.EqualTo("Crime"));
         }
 
         #endregion DisplayName_Should_Return_Correct_Name_For_Amature
@@ -63,13 +63,13 @@ namespace UnitTests.Model
         public void DisplayName_Should_Return_Correct_Name_For_Antique()
         {
             // Arrange
-            var productType = ProductTypeEnum.Antique;
+            var productType = GenreEnum.Drama;
 
             // Act
             var displayName = productType.DisplayName();
 
             // Assert
-            Assert.That(displayName, Is.EqualTo("Antiques"));
+            Assert.That(displayName, Is.EqualTo("Drama"));
         }
 
         #endregion DisplayName_Should_Return_Correct_Name_For_Antique
@@ -80,7 +80,7 @@ namespace UnitTests.Model
         public void DisplayName_Should_Return_Empty_String_For_Undefined()
         {
             // Arrange
-            var productType = ProductTypeEnum.Undefined;
+            var productType = GenreEnum.Undefined;
 
             // Act
             var displayName = productType.DisplayName();
@@ -97,7 +97,7 @@ namespace UnitTests.Model
         public void DisplayName_Should_Return_Empty_String_For_Unknown_Value()
         {
             // Arrange
-            var productType = (ProductTypeEnum)999;  // Invalid value outside defined enum values
+            var productType = (GenreEnum)999;  // Invalid value outside defined enum values
 
             // Act
             var displayName = productType.DisplayName();
