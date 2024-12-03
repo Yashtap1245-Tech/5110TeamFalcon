@@ -126,6 +126,12 @@ namespace UnitTests.Pages.Product.Update
         }
 
         [Test]
+        /// <summary>
+        /// Tests the OnPost method with a valid product model.
+        /// Ensures that:
+        /// 1. The ModelState is valid after the method is invoked.
+        /// 2. The method redirects to the "Index" page after successfully handling the valid product.
+        /// </summary>
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
