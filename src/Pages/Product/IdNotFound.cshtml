@@ -1,24 +1,28 @@
 @page
 
 @{
+    // Set the title of the error page to display in the browser tab
     ViewData["Title"] = "Error";
 }
-
+// Main container for the error page
 <div class="error-page-container">
+    <!-- Main title of the error page -->
     <h1 class="error-title">Oops! Something Went Wrong</h1>
+    <!-- Description to inform the user about the issue -->
     <p class="error-description">
         The product you're looking for doesn't exist or the URL might be invalid.
     </p>
 
     <!-- Clickable Image -->
     <a href="/" class="error-image-link" title="Back to Homepage">
+        <!-- Error image representing the issue -->
         <img src="https://clipart-library.com/images_k/movie-reel-transparent-background/movie-reel-transparent-background-4.png" alt="Error Image" class="error-image" />
     </a>
-
+    <!-- Additional instructions for the user -->
     <p class="error-instruction">
         Please check the URL and try again, or click the image above to return to the homepage.
     </p>
-
+    <!-- Container for additional actions the user can take -->
     <div class="error-actions">
         <a href="/" class="error-button error-button-primary">Back to Homepage</a>
     </div>
