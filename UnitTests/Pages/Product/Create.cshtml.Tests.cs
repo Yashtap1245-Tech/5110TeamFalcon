@@ -73,6 +73,10 @@ namespace UnitTests.Pages.Product.Create
         #region OnPost Tests
 
         [Test]
+        /// <summary>
+        /// Tests the OnPost method when the ModelState is invalid.
+        /// Ensures that the method returns a PageResult, allowing the user to correct the errors.
+        /// </summary>
         public void OnPost_InvalidModelState_Should_Return_Page()
         {
             // Arrange
@@ -86,6 +90,10 @@ namespace UnitTests.Pages.Product.Create
         }
 
         [Test]
+        /// <summary>
+        /// Tests the OnPost method when the ModelState is valid.
+        /// Ensures that a new product is created, an ID is generated, and the method redirects the user to another page.
+        /// </summary>
         public void OnPost_ValidModelState_Should_Create_New_Product_And_Redirect()
         {
             // Arrange
