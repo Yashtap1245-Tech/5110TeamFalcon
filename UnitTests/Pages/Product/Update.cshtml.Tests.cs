@@ -108,6 +108,10 @@ namespace UnitTests.Pages.Product.Update
         }
 
         [Test]
+        /// <summary>
+        /// Tests the OnPost method when the ModelState is invalid.
+        /// Ensures that the ModelState is marked as invalid and that the method does not proceed further.
+        /// </summary>
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
             // Arrange
