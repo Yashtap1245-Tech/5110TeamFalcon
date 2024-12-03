@@ -726,3 +726,8 @@ body.dark-theme .form-group .btn-secondary {
     background-color: #dc3545; /* Red background */
     color: #ffffff; /* White text for contrast */
 }
+/* Delete Button (Red) */
+body.dark-theme .btn-primary {
+    background-color: #dc3545; /* Red background for delete */
+    color: #ffffff; /* White text for contrast */
+}
