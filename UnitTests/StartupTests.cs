@@ -22,6 +22,10 @@ namespace UnitTests.Pages.Startup
         {
         }
 
+        /// <summary>
+        /// Custom implementation of the Startup class for testing purposes.
+        /// Inherits from the main Startup class and passes the configuration to the base class.
+        /// </summary>
         public class Startup : ContosoCrafts.WebSite.Startup
         {
             public Startup(IConfiguration config) : base(config) { }
@@ -29,6 +33,11 @@ namespace UnitTests.Pages.Startup
         #endregion TestSetup
 
         #region ConfigureServices
+
+        /// <summary>
+        /// Tests the ConfigureServices method of the Startup class.
+        /// Verifies that the web host is created successfully with the default configuration and services.
+        /// </summary>
         [Test]
         public void Startup_ConfigureServices_Valid_Defaut_Should_Pass()
         {
@@ -37,6 +46,10 @@ namespace UnitTests.Pages.Startup
         }
         #endregion ConfigureServices
 
+        /// <summary>
+        /// Tests the Configure method of the Startup class.
+        /// Verifies that the web host is initialized successfully with the default settings.
+        /// </summary>
         #region Configure
         [Test]
         public void Startup_Configure_Valid_Defaut_Should_Pass()
