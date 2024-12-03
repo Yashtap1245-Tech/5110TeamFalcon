@@ -69,6 +69,12 @@ namespace UnitTests.Pages.Product.Index
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// Tests the OnGet method of the page model to verify its behavior.
+        /// Ensures that:
+        /// 1. The ModelState is valid after the method is invoked.
+        /// 2. The Products list contains at least one item, indicating data retrieval is successful.
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
