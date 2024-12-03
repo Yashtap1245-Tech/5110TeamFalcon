@@ -716,6 +716,11 @@ body.dark-theme .back-to-index .btn-secondary {
     background-color: #28a745; /* Green background */
     color: #ffffff; /* White text for contrast */
 }
+/* Styling for the Delete button */
+body.dark-theme .back-to-index .btn-danger {
+    background-color: #dc3545; /* Green background */
+    color: #ffffff; /* White text for contrast */
+}
 /* Save Button (Green) */
 body.dark-theme .form-group .btn-primary {
     background-color: #28a745; /* Green background */
