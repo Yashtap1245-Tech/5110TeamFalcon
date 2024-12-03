@@ -40,9 +40,6 @@ namespace ContosoCrafts.WebSite.Models
         [MinLength(1, ErrorMessage = "At least one cast member is required.")]
         public List<string> Cast { get; set; } = new List<string>();
 
-        // Product Type
-        public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
-
         // Release Year Field
         [Range(1000, 9999, ErrorMessage = "The year must be a four-digit number.")]
         public int ReleaseYear { get; set; }
@@ -52,9 +49,11 @@ namespace ContosoCrafts.WebSite.Models
         public string YouTubeID { get; set; }
 
         // Genre field
-        [StringLength(maximumLength: 30, MinimumLength = 1, ErrorMessage = "The genre should have a length between 1 and 30 characters.")]
         [Required(ErrorMessage = "Genre is required")]
-        public string Genre { get; set; }
+        public GenreEnum Genre { get; set; } = GenreEnum.Undefined;
+        
+        [JsonIgnore]
+        public string GenreDisplayName => Genre.DisplayName();
 
         // IMDb Rating Field
         public float IMDbRating { get; set; }
