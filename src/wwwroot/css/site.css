@@ -736,3 +736,15 @@ body.dark-theme .btn-danger {
     background-color: #28a745; /* Green background for cancel */
     color: #ffffff; /* White text for contrast */
 }
+/* More Info Button (Green) */
+body.dark-theme .card-footer .btn-primary {
+    background-color: #28a745; /* Green background */
+    color: #ffffff; /* White text for readability */
+    border: 2px solid #1c7c31; /* Darker green border for definition */
+    border-radius: 5px; /* Rounded corners for modern look */
+    padding: 10px 20px; /* Spacing inside the button */
+    font-size: 14px; /* Readable font size */
+    font-weight: bold; /* Bold text for emphasis */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth hover effects */
+}
