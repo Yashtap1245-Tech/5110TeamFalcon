@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace UnitTests.Pages.Product
 {
