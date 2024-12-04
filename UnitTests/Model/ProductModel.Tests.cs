@@ -29,6 +29,21 @@ namespace UnitTests.Model
             Assert.That(validationResults[0].ErrorMessage, Is.EqualTo("At least one cast member is required."));
         }
 
+        [Test]
+        public void GenreDisplayName_Should_Return_Correct_DisplayName()
+        {
+            // Arrange
+            var product = new ProductModel
+            {
+                Genre = GenreEnum.SciFi
+            };
+
+            // Act
+            var displayName = product.GenreDisplayName;
+
+            // Assert
+            Assert.That(displayName, Is.EqualTo("SciFi"));
+        }
         #endregion
 
         #region Helper_Method_ValidateModel
