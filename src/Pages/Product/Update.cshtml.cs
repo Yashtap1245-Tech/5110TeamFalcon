@@ -55,12 +55,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// </returns>
         public IActionResult OnPost()
         {
+            // Check if ModelState is inValid
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            ProductService.UpdateData(Product);
+            ProductService.UpdateData(Product); // Update data in data store
             return RedirectToPage("./Index");
         }
 
