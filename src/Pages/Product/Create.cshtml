@@ -74,6 +74,13 @@
             <label asp-for="Product.Cast" class="control-label"></label>
             <br />
             <button type="button" class="btn btn-yellow" onclick="addCastMember()">Add Cast Member</button>
+            <div class="form-group">
+                @for (var i = 0; i < Model.Product.Cast.Count; i++)
+                {
+                    <input asp-for="@Model.Product.Cast[i]" class="form-control" />
+                    <span asp-validation-for="Product.Cast" class="text-danger"></span>
+                }
+                </div>
         </div>
 
         <!-- Submit Button to Save the Movie -->
@@ -90,11 +97,13 @@
     }
     <script>
         function addCastMember() {
-            const castContainer = document.querySelector('.form-group:nth-child(10)'); // Adjust index based on form structure
+            const castContainer = document.querySelector('.form-group:nth-child(9)'); // Adjust index based on form structure
+            const br = document.createElement('br');
             const input = document.createElement('input');
             input.type = 'text';
             input.name = 'Product.Cast'; // Ensure proper binding
             input.className = 'form-control';
+            castContainer.appendChild(br);
             castContainer.appendChild(input);
         }
     </script>
