@@ -42,6 +42,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// </returns>
         public IActionResult OnPost()
         {
+            // Check if ModelState is inValid
             if (!ModelState.IsValid)
             {
                 return Page();
