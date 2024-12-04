@@ -36,7 +36,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             Product = ProductService.GetDataForRead(id);
             if (Product == null)
             {
-                return RedirectToPage("./IdNotFound");
+                return RedirectToPage("./IdNotFound"); // redirect to Not found page if prodcut is null
             }
 
             return Page();
