@@ -68,6 +68,7 @@ namespace UnitTests.Pages.Product.Read
 
         #endregion TestSetup
 
+        #region OnGet
         [Test]
         /// <summary>
         /// Tests the OnGet method with a valid product ID.
@@ -102,5 +103,7 @@ namespace UnitTests.Pages.Product.Read
             //Assert
             Assert.That(result, Is.TypeOf<RedirectToPageResult>());
         }
+
+        #endregion
     }
 }
