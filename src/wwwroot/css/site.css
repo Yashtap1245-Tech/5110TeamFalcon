@@ -762,3 +762,12 @@ body.dark-theme .card-footer .btn-primary {
     font-style: italic; /* Differentiate instruction with italic style */
     color: #1e1e1e; /* Lighter gray for secondary information */
 }
+body.dark-theme .error-description {
+    font-weight: bold; /* Make the description stand out */
+    color: #ffffff; /* Use a subtle red color to indicate an error */
+}
+
+body.dark-theme .error-instruction {
+    font-style: italic; /* Differentiate instruction with italic style */
+    color: #ffffff; /* Lighter gray for secondary information */
+}
