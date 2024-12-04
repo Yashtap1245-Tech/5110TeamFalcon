@@ -9,7 +9,7 @@ namespace UnitTests.Services
     [TestFixture]
     public class SentimentAnalysisServiceTests
     {
-
+        #region SentimentAnalysis
         [Test]
         public void SentimentAnalysis_Should_Return_Sentiment_And_PositiveScore()
         {
@@ -31,5 +31,7 @@ namespace UnitTests.Services
             Assert.That(sentimentType, Is.EqualTo("Positive"));
             Assert.That(positive, Is.GreaterThan(50)); // 80% positive + 10% neutral / 2 = 90%
         }
+
+        #region
     }
 }
