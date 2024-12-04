@@ -35,7 +35,7 @@ namespace ContosoCrafts.WebSite.Pages
         /// </summary>
         public void OnGet()
         {   
-            Products = ProductService.GetAllData();
+            Products = ProductService.GetAllData(); // Fetch all data from datastore
         }
     }
 }
