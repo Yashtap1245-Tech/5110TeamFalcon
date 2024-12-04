@@ -32,6 +32,6 @@ namespace UnitTests.Services
             Assert.That(positive, Is.GreaterThan(50)); // 80% positive + 10% neutral / 2 = 90%
         }
 
-        #region
+        #endregion
     }
 }
