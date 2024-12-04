@@ -753,3 +753,12 @@ body.dark-theme .card-footer .btn-primary {
     cursor: pointer; /* Pointer cursor for interactivity */
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth hover effects */
 }
+.error-description {
+    font-weight: bold; /* Make the description stand out */
+    color: #1e1e1e; /* Use a subtle red color to indicate an error */
+}
+
+.error-instruction {
+    font-style: italic; /* Differentiate instruction with italic style */
+    color: #1e1e1e; /* Lighter gray for secondary information */
+}
