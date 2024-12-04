@@ -16,6 +16,7 @@ namespace UnitTests.Controllers
         private JsonFileProductService _productService;
         private string _testWebRootPath;
 
+        #region TestSetup
         // Setup method to initialize test environment
         [SetUp]
         public void Setup()
@@ -75,6 +76,8 @@ namespace UnitTests.Controllers
                 Directory.Delete(_testWebRootPath, true);
             }
         }
+
+        #endregion
 
         /// <summary>
         /// Tests the constructor of the ProductsController to ensure that the ProductService
