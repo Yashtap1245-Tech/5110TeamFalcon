@@ -14,7 +14,7 @@ using Moq;
 using NUnit.Framework;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace UnitTests.Pages.Product.Update
+namespace UnitTests.Pages.Product
 {
     public class UpdateTests
     {
@@ -70,13 +70,14 @@ namespace UnitTests.Pages.Product.Update
 
         #endregion TestSetup
         
-        [Test]
         /// <summary>
         /// Tests the OnGet method with a valid product ID.
         /// Ensures that:
         /// 1. The ModelState is valid after invoking the method.
-        /// 2. The returned Product object contains the correct details for the specified product ID, including title, director, description, and genre.
+        /// 2. The returned Product object contains the correct details for the specified product ID, including title,
+        /// director, description, and genre.
         /// </summary>
+        [Test]
         public void OnGet_Valid_Should_Return_Product()
         {
             // Arrange
@@ -91,11 +92,11 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(PageModel.Product.Genre, Is.EqualTo(GenreEnum.Drama));
         }
 
-        [Test]
         /// <summary>
         /// Tests the OnGet method with an invalid product ID.
         /// Ensures that the method redirects the user to a different page when the specified product ID does not exist.
         /// </summary>
+        [Test]
         public void OnGet_Invalid_Id_Should_Redirect_Page()
         {
             // Arrange
@@ -107,11 +108,11 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(result, Is.TypeOf<RedirectToPageResult>());
         }
 
-        [Test]
         /// <summary>
         /// Tests the OnPost method when the ModelState is invalid.
         /// Ensures that the ModelState is marked as invalid and that the method does not proceed further.
         /// </summary>
+        [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
             // Arrange
@@ -125,13 +126,13 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(false));
         }
 
-        [Test]
         /// <summary>
         /// Tests the OnPost method with a valid product model.
         /// Ensures that:
         /// 1. The ModelState is valid after the method is invoked.
         /// 2. The method redirects to the "Index" page after successfully handling the valid product.
         /// </summary>
+        [Test]
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
