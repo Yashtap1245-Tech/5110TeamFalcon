@@ -650,9 +650,9 @@ body.dark-theme .list-group {
 }
 
 .btn-yellow {
-    color: yellow;
-    border-color: yellow;
-    background-color: yellow
+    color: black;
+    border-color: black;
+    background-color: black
 }
 
 /* Error Page Styles */
@@ -711,6 +711,8 @@ body.dark-theme .list-group {
     background-color: #6c757d;
     color: white;
 }
+
+
 /* Styling for the Back to Index button */
 body.dark-theme .back-to-index .btn-secondary {
     background-color: #28a745; /* Green background */
@@ -770,4 +772,11 @@ body.dark-theme .error-description {
 body.dark-theme .error-instruction {
     font-style: italic; /* Differentiate instruction with italic style */
     color: #ffffff; /* Lighter gray for secondary information */
+}
+
+body.dark-theme .btn-yellow{
+    color: black;
+    border-color: #704d4d;
+    background-color: #6e3535;
+    
 }
