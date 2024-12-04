@@ -69,7 +69,9 @@ namespace UnitTests.Pages.Product
         }
 
         #endregion TestSetup
-        
+
+        #region OnGet
+
         /// <summary>
         /// Tests the OnGet method with a valid product ID.
         /// Ensures that:
@@ -156,5 +158,7 @@ namespace UnitTests.Pages.Product
             Assert.That(result.PageName.Contains("Index"), Is.EqualTo(true));            
 
         }
+
+        #endregion
     }
 }
