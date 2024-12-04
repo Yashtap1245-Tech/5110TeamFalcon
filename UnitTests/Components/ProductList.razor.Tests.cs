@@ -21,6 +21,7 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        #region OnGet
         [Test]
         public void ProductList_Valid_Default_Should_Return_Content()
         {
@@ -36,6 +37,8 @@ namespace UnitTests.Components
             // Assert
             Assert.That(result.Contains("The Shawshank Redemption"), Is.EqualTo(true));
         }
+
+        #endregion
 
         #region SelectProduct
         [Test]
