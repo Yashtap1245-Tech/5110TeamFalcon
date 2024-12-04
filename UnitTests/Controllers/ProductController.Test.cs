@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
@@ -6,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Controllers;
-using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Controllers
@@ -116,17 +114,21 @@ namespace UnitTests.Controllers
         [Test]
         public void Patch_Should_Add_Rating_To_Product_And_Return_Ok()
         {
-            // Arrange - Create a RatingRequest object with ProductId "1" and Rating 5
-            var request = new ProductsController.RatingRequest
+            // Arrange
+            
+            var request = new ProductsController.RatingRequest // Create a RatingRequest object with ProductId "1" and Rating 5
             {
                 ProductId = "1",
                 Rating = 5
             };
 
-            // Act - Call the Patch method with the request
-            var result = _controller.Patch(request);
+            // Act 
 
-            // Assert - Check that the result is of type OkResult
+            var result = _controller.Patch(request); // Call the Patch method with the request
+
+            // Assert
+
+            // Check that the result is of type OkResult
             Assert.That(result, Is.TypeOf<OkResult>(), "Expected Patch() to return Ok result.");
 
             // Verify that the rating was successfully added
@@ -134,10 +136,10 @@ namespace UnitTests.Controllers
             var product = products.FirstOrDefault(p => p.Id == "1");
 
             // Check if the product with Id "1" exists
-            Assert.That(product, Is.Not.Null, "Product with Id '1' should exist.");
+            Assert.That(product.Id, Is.EqualTo("1"));
 
-            // Check if the Ratings array is not null
-            Assert.That(product.Ratings, Is.Not.Null, "Product Ratings should not be null.");
+            // Check if the Ratings array is not empty
+            Assert.That(product.Ratings.Length > 0, Is.EqualTo(true));
 
             // Check if the Ratings array contains the new rating (5)
             Assert.That(product.Ratings, Contains.Item(5), "Product Ratings should contain the new rating.");
