@@ -15,7 +15,6 @@
     "IMDbRating": 9.2,
     "CommentList": []
   },
-  
   {
     "Id": "jenlooper-light",
     "img": "https://live.staticflickr.com/4848/31162695417_53fe89db83_n.jpg",
@@ -32,10 +31,8 @@
     "YouTubeID": "G0eKzU_fV00",
     "Genre": 2,
     "IMDbRating": 9.2,
-    "CommentList": [
-    ]
+    "CommentList": []
   },
-  
   {
     "Id": "jenlooper-lightshow",
     "img": "https://i.pinimg.com/564x/8a/12/32/8a123299f6be370ece4efdc9c2678d9d.jpg",
@@ -54,7 +51,6 @@
     "IMDbRating": 9,
     "CommentList": []
   },
-  
   {
     "Id": "jenlooper-survival",
     "img": "https://dkanut5j171nq.cloudfront.net/0009/9719/GODFATHER2-quad-emailable.jpg",
@@ -73,7 +69,6 @@
     "IMDbRating": 9,
     "CommentList": []
   },
-  
   {
     "Id": "sailorhg-bubblesortpic",
     "img": "https://e-cdn-images.dzcdn.net/images/cover/ae225312d20d16a63011ce9e92e29a76/500x500-000000-80-0-0.jpg",
@@ -92,15 +87,13 @@
     "IMDbRating": 8.9,
     "CommentList": []
   },
-  
   {
     "Id": "sailorhg-corsage",
     "img": "https://alternativemovieposters.com/wp-content/uploads/2021/06/ThomasHealy_LOTR.jpg",
     "Title": "The Lord of the Rings: The Return of the King",
     "Director": "Peter Jackson",
     "Description": "The Lord of the Rings: The Return of the King is a 2003 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson. It is based on 1955\u0027s The Return of the King, the third volume of the novel The Lord of the Rings by J. R. R. Tolkien. The sequel to 2002\u0027s The Lord of the Rings: The Two Towers, the film is the third and final instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Bernard Hill, Billy Boyd, Dominic Monaghan, Orlando Bloom, Hugo Weaving, Miranda Otto, David Wenham, Karl Urban, John Noble, Andy Serkis, Ian Holm, and Sean Bean. Continuing the plot of the previous film, Frodo, Sam and Gollum make their final way toward Mount Doom to destroy the One Ring, unaware of Gollum\u0027s true intentions, while Merry, Pippin, Gandalf, Aragorn, Legolas, Gimli and their allies join forces against Sauron and his legions from Mordor.",
-    "Ratings": [
-    ],
+    "Ratings": [],
     "Cast": [
       "Elijah Wood",
       "Karl Urban",
@@ -112,7 +105,6 @@
     "IMDbRating": 8.9,
     "CommentList": []
   },
-  
   {
     "Id": "sailorhg-kit",
     "img": "https://i.pinimg.com/564x/e1/42/a5/e142a53687a5d1fcd838f2127d267999.jpg",
@@ -131,7 +123,6 @@
     "IMDbRating": 8.9,
     "CommentList": []
   },
-  
   {
     "Id": "sailorhg-led",
     "img": "https://i.pinimg.com/564x/89/41/e7/8941e71464be8fe81ade92a86817338e.jpg",
@@ -150,12 +141,9 @@
     "IMDbRating": 8.9,
     "CommentList": []
   },
-  
   {
     "Id": "selinazawacki-soi-shirt",
-    
     "img": "https://i.pinimg.com/564x/4d/8c/eb/4d8ceb7c6e967c8c7948475e43791a2b.jpg",
-    
     "Title": "The Lord of the Rings: The Fellowship of the Ring",
     "Director": "Peter Jackson",
     "Description": "The Lord of the Rings: The Fellowship of the Ring is a 2001 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson, based on 1954\u0027s The Fellowship of the Ring, the first volume of the novel The Lord of the Rings by J. R. R. Tolkien. The film is the first instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Billy Boyd, Dominic Monaghan, Orlando Bloom, Christopher Lee, Hugo Weaving, Sean Bean, Ian Holm, and Andy Serkis.",
@@ -169,9 +157,24 @@
     "YouTubeID": "_nZdmwHrcnw",
     "Genre": 4,
     "IMDbRating": 0,
-    "CommentList": []
+    "CommentList": [
+      {
+        "Text": "A visually stunning masterpiece with incredible storytelling and unforgettable characters, though it feels a bit long at times",
+        "SentimentType": "Positive",
+        "SentimentPositive": 100
+      },
+      {
+        "Text": "An epic tale with breathtaking visuals and memorable characters, though the pacing occasionally drags in parts",
+        "SentimentType": "Positive",
+        "SentimentPositive": 100
+      },
+      {
+        "Text": "While visually impressive, the story feels overly drawn out and lacks the momentum to fully engage throughout.",
+        "SentimentType": "Negative",
+        "SentimentPositive": 0
+      }
+    ]
   },
-  
   {
     "Id": "selinazawacki-soi-pins",
     "img": "https://i.pinimg.com/564x/2e/e8/14/2ee814f24d946673ae326d5ec5b39f72.jpg",
@@ -190,7 +193,6 @@
     "IMDbRating": 8.8,
     "CommentList": []
   },
-  
   {
     "Id": "vogueandcode-hipster-dev-bro",
     "img": "https://i.pinimg.com/564x/8e/d7/a9/8ed7a9baeae932abec095d109d306fb3.jpg",
@@ -209,14 +211,15 @@
     "IMDbRating": 8.8,
     "CommentList": []
   },
-  
   {
     "Id": "vogueandcode-pretty-girls-code-tee",
     "img": "https://i.pinimg.com/564x/3a/b9/16/3ab9160a503966644f691f82bb7af0ee.jpg",
     "Title": "The Lord of the Rings: The Two Towers",
     "Director": "Peter Jackson",
     "Description": "The Lord of the Rings: The Two Towers is a 2002 epic high fantasy adventure film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, Stephen Sinclair, and Jackson, based on 1954\u0027s The Two Towers, the second volume of the novel The Lord of the Rings by J. R. R. Tolkien. The sequel to 2001\u0027s The Lord of the Rings: The Fellowship of the Ring, the film is the second instalment in The Lord of the Rings trilogy.",
-    "Ratings": null,
+    "Ratings": [
+      3
+    ],
     "Cast": [
       "Viggo Mortensen",
       "Sean Bean",
@@ -226,9 +229,34 @@
     "YouTubeID": "LbfMDwc4azU",
     "Genre": 4,
     "IMDbRating": 8.7,
-    "CommentList": []
+    "CommentList": [
+      {
+        "Text": "Hello this is good",
+        "SentimentType": "Positive",
+        "SentimentPositive": 99
+      },
+      {
+        "Text": "not good, hate it",
+        "SentimentType": "Negative",
+        "SentimentPositive": 0
+      },
+      {
+        "Text": "not good",
+        "SentimentType": "Negative",
+        "SentimentPositive": 0
+      },
+      {
+        "Text": "so good, but bad",
+        "SentimentType": "Negative",
+        "SentimentPositive": 32
+      },
+      {
+        "Text": "nice",
+        "SentimentType": "Positive",
+        "SentimentPositive": 100
+      }
+    ]
   },
-  
   {
     "Id": "vogueandcode-ruby-sis-2",
     "img": "https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
@@ -241,13 +269,12 @@
       "Brad Pitt",
       "Helena Bonham Carter"
     ],
-   "ReleaseYear": 1999,
+    "ReleaseYear": 1999,
     "YouTubeID": "BdJKm16Co6M",
     "Genre": 3,
     "IMDbRating": 8.8,
     "CommentList": []
   },
-  
   {
     "Id": "selinazawacki-moon",
     "img": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Aop38tMyxWjGowYDVX4Nqw@2x.jpeg",
@@ -266,7 +293,6 @@
     "IMDbRating": 8.8,
     "CommentList": []
   },
-  
   {
     "Id": "selinazawacki-shirt",
     "img": "https://m.media-amazon.com/images/I/61VP0JS833L.jpg",
@@ -283,6 +309,22 @@
     "YouTubeID": "vKQi3bBA1y8",
     "Genre": 5,
     "IMDbRating": 8.7,
+    "CommentList": []
+  },
+  {
+    "Id": "1e154c75-c323-49d7-bfd8-409256fb375d",
+    "img": "sdiljf",
+    "Title": "sjdfa",
+    "Director": "asjdf",
+    "Description": "sdkfh",
+    "Ratings": null,
+    "Cast": [
+      "asjdf"
+    ],
+    "ReleaseYear": 2003,
+    "YouTubeID": "awijr",
+    "Genre": 3,
+    "IMDbRating": -1,
     "CommentList": []
   }
 ]
