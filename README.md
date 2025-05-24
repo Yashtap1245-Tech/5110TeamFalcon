@@ -39,8 +39,8 @@ Before running this application, ensure you have:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/movie-web-app.git
-   cd movie-web-app
+   git clone https://github.com/Yashtap1245-Tech/5110TeamFalcon.git
+   cd 5110TeamFalco
    ```
 
 2. **Restore dependencies**
@@ -131,8 +131,3 @@ dotnet test --filter Category=Component
 - **Sentiment Analysis**: Azure Text Analytics integration for comment sentiment scoring
 - **Smart Insights**: AI-powered movie recommendations based on user interactions
 ```
-
-
----
-
-**Built using ASP.NET Core 7.0
