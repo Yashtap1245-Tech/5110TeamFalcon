@@ -25,17 +25,21 @@
                 </button>
                 
 
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1 d-flex justify-content-between w-100">
-                        <!-- Added flexbox classes -->
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1 d-flex justify-content-between w-100">
+                    <div class="d-flex"> <!-- Group left-side links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="/Product/Index">Edit Movies</a>
+                            <a class="nav-link" href="/Product/Index">Edit Movies</a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link" href="https://github.com/Yashtap1245-Tech/5110TeamFalcon">Source Code</a>
                         </li>
-                    </ul>
-                </div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </div>
 
                 <div class="logo-wrapper">
                     <a class="navbar-brand" asp-area="" asp-page="/Index">
